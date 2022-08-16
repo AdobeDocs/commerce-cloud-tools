@@ -3,7 +3,13 @@ title: Overview - Adobe Commerce Cloud Tools
 description: This is the overview page of the Commerce Cloud Tools.
 ---
 
+<Hero slots="image, heading, text"/>
+
+![Commerce Cloud Docker](_images/banner-hex-violet.png)
+
 # Adobe Commerce Cloud Tools
+
+This is the overview page of the Commerce Cloud Tools.
 
 ## Contributing
 
