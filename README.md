@@ -51,6 +51,17 @@ Install the following for local documentation site builds:
 
    You can use `yarn dev` to launch the site again.
 
+## Available Commands
+
+Command | Description
+------- | -----------
+`yarn build` | Compile site files.
+`yarn clean` | Clean build artifacts.
+`yarn dev` | Launch dev server preview.
+`yarn serve` | Serve the existing site files for testing preview.
+`yarn start` | Compile site files and serve for testing preview.
+`yarn test:links` | Test for broken links.
+
 ## Repository Template
 
 This repository uses a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
