@@ -13,14 +13,14 @@ The following containers provide the services required to build, deploy, and run
 
 ## Database container
 
-**Container name**: db<br/>
-**Docker base image**: mariadb, MySQL<br/>
-**Ports exposed**: `3306`
+- **Container name**: db
+- **Docker base image**: [mariadb][], MySQL
+- **Ports exposed**: `3306`
 
-You can configure the database container to use either MariaDB or MySQL for the database. The default configuration uses the [mariadb][] image and includes the following volumes:
+You can configure the database container to use either MariaDB or MySQL for the database. The default configuration uses the mariadb image and includes the following volumes:
 
--  `magento-db: /var/lib/mysql`
--  `.docker/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d`
+- `magento-db: /var/lib/mysql`
+- `.docker/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d`
 
 To use MySQL for the database, add the `--db image` option when you generate the Docker Compose configuration file. See [Service configuration options](containers.md#service-containers).
 
@@ -57,9 +57,9 @@ See [Manage the database](manage-database.md) for details about using the databa
 
 ## Elasticsearch container
 
-**Container name**: elasticsearch<br/>
-**Docker base image**: [magento/magento-cloud-docker-elasticsearch][elasticsearch-docker]<br/>
-**Ports exposed**: `9200`, `9300`
+- **Container name**: elasticsearch
+- **Docker base image**: [magento/magento-cloud-docker-elasticsearch][elasticsearch-docker]
+- **Ports exposed**: `9200`, `9300`
 
 The Elasticsearch container for Cloud Docker for Commerce is a standard Elasticsearch container with required plugins and configurations for Adobe Commerce.
 
@@ -79,7 +79,7 @@ See [Important Elasticsearch configuration][] in the Elasticsearch documentation
 
 The `analysis-icu` and `analysis-phonetic` plugins are installed by default and cannot be skipped. If you use Elasticsearch 6.5 and later, the default Elasticsearch plugins are installed automatically along with any custom plugins added to the `services.yaml`file. When you generate the `docker-compose.yaml` file, you can add additional custom plugins to the Docker environment using the `ES_PLUGINS` environment configuration option.
 
-The following example adds the `analysis-stempel` and `analysis-nori` plugins to the Docker environment.
+>The following example adds the `analysis-stempel` and `analysis-nori` plugins to the Docker environment.
 
 ```yaml
 services:
@@ -117,9 +117,9 @@ sysctl -w vm.max_map_count=262144
 
 ## OpenSearch container
 
-**Container name**: opensearch<br/>
-**Docker base image**: [magento/magento-cloud-docker-opensearch][opensearch-docker]<br/>
-**Ports exposed**: `9200`, `9300`
+- **Container name**: opensearch
+- **Docker base image**: [magento/magento-cloud-docker-opensearch][opensearch-docker]
+- **Ports exposed**: `9200`, `9300`
 
 The OpenSearch container for Cloud Docker for Commerce is a standard OpenSearch container with required plugins and configurations for Adobe Commerce.
 
@@ -160,7 +160,7 @@ The following plugins are installed by default and **cannot** be skipped:
    -  opensearch-security
    -  opensearch-sql
 
-The following example adds the `opensearch-asynchronous-search` plugin to the Docker environment.
+>The following example adds the `opensearch-asynchronous-search` plugin to the Docker environment.
 
 ```yaml
 services:
@@ -171,9 +171,9 @@ services:
 
 ## FPM container
 
-**Container name**: fpm<br/>
-**Docker base image**: [magento/magento-cloud-docker-php][php-cloud], which is based on the [php](https://hub.docker.com/_/php) Docker image<br/>
-**Ports exposed**: `9000`, `9001`
+- **Container name**: fpm
+- **Docker base image**: [magento/magento-cloud-docker-php][php-cloud], which is based on the [php](https://hub.docker.com/_/php) Docker image
+- **Ports exposed**: `9000`, `9001`
 
 The FPM container includes the following volumes:
 
@@ -207,9 +207,9 @@ Optionally, you can add Xdebug to your Cloud Docker environment to debug your PH
 
 ## MailHog container
 
-**Container name**: mailhog<br/>
-**Docker base image**: [mailhog][]<br/>
-**Ports**: SMTP:`1025`, HTTP:`8025`
+- **Container name**: mailhog
+- **Docker base image**: [mailhog][]
+- **Ports**: SMTP:`1025`, HTTP:`8025`
 
 The default Cloud Docker configuration includes the [MailHog service][] as a replacement for the Sendmail service. Sendmail can cause performance issues in the local Docker environment.
 
@@ -229,17 +229,17 @@ If needed, you can disable the MailHog service when you generate the Docker comp
 
 ## RabbitMQ container
 
-**Container name**: rabbitmq<br/>
-**Docker base image**: [rabbitmq][]<br/>
-**Ports exposed**: `4369`, `5671`, `5672`, `25672`
+- **Container name**: rabbitmq
+- **Docker base image**: [rabbitmq][]
+- **Ports exposed**: `4369`, `5671`, `5672`, `25672`
 
 The RabbitMQ container for Cloud Docker for Commerce is a standard RabbitMQ container with no configuration or changes.
 
 ## Redis container
 
-**Container name**: redis<br/>
-**Docker base image**: [redis][]<br/>
-**Ports exposed**: `6379`
+- **Container name**: redis
+- **Docker base image**: [redis][]
+- **Ports exposed**: `6379`
 
 The Redis container for Cloud Docker for Commerce is a standard container with no customization, no persistence, and no additional configuration.
 
@@ -251,25 +251,25 @@ docker-compose run --rm redis redis-cli -h redis
 
 ## Selenium container
 
-**Container name**: selenium<br/>
-**Docker base image**: [selenium/standalone-chrome/](https://hub.docker.com/r/selenium/standalone-chrome), based on the [selenium/standalone-chrome/](https://hub.docker.com/r/selenium/standalone-chrome/h) Docker image<br/>
-**Ports exposed**: `4444`
+- **Container name**: selenium
+- **Docker base image**: [selenium/standalone-chrome/](https://hub.docker.com/r/selenium/standalone-chrome), based on the [selenium/standalone-chrome/](https://hub.docker.com/r/selenium/standalone-chrome/h) Docker image
+- **Ports exposed**: `4444`
 
 The Selenium container enables the [Magento Functional Testing Framework (MFTF)](https://devdocs.magento.com/mftf/docs/introduction.html) for application testing in the Cloud Docker environment. See [Magento application testing](test-app-mftf.md).
 
 ## Test container
 
-**Container name**: test<br/>
-**Docker base image**: [magento/magento-cloud-docker-php][php-cloud], based on the [magento/magento-cloud-docker-php][php-cloud] Docker image<br/>
-**Ports exposed**: None
+- **Container name**: test
+- **Docker base image**: [magento/magento-cloud-docker-php][php-cloud], based on the [magento/magento-cloud-docker-php][php-cloud] Docker image
+- **Ports exposed**: None
 
 The Test container, based on the [magento/magento-cloud-docker-php][php-cloud] Docker image, has a writable file system and is used for application testing in the Cloud Docker environment. See [Magento application testing](test-app-mftf.md).
 
 ## TLS container
 
-**Container name**: tls<br/>
-**Docker base image**: [magento/magento-cloud-docker-nginx:1.19-1.2.0][tls]<br>
-**Ports**: `443` (default), `8080:80` (Varnish bypass)
+- **Container name**: tls
+- **Docker base image**: [magento/magento-cloud-docker-nginx:1.19-1.2.0][tls]
+- **Ports**: `443` (default), `8080:80` (Varnish bypass)
 
 By default, the TLS container is included with the Docker Compose configuration. However, you can generate a configuration without TLS by adding the `--no-tls` option to the `ece-docker build:compose` command.
 
@@ -293,8 +293,8 @@ To increase the timeout on this container, add the following code to the  `docke
 
 ## Varnish container
 
-**Container name**: varnish<br/>
-**Docker base image**: [magento/magento-cloud-docker-varnish][varnish], based on the `[centos]` Docker image
+- **Container name**: varnish
+- **Docker base image**: [magento/magento-cloud-docker-varnish][varnish], based on the `[centos]` Docker image
 
 The Varnish container simulates Fastly and is useful for testing VCL snippets.
 
@@ -316,9 +316,9 @@ docker-compose exec varnish varnishadm ban req.url '~' '.'
 
 ## Web container
 
-**Container name**: web<br/>
-**Docker base image**: [magento/magento-cloud-docker-nginx][nginx], based on the `[centos]` Docker image<br/>
-**Ports exposed**: None
+- **Container name**: web
+- **Docker base image**: [magento/magento-cloud-docker-nginx][nginx], based on the `[centos]` Docker image
+- **Ports exposed**: None
 
 The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](containers.md#request-flow).
 
@@ -360,9 +360,9 @@ The NGINX configuration for this container is the standard Adobe Commerce [nginx
 
 ## Zookeeper container
 
-**Container name**: Zookeeper<br/>
-**Docker base image**: [zookeeper/latest/](https://hub.docker.com/_/zookeeper)<br/>
-**Ports exposed**: 2181
+- **Container name**: Zookeeper
+- **Docker base image**: [zookeeper/latest/][zoo]
+- **Ports exposed**: 2181
 
 Developers can use Zookeeper to manage locks to prevent the launch of duplicate cron jobs and cron groups for Adobe Commerce and Magento Open Source projects running on servers with multiple nodes.
 
@@ -376,7 +376,7 @@ For projects hosted on other infrastructure, developers can add the Zookeeper co
 
 The latest Zookeeper version is installed by default from Docker Hub. You can add the following options to customize the installation:
 
-- `--zookeeper-version`—Specify a specific version to install from [Docker Hub](https://hub.docker.com/_/zookeeper).
+- `--zookeeper-version`—Specify a specific version to install from Docker Hub.
 - `--zookeeper-image`—Specify the Zookeeper image name to install from a custom image.
 
 <!--Link definitions-->
@@ -404,3 +404,4 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [tls]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
 [varnish]: https://hub.docker.com/r/magento/magento-cloud-docker-varnish
 [web config]: https://github.com/magento/docker
+[zoo]: https://hub.docker.com/_/zookeeper

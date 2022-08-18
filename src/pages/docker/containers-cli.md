@@ -7,10 +7,10 @@ description:
 
 The following CLI containers, most of which are based on a [PHP-CLI version 7 image], provide `magento-cloud` and `ece-tools` commands to perform file system operations and interact with the application:
 
--  `build`—extends the CLI container to perform operations with writable filesystem, similar to the build phase
--  `deploy`—extends the CLI container to use read-only file system, similar to the deploy phase
--  `cron`—extends the CLI container to run cron
--  `node`—based on node image, used for NPM activities
+- `build`—extends the CLI container to perform operations with writable filesystem, similar to the build phase
+- `deploy`—extends the CLI container to use read-only file system, similar to the deploy phase
+- `cron`—extends the CLI container to run cron
+- `node`—based on node image, used for NPM activities
 
 For example, you can check the state of your project using the _ideal-state_ wizard:
 
@@ -47,8 +47,8 @@ See the [scripts in the Cloud Docker for Commerce GitHub repository][scripts] to
 
 ## Build container
 
-**Container name**: build<br/>
-**Docker base image**: [magento/magento-cloud-docker-php], which is based on the Docker [php] image<br/>
+- **Container name**: build
+- **Docker base image**: [magento/magento-cloud-docker-php], which is based on the Docker [php] image
 
 The Build container mimics the behavior of the Adobe Commerce on cloud infrastructure build process so that testing the build and deploy process is as close to testing in production as possible.
 
@@ -60,8 +60,8 @@ docker-compose run --rm build magento-command setup:static-content:deploy
 
 ## Cron container
 
-**Container name**: cron<br/>
-**Docker base image**: [magento/magento-cloud-docker-php], which is based on the Docker [php] image<br/>
+- **Container name**: cron
+- **Docker base image**: [magento/magento-cloud-docker-php], which is based on the Docker [php] image
 
 The Cron container runs operations in the background immediately after the Docker environment starts. This container uses the cron configuration defined in the [`crons` property of the `.magento.app.yaml` file](https://devdocs.magento.com/cloud/project/magento-app-properties.html#crons). This container has no custom configuration.
 
@@ -73,8 +73,8 @@ For details on managing cron jobs in the Cloud Docker environment, see [Manage c
 
 ## Deploy container
 
-**Container name**: deploy<br/>
-**Docker base image**: [magento/magento-cloud-docker-php], which is based on the [php] Docker image<br/>
+- **Container name**: deploy
+- **Docker base image**: [magento/magento-cloud-docker-php], which is based on the [php] Docker image
 
 The Deploy container mimics the Adobe Commerce on cloud infrastructure deploy process so that testing the build and deploy process is as close to testing in production as possible.
 
@@ -86,8 +86,8 @@ docker-compose run --rm deploy magento-command index:reindex
 
 ## Node container
 
-**Container name**: node<br/>
-**Docker base image**: [node]<br/>
+- **Container name**: node
+- **Docker base image**: [node]
 
 The Node container is based on the [official Node Docker image][node]. You can use the container to install NPM dependencies, such as Gulp, or run any Node-based command-line tools.
 

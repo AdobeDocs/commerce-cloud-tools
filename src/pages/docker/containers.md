@@ -48,7 +48,7 @@ The following table shows the options to customize service container configurati
 | [redis](containers-service.md#redis-container) | Redis | `--redis` | 3.2, 5.0, 6.0 | Standard redis container |
 | [selenium](containers-service.md#selenium-container) | Selenium | `--with-selenium`<br>`--selenium-version`<br>`--selenium-image` | Any | Enables application testing using the Magento Functional Testing Framework (MFTF) |
 | [test](containers-service.md#test-container) | PHP CLI | `--with-test` | Any | Optional container with a writable file system for running tests |
-| [tls](containers-service.md#tls-container) | SSL Endpoint | `--tls-port`<br/>`--no-tls` | nginx 1.19 | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).<br/>Use the `--no-tls` option to disable tls. |
+| [tls](containers-service.md#tls-container) | SSL Endpoint | `--tls-port`<br>`--no-tls` | nginx 1.19 | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).<br>Use the `--no-tls` option to disable tls. |
 | [varnish](containers-service.md#varnish-container) | Varnish | `--no-varnish` | 4, 6.2, 6.6 | Varnish is provisioned by default. Use the `--no-varnish` option to skip Varnish service installation. |
 | [zookeeper](containers-service.md#zookeeper-container) | Zookeeper | `--with-zookeeper`<br>`--zookeeper-version`<br>`--zookeeper-image` | latest (default)<br>User-specified version | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.<br>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
 
@@ -63,7 +63,7 @@ Use the following command to view all available options for the `ece-docker buil
 Web requests to `https://magento2.docker/` are handled by the Docker containers using the following request flow:
 
 1. TLS
-1. _Varnish_
+1. Varnish
 1. Web (nginx)
 1. FPM
 
