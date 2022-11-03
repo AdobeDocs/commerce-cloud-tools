@@ -98,7 +98,7 @@ root@deploy:/app#
 | Clears Redis cache                                                                                             | `./bin/magento-docker flush-redis`     |
 | Clears Varnish cache                                                                                           | `./bin/magento-docker flush-varnish`   |
 | Access database                                                                                                | `./bin/magento-docker ece-db`          |
-| Run a command in a PHP container<br>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
+| Run a command in a PHP container<br/>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
 
 Use the following command to view the magento-docker CLI command help:
 

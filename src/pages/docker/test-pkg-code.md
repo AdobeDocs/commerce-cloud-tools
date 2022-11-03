@@ -13,7 +13,7 @@ Before you run tests, you must prepare your Docker environment and update the te
 
 Use the following table to review the test configuration files and available tests for each package.
 
-| Package                       | Test configuration                                                         | Test folder <br>(`src/Test/Functional/Acceptance`)                 |
+| Package                       | Test configuration                                                         | Test folder <br/>(`src/Test/Functional/Acceptance`)                 |
 | ----------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | magento/ece-tools     | [codeception.dist.yml][magento/ece-tools codeception.dist.yml]     | [Acceptance tests][magento/ece-tools Acceptance tests]     |
 | magento/magento-cloud-components | [codeception.dist.yml][magento/magento-cloud-components codeception.dist.yml] | [Acceptance tests][magento/magento-cloud-components Acceptance tests] |
