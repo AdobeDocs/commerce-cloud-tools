@@ -138,9 +138,9 @@ return [
 
 ## Import a database dump
 
->[!WARNING]
->
->Before you import a database from an existing Adobe Commerce installation into a new cloud project, you must add the encryption key from the remote environment to the new environment, and then deploy the changes. See [Add the encryption key][].
+<InlineAlert variant="warning" slots="text"/>
+
+Before you import a database from an existing Adobe Commerce installation into a new cloud project, you must add the encryption key from the remote environment to the new environment, and then deploy the changes. See [Add the encryption key][].
 
 **To import a database dump into the Docker environment**:
 
@@ -150,17 +150,17 @@ return [
    magento-cloud db:dump
    ```
 
-   >[!INFO]
-   >
-   >The `magento-cloud db:dump` command runs the [mysqldump][] command with the `--single-transaction` flag, which allows you to back up your database without locking the tables.
+   <InlineAlert variant="info" slots="text"/>
+
+   The `magento-cloud db:dump` command runs the [mysqldump][] command with the `--single-transaction` flag, which allows you to back up your database without locking the tables.
 
 1. Place the resulting SQL file into the `.docker/mysql/docker-entrypoint-initdb.d` folder.
 
    The `ece-tools` package imports and processes the SQL file the next time you build and start the Docker environment using the `docker-compose up` command. When you build, you must add the `--with-entrypoint` option to the `ece-docker build:compose` command. This option configures the directories for the imported database. See [Service configuration options][].
 
->[!TIP]
->
->Although it is a more complex approach, you can use GZIP to import the database by _sharing_ the `.sql.gz` file using the `.docker/mnt` directory and import it inside the Docker container.
+<InlineAlert variant="help" slots="text"/>
+
+Although it is a more complex approach, you can use GZIP to import the database by _sharing_ the `.sql.gz` file using the `.docker/mnt` directory and import it inside the Docker container.
 
 ## Customize the database container
 
@@ -182,8 +182,8 @@ db:
       - innodb-buffer-pool-size=134217728
 ```
 
->[!INFO]
->
+<InlineAlert variant="info" slots="text"/>
+
 >See [Docker service containers](containers.md#service-containers) for details about the Database container and container configuration.
 
 <!--Link definitions-->

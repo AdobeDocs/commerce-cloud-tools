@@ -67,9 +67,9 @@ Web requests to `https://magento2.docker/` are handled by the Docker containers 
 1. Web (nginx)
 1. FPM
 
->[!TIP]
->
->You can remove Varnish from the configuration, in which case the traffic passes directly from the TLS container to the Web container.
+<InlineAlert variant="help" slots="text"/>
+
+You can remove Varnish from the configuration, in which case the traffic passes directly from the TLS container to the Web container.
 
 ## Sharing data between host machine and container
 

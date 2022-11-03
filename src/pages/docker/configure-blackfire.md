@@ -1,6 +1,6 @@
 ---
 title: Configure Blackfire.io
-description:
+description: Learn how to configure Blackfire.io and automate performance testing.
 ---
 
 # Configure Blackfire.io
@@ -9,9 +9,9 @@ You can add Blackfire.io to your Cloud Docker for Commerce environment to fully 
 
 Blackfire.io for Adobe Commerce on cloud infrastructure is a PHP profiler and automated performance testing tool for use in development, integration, staging, and production environments. It enables you to locate and investigate performance issues in your environment at the code level and creates a performance profile by tracking every PHP call, method, and SQL query performed by your code.
 
->[!WARNING]
->
->You must have a Blackfire license and account to use Blackfire.io with Adobe Commerce on cloud infrastructure projects. See [Blackfire.io for Adobe Commerce on cloud infrastructure][].
+<InlineAlert variant="warning" slots="text"/>
+
+You must have a Blackfire license and account to use Blackfire.io with Adobe Commerce on cloud infrastructure projects. See [Blackfire.io for Adobe Commerce on cloud infrastructure][].
 
 **To add Blackfire.io to your project configuration**:
 
@@ -46,9 +46,9 @@ Blackfire.io for Adobe Commerce on cloud infrastructure is a PHP profiler and au
    ./bin/magento-docker ece-redeploy
    ```
 
-   >[!INFO]
-   >
-   >If you are using file synchronization, synchronize files as needed. See [Launch Docker in developer mode](developer-mode.md)
+   <InlineAlert variant="info" slots="text"/>
+
+   If you are using file synchronization, synchronize files as needed. See [Launch Docker in developer mode](developer-mode.md).
 
 1. Add context to use locally customized PHP images as described in [Extend the Docker configuration](extend-docker-configuration.md).
 
@@ -70,9 +70,9 @@ Blackfire.io for Adobe Commerce on cloud infrastructure is a PHP profiler and au
       docker-compose run --rm deploy cloud-post-deploy
       ```
 
-   >[!TIP]
-   >
-   >Review messages and notifications during the deployment process and address any errors or notifications as needed.
+   <InlineAlert variant="help" slots="text"/>
+
+   Review messages and notifications during the deployment process and address any errors or notifications as needed.
 
 1. Enable the Varnish cache for the Adobe Commerce application.
 

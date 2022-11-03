@@ -15,9 +15,9 @@ Cloud Docker supports multiple websites or stores by adding subdomains to your c
    auto_prepend_file = /app/magento-vars.php
    ```
 
-   >[!INFO]
-   >
-   >Cloud Docker for Commerce applies the configuration in the `php.ini` file to the Docker environment if it is included in the root directory of your project.
+   <InlineAlert variant="info" slots="text"/>
+
+   Cloud Docker for Commerce applies the configuration in the `php.ini` file to the Docker environment if it is included in the root directory of your project.
 
 1. Add each subdomain to the `/etc/hosts` configuration file.
 

@@ -12,9 +12,9 @@ Cloud Docker for Commerce uses Docker Compose to build and deploy Adobe Commerce
 - [CLI configuration](configuration-sources.md#cli-configuration) using `ece-docker build:compose` command options to override configuration values at runtime
 - [Custom Docker Compose configuration file](configuration-sources.md#build-a-custom-docker-compose-configuration) supports installation for both Cloud and On-premises projects
 
->[!INFO]
->
->When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](docker-quick-reference.md#override-configuration).
+<InlineAlert variant="info" slots="text"/>
+
+When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](docker-quick-reference.md#override-configuration).
 
 ## Run Composer with Docker
 

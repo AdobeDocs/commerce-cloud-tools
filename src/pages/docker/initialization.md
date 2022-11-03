@@ -94,9 +94,9 @@ When you initialize an Adobe Commerce project for Docker development, you must c
            path: 'pub/static'
    ```
 
->[!INFO]
->
->This default configuration file provides the minimum configuration for the Docker environment. See [Configure and manage your project and environment](manage-docker-environment.md).
+<InlineAlert variant="info" slots="text"/>
+
+This default configuration file provides the minimum configuration for the Docker environment. See [Configure and manage your project and environment](manage-docker-environment.md).
 
 ## Update the hosts file and install dependencies
 

@@ -7,9 +7,9 @@ description:
 
 The [Cron container](containers-cli.md#cron-container) runs the scheduled cron jobs automatically based on the cron configuration defined in the [`crons` property of the `.magento.app.yaml` file][cron-property], and any custom configuration specified in the `docker-compose-override.yml` file.
 
->[!INFO]
->
->Adobe Commerce on cloud infrastructure includes a default cron configuration, which can be further customized in the `.magento.app.yaml` file. See [Set up cron jobs](manage-cron-jobs.md). You can also use the `docker-compose-override.yml` file to customize the Cron container configuration for Docker without updating the environment configuration for the Adobe Commerce on cloud infrastructure project. The custom settings are applied during the build and deploy process.
+<InlineAlert variant="info" slots="text"/>
+
+dobe Commerce on cloud infrastructure includes a default cron configuration, which can be further customized in the `.magento.app.yaml` file. See [Set up cron jobs](manage-cron-jobs.md). You can also use the `docker-compose-override.yml` file to customize the Cron container configuration for Docker without updating the environment configuration for the Adobe Commerce on cloud infrastructure project. The custom settings are applied during the build and deploy process.
 
 The Adobe Commerce cron implementation has the following limitations:
 

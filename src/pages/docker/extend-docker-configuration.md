@@ -109,9 +109,9 @@ You can add PHP extensions to the PHP container by adding the extension configur
 
       In this case, the `bcmath` PHP core extension installs from `docker-php-source` images.
 
-   >[!INFO]
-   >
-   >The configuration you specify depends on the location of the extension source files and method of installation. You can add PHP core extensions from the official Docker PHP images, from the PECL repository, or using an installation script. For details on the configuration attributes and format for the `getConfig` method, see [PHP extension configuration reference](#php-extension-configuration-reference).
+   <InlineAlert variant="info" slots="text"/>
+
+   The configuration you specify depends on the location of the extension source files and method of installation. You can add PHP core extensions from the official Docker PHP images, from the PECL repository, or using an installation script. For details on the configuration attributes and format for the `getConfig` method, see [PHP extension configuration reference](#php-extension-configuration-reference).
 
 1. Enable the extension by default, or by adding it to the `.magento.app.yaml` file:
 
@@ -201,9 +201,9 @@ Use the following attributes to specify the PHP extension configuration in the `
 `EXTENSION_PACKAGE_NAME` | Specifies the extension package name. This value is used to generate the installation command.
 `EXTENSION_INSTALLATION_SCRIPT` | For extension type `EXTENSION_TYPE_INSTALLATION_SCRIPT`, specifies the Bash script to install the extension.
 
->[!INFO]
->
->For more information about extension types and extension installation, see How to install more PHP extensions section of the [PHP, Docker Official Images][] page in _Docker Hub_.
+<InlineAlert variant="info" slots="text"/>
+
+For more information about extension types and extension installation, see How to install more PHP extensions section of the [PHP, Docker Official Images][] page in _Docker Hub_.
 
 #### Example: Core extension configuration
 

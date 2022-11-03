@@ -1,6 +1,6 @@
 ---
 title: Configuration sources
-description:
+description: placeholder
 ---
 
 # Configuration sources
@@ -12,9 +12,9 @@ You can create the Docker Compose configuration to build and deploy the Docker c
 -  [CLI configuration](#cli-configuration) using `ece-docker build:compose` command options
 -  [Custom Docker Compose configuration file](#build-a-custom-docker-compose-configuration) supports installation for both Cloud and On-premises projects
 
->[!INFO]
->
->When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](docker-quick-reference.md#override-configuration).
+<InlineAlert variant="info" slots="text"/>
+
+When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](docker-quick-reference.md#override-configuration).
 
 ## Cloud configuration for Commerce
 
@@ -142,9 +142,9 @@ Use the command help to view the available options:
 php ./vendor/bin/ece-docker build:compose -h
 ```
 
->[!TIP]
->
->See [Service configuration options](containers.md#service-configuration-options) for additional information about the service configuration options for the `ece-docker build:compose` command.
+<InlineAlert variant="tip" slots="text"/>
+
+See [Service configuration options](containers.md#service-configuration-options) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
 ## Build a custom Docker Compose configuration
 

@@ -13,9 +13,9 @@ Cloud Docker for Commerce provides an option to deploy Adobe Commerce to a Docke
 - **Multiple sync options**—Provides three file synchronization options: `native`, `mutagen`, and `manual-native`. The manual-native option provides the best performance on macOS and Windows.
 - **Extensibility**—Use a standard Docker configuration file to extend and customize your development environment
 
->[!INFO]
->
->Cloud Docker for Commerce is a Magento Community Engineering project supported by the Magento developer community. For details and support information, see [Get support for Cloud Docker for Commerce](get-support.md).
+<InlineAlert variant="info" slots="text"/>
+
+Cloud Docker for Commerce is a Magento Community Engineering project supported by the Magento developer community. For details and support information, see [Get support for Cloud Docker for Commerce](get-support.md).
 
 ## Host Operating Systems
 
@@ -83,9 +83,9 @@ Cloud Docker for Commerce binds to port `80` on your host environment. If you en
 sudo apachectl stop
 ```
 
->[!INFO]
->
->If you start your Docker environment with Apache running, the following error displays: `Cannot start service tls: Ports are not available: port is already allocated`
+<InlineAlert variant="info" slots="text"/>
+
+If you start your Docker environment with Apache running, the following error displays: `Cannot start service tls: Ports are not available: port is already allocated`
 
 ### Composer authentication keys
 

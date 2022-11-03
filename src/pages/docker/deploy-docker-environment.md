@@ -9,9 +9,9 @@ By default, Cloud Docker for Commerce deploys Adobe Commerce to a read-only file
 
 You use the `ece-docker build:compose` command to generate the Docker Compose configuration file from specified configuration settings and to deploy Adobe Commerce on cloud infrastructure to a local Docker environment. You supply the configuration settings from multiple sources depending on your requirements. See [Configure sources](configuration-sources.md).
 
->[!WARNING]
->
->When you run the `ece-docker build:compose` command, it regenerates the `docker-compose.yml` configuration file and overwrites the existing `docker-compose.yml` configuration file. You can save custom configurations across builds by adding the settings to a `docker-compose.override.yml` file. See a detailed example in the [Docker quick reference](docker-quick-reference.md).
+<InlineAlert variant="warning" slots="text"/>
+
+When you run the `ece-docker build:compose` command, it regenerates the `docker-compose.yml` configuration file and overwrites the existing `docker-compose.yml` configuration file. You can save custom configurations across builds by adding the settings to a `docker-compose.override.yml` file. See a detailed example in the [Docker quick reference](docker-quick-reference.md).
 
 ## Set the launch mode
 
@@ -29,9 +29,9 @@ For example, the following command starts the Docker configuration generator for
 
 To skip the interactive mode, use the `-n, --no-interaction` option.
 
->[!INFO]
->
->The `mode` option for the `ece-docker build:compose` command does not affect the mode. It determines the Adobe Commerce on cloud infrastructure file system installation and read-only or read-write behavior.
+<InlineAlert variant="info" slots="text"/>
+
+The `mode` option for the `ece-docker build:compose` command does not affect the mode. It determines the Adobe Commerce on cloud infrastructure file system installation and read-only or read-write behavior.
 
 ## Stop and start containers
 
@@ -49,6 +49,6 @@ Use the following command to stop and remove the Docker configuration:
    docker-compose down -v
    ```
 
->[!WARNING]
->
->This command removes all components of your local Docker instance including containers, networks, volumes, and images except for the persistent database and the `magento-sync` volume. See [Rebuild a clean environment](containers.md#rebuild-a-clean-environment).
+<InlineAlert variant="warning" slots="text"/>
+
+This command removes all components of your local Docker instance including containers, networks, volumes, and images except for the persistent database and the `magento-sync` volume. See [Rebuild a clean environment](containers.md#rebuild-a-clean-environment).

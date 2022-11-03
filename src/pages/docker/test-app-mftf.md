@@ -11,9 +11,9 @@ In a Cloud Docker development environment, you can use the [Magento Functional T
 docker-compose run test mftf-command generate:tests --debug=none
 ```
 
->[!INFO]
->
->Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
+<InlineAlert variant="info" slots="text"/>
+
+Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
 
 **To set up and run MFTF tests in a Cloud Docker environment**:
 
@@ -62,9 +62,9 @@ docker-compose run test mftf-command generate:tests --debug=none
    docker-compose run deploy bash -c "echo \"$CONFIG\" > /app/dev/tests/acceptance/.env"
    ```
 
-   >[!INFO]
-   >
-   >In this example, the variable configuration is for testing a Magento application deployed to the Docker environment. To run tests in a remote environment, change the value of `MAGENTO_BASE_URL` to the remote URL and update the credentials as needed.
+   <InlineAlert variant="info" slots="text"/>
+
+   In this example, the variable configuration is for testing a Magento application deployed to the Docker environment. To run tests in a remote environment, change the value of `MAGENTO_BASE_URL` to the remote URL and update the credentials as needed.
 
 1. Disable the Magento settings that conflict with MFTF functionality.
 

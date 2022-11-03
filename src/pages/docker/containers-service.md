@@ -7,9 +7,9 @@ description:
 
 The following containers provide the services required to build, deploy, and run Adobe Commerce sites.
 
->[!INFO]
->
->See [Service configuration options](containers.md#service-containers) to customize container configuration when you build the Docker compose configuration file.
+<InlineAlert variant="info" slots="text"/>
+
+See [Service configuration options](containers.md#service-containers) to customize container configuration when you build the Docker compose configuration file.
 
 ## Database container
 
@@ -71,9 +71,9 @@ php vendor/bin/ece-docker build:compose --es-env-var=ES_JAVA_OPTS="-Xms512m -Xmx
 
 See [Important Elasticsearch configuration][] in the Elasticsearch documentation for details about available configuration options.
 
->[!INFO]
->
->If your Cloud project uses Adobe Commerce version 2.3.5 or earlier with MySQL search, add the `--no-es` option to skip the Elasticsearch container configuration when you generate the Docker Compose configuration file: `ece-docker build:compose --no-es`.
+<InlineAlert variant="info" slots="text"/>
+
+If your Cloud project uses Adobe Commerce version 2.3.5 or earlier with MySQL search, add the `--no-es` option to skip the Elasticsearch container configuration when you generate the Docker Compose configuration file: `ece-docker build:compose --no-es`.
 
 ### Elasticsearch plugins
 
@@ -131,9 +131,9 @@ php vendor/bin/ece-docker build:compose --os-env-var=OPENSEARCH_JAVA_OPTS="-Xms5
 
 See [Important OpenSearch configuration] in the OpenSearch documentation for details about available configuration options.
 
->[!INFO]
->
->If your Cloud project uses Adobe Commerce version 2.4.4 or earlier with MySQL or Elasticsearch search, add the `--no-os` option to skip the OpenSearch container configuration when you generate the Docker Compose configuration file: `ece-docker build:compose --no-os`
+<InlineAlert variant="info" slots="text"/>
+
+If your Cloud project uses Adobe Commerce version 2.4.4 or earlier with MySQL or Elasticsearch search, add the `--no-os` option to skip the OpenSearch container configuration when you generate the Docker Compose configuration file: `ece-docker build:compose --no-os`
 
 ### OpenSearch plugins
 
@@ -195,9 +195,9 @@ You can customize PHP service settings for PHP-FPM and CLI containers by adding 
 
 The Cloud Docker deployment process copies the `php.ini` file to the Docker environment after applying the default Docker and extension configurations and applies the settings to the FPM and CLI containers.
 
->[!WARNING]
->
->If you use the `mutagen` file synchronization tools, the `php.ini` file is available only after the file synchronization completes.
+<InlineAlert variant="warning" slots="text"/>
+
+If you use the `mutagen` file synchronization tools, the `php.ini` file is available only after the file synchronization completes.
 
 ### Customize PHP extensions
 

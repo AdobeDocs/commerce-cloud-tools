@@ -20,9 +20,9 @@ Use the following table to review the test configuration files and available tes
 | magento/magento-cloud-docker | [codeception.dist.yml][magento/magento-cloud-docker codeception.dist.yml] | [Acceptance tests][magento/magento-cloud-docker Acceptance tests] |
 | magento/magento-cloud-components | [codeception.dist.yml][magento/magento-cloud-patches codeception.dist.yml] | [Acceptance tests][magento/magento-cloud-patches Acceptance tests] |
 
->[!INFO]
->
->For Magento application testing, use the Magento Application Testing (MFTF) framework to run functional tests. See [Application testing](test-app-mftf.md).
+<InlineAlert variant="info" slots="text"/>
+
+For Magento application testing, use the Magento Application Testing (MFTF) framework to run functional tests. See [Application testing](test-app-mftf.md).
 
 ## Prepare the Docker environment for testing
 
@@ -170,9 +170,9 @@ modules:
       ...
 ```
 
->[!INFO]
->
->You can locate the test configuration file in the root directory for each package. (See [Test resources](#test-resources)).
+<InlineAlert variant="info" slots="text"/>
+
+You can locate the test configuration file in the root directory for each package. (See [Test resources](#test-resources)).
 
 ### Run a specific test
 
@@ -205,9 +205,9 @@ PostDeployCest: Test post deploy | {"ADMIN_EMAIL":"admin@example.com"}
 ✔ PostDeployCest: Test post deploy | {"ADMIN_EMAIL":"admin@example.com"} (210.41s)
 ```
 
->[!INFO]
->
->You can see the available tests for each package in the package source files. See [Test resources](#test-resources).
+<InlineAlert variant="info" slots="text"/>
+
+You can see the available tests for each package in the package source files. See [Test resources](#test-resources).
 
 ### Run all tests
 
@@ -243,9 +243,9 @@ Use the following commands to run all available tests for each PHP version:
    ./vendor/bin/codecept run -x php71 -x php72 -x php73 -x php74 --steps
    ```
 
->[!TIP]
->
->For help with Codeception command options, use the `.vendor/bin/codecept run --help` command, or see the [Codeception CLI documentation][] for the installed version.
+<InlineAlert variant="help" slots="text"/>
+
+For help with Codeception command options, use the `.vendor/bin/codecept run --help` command, or see the [Codeception CLI documentation][] for the installed version.
 
 <!--Link definitions-->
 

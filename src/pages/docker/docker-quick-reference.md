@@ -1,6 +1,6 @@
 ---
 title: Docker development quick reference
-description:
+description: See a list of common Docker commands.
 ---
 
 # Cloud Docker quick reference
@@ -30,9 +30,9 @@ Docker Compose is a tool for defining and running multi-container Docker applica
 | List images                                           | `docker-compose images`                                    |
 | List containers and ports                             | `docker-compose ps` or `docker ps`                         |
 
->[!INFO]
->
->The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker-compose run`][] in the _Docker command-line reference_.
+<InlineAlert variant="info" slots="text"/>
+
+The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker-compose run`][] in the _Docker command-line reference_.
 
 ## Docker Compose configuration generator
 
@@ -44,9 +44,9 @@ Use the following command to view the available build options:
 php ./vendor/bin/ece-docker build:compose -h
 ```
 
->[!INFO]
->
->See [Service versions](containers.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
+<InlineAlert variant="info" slots="text"/>
+
+See [Service versions](containers.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
 ### Override configuration
 
