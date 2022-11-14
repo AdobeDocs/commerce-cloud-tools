@@ -28,6 +28,16 @@ module.exports = [
   {
     title: "Test",
     path: '/docker/test/',
+    pages: [
+      {
+        title: "Application Testing",
+        path: '/docker/test/test-app-mftf.md/',
+      },
+      {
+        title: "Code Testing",
+        path: '/test/test-pkg-code.md/',
+      },
+    ],
   },
   {
     title: "Upgrade",

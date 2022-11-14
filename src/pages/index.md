@@ -1,5 +1,5 @@
 ---
-title: Overview - Adobe Commerce Cloud Tools
+title: Commerce Cloud Tools
 description: This is the overview page of the Commerce Cloud Tools.
 ---
 
@@ -7,10 +7,32 @@ description: This is the overview page of the Commerce Cloud Tools.
 
 ![Commerce Cloud Docker](_images/banner-hex-violet.png)
 
-# Adobe Commerce Cloud Tools
+# Commerce Cloud Tools
 
 This is the overview page of the Commerce Cloud Tools.
 
-## Contributing
+<Resources slots="heading, links"/>
 
-We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull request with your contribution.
+## Resources
+
+*  Commerce Cloud guide
+
+## Overview
+
+This documentation provides resources for deploying Adobe Commerce to a Docker environment for development, testing, and automation tasks.
+
+## Discover
+
+Use these sections to learn about Cloud Docker.
+
+<DiscoverBlock slots="heading, link, text"/>
+
+### Sections
+
+[Cloud Docker for Commerce Guide](../pages/docker/)
+
+Explore Cloud Docker.
+
+## Contributing to this documentation
+
+We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-cloud-tools), and open a pull request.
