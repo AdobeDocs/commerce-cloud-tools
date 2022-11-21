@@ -1,46 +1,50 @@
 module.exports = [
   {
     title: "Introduction",
-    path: '/docker/',
+    path: "/docker/",
+  },
+  {
+    title: "Architecture",
+    path: "/docker/containers/",
     pages: [
       {
-        title: "Container Architecture",
-        path: '/docker/containers.md/',
+        title: "Service containers",
+        path: "/docker/containers/service/",
       },
       {
-        title: "Test the nav",
-        path: '/docker/test/',
+        title: "CLI containers",
+        path: "/docker/containers/cli/",
       },
     ],
   },
   {
     title: "Install",
-    path: '/docker/test/',
-  },
-  {
-    title: "Deploy",
-    path: '/docker/test/',
-  },
-  {
-    title: "Configure",
-    path: '/docker/test/',
-  },
-  {
-    title: "Test",
-    path: '/docker/test/',
+    path: "/docker/initialization/",
     pages: [
       {
-        title: "Application Testing",
-        path: '/docker/test/test-app-mftf.md/',
+        title: "Local development",
+        path: "/docker/local-development/",
       },
       {
-        title: "Code Testing",
-        path: '/test/test-pkg-code.md/',
+        title: "File synchronization",
+        path: "/docker/synchronize-data/",
       },
     ],
   },
   {
+    title: "Deploy",
+    path: "/docker/initialization/",
+  },
+  {
+    title: "Configure",
+    path: "/docker/configuration-sources/",
+  },
+  {
+    title: "Test",
+    path: "/docker/test/",
+  },
+  {
     title: "Upgrade",
-    path: '/docker/test/',
+    path: "/docker/upgrade-docker-package",
   },
 ];

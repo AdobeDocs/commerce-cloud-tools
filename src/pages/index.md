@@ -13,9 +13,10 @@ This is the overview page of the Commerce Cloud Tools.
 
 <Resources slots="heading, links"/>
 
-## Resources
+#### Resources
 
-*  Commerce Cloud guide
+- [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs) (Adobe Developer site)
+- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League site)
 
 ## Overview
 
@@ -23,15 +24,28 @@ This documentation provides resources for deploying Adobe Commerce to a Docker e
 
 ## Discover
 
-Use these sections to learn about Cloud Docker.
+<DiscoverBlock width="100%" slots="heading, link, text"/>
+
+### Cloud Infrastructure
+
+[Commerce on Cloud Infrastructure guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html)
+
+Learn more about our automated hosting platform with a self-service approach to building, deploying, and managing your Commerce application in a cloud-native environment.
 
 <DiscoverBlock slots="heading, link, text"/>
 
-### Sections
+### Tools
 
-[Cloud Docker for Commerce Guide](../pages/docker/)
+[Cloud Docker for Commerce](../pages/docker/)
 
-Explore Cloud Docker.
+Use the Cloud Docker tool for development and testing.
+
+<DiscoverBlock width="100%" slots="heading, text"/>
+
+### Commerce documentation
+
+- [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs) (Adobe Developer site)
+- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League site)
 
 ## Contributing to this documentation
 

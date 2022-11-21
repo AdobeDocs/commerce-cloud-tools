@@ -4,11 +4,7 @@ module.exports = [
       path: "/",
     },
     {
-      title: "Docker Deployment Tool",
+      title: "Cloud Docker for Commerce",
       path: "/docker/",
     },
-    // {
-    //   title: "Ece-tools Package",
-    //   path: "/ece-tools/",
-    // },
   ];

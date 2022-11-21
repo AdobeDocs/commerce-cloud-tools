@@ -1,9 +1,9 @@
 ---
 title: Docker services containers
-description:
+description: placeholder
 ---
 
-# Docker Service containers
+# Service containers
 
 The following containers provide the services required to build, deploy, and run Adobe Commerce sites.
 

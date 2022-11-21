@@ -1,9 +1,9 @@
 ---
 title: Docker container architecture
-description:
+description: placeholder
 ---
 
-# Cloud Docker Container Architecture
+# Container Architecture
 
 The [`magento-cloud-docker` repository][docker-repo] contains build information to create a Docker environment with the required specifications for Adobe Commerce on cloud infrastructure. The build configuration creates a Docker instance with CLI and service containers required to run Adobe Commerce on cloud infrastructure in a local Docker environment. You can customize the Docker containers available in the repository and add more as needed.
 
@@ -13,14 +13,14 @@ Cloud Docker for Commerce generates the `docker-compose.yml` file to the require
 
 The following CLI containers, most of which are based on a PHP-CLI version 7 Docker image, provide `magento-cloud` and `ece-tools` commands to perform file system operations and interact with the application:
 
-| Name                 | Service          | Key & options | Available Versions | Notes                                                           |
+| Name                 | Service          | Key & options | Available Versions | Notes                                                            |
 |----------------------|------------------|---------------|--------------------|------------------------------------------------------------------|
 | [node](containers-cli.md#node-container) | Node  | `--node` | 6, 8, 10, 11 | Optional Node container used for gulp or other NPM-based commands |
 | [cron](containers-cli.md#cron-container) | Cron Jobs | `--with-cron` | none | Optional PHP Container runs cron tasks |
 | [build](containers-cli.md#build-container) | Build Container  | none | none | PHP Container, runs build process |
 | [deploy](containers-cli.md#deploy-container) | Deploy Container | none | none | PHP Container, runs the deploy process |
 
-See [Docker CLI containers](containers-cli.md).
+See [CLI containers](cli.md).
 
 ## Service containers
 
@@ -31,6 +31,8 @@ For example, the following command starts the Docker configuration generator in 
 ```bash
 ./vendor/bin/ece-docker build:compose --mode="developer" --php 7.2
 ```
+
+See [Service containers](service.md).
 
 ### Service configuration options
 
