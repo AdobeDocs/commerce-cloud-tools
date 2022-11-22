@@ -1,17 +1,17 @@
 ---
 title: Get support for Cloud Docker for Adobe Commerce
-description:
+description: Read about the community support mechanisms for Cloud Docker for Commerce.
 ---
 
 # Get support for Cloud Docker
 
 Cloud Docker for Commerce is a Magento Community Engineering project supported by the Magento developer community. You have several options to get support and learn more about Cloud Docker for Commerce and local development.
 
--  **[Magento Community Engineering Slack organization]**–For support, questions, or discussion, chat with us in the **#cloud-docker** and **#cloud** channels. To join, send a request to _engcom@adobe.com_ or [sign yourself up] using Slack.
+-  **[Magento Community Engineering Slack organization][]**–For support, questions, or discussion, chat with us in the **#cloud-docker** and **#cloud** channels. To join, send a request to _engcom@adobe.com_ or sign up using [Slack](https://opensource.magento.com/slack).
 
--  **[magento/magento-cloud-docker GitHub repository]**–Visit the GitHub repository to read discussions about current issues, check current development, and submit issues or pull requests to improve the project.
+-  **[magento/magento-cloud-docker GitHub repository][]**–Visit the GitHub repository to read discussions about current issues, check current development, and submit issues or pull requests to improve the project.
 
--  **Magento Cloud Community Engineering demos**–Magento hosts Cloud demo sessions where you can learn about developing Adobe Commerce on cloud infrastructure, including information about local development with Cloud Docker for Commerce. For a schedule and recordings of previous demos, see the [Magento Cloud Community Engineering Demo Schedule].
+-  **[Magento Cloud Community Engineering demos][]**–Magento hosts Cloud demo sessions where you can learn about developing Adobe Commerce on cloud infrastructure, including information about local development with Cloud Docker for Commerce. For a schedule and recordings of previous demos.
 
 ## Troubleshooting
 
@@ -44,7 +44,6 @@ sysctl -w vm.max_map_count=262144
 
 <!--Link definitions-->
 
-[Magento Cloud Community Engineering demo schedule]: https://spark.adobe.com/page/PbxJoujH7oRTc/
+[Magento Cloud Community Engineering demos]: https://spark.adobe.com/page/PbxJoujH7oRTc/
 [Magento Community Engineering Slack organization]: https://magentocommeng.slack.com/
-[sign yourself up]: https://opensource.magento.com/slack
 [magento/magento-cloud-docker GitHub repository]: https://github.com/magento/magento-cloud-docker

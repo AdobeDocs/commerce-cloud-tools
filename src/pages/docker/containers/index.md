@@ -103,7 +103,7 @@ You can customize this configuration by updating the [`mounts`][mount-configurat
 
 ### File synchronization
 
-Additionally, you can share data into the containers using file synchronization. See the [File synchronization] and [Developer mode] documentation.
+Additionally, you can share data into the containers using file synchronization. See the [File synchronization](../setup/synchronize-data.md) and [Developer mode](../deploy/developer-mode.md) documentation.
 
 ## Container Volumes
 
@@ -146,5 +146,5 @@ Now you can see all requests that are passing through the TLS container and chec
 [Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html
 [docker-repo]: https://github.com/magento/magento-cloud-docker
 [nginx]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
-[mount-configuration]: https://devdocs.magento.com/cloud/project/magento-app-properties.html#mounts
-[lock provider]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html#instgde-cli-lockconfig
+[mount-configuration]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
+[lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html

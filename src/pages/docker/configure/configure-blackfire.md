@@ -30,7 +30,7 @@ You must have a Blackfire license and account to use Blackfire.io with Adobe Com
            client_token: CLIENT_TOKEN
    ```
 
-1. Generate the `docker-compose.yml` file for developer mode, adding any required [build or service configuration options](docker-quick-reference.md) and [file synchronization options](synchronize-data.md#file-synchronization-options) if needed.
+1. Generate the `docker-compose.yml` file for developer mode, adding any required [build or service configuration options](quick-reference.md) and [file synchronization options](synchronize-data.md#file-synchronization-options) if needed.
 
    ```bash
    ./vendor/bin/ece-docker build:compose --mode="developer"

@@ -22,7 +22,7 @@ Use the following table to review the test configuration files and available tes
 
 <InlineAlert variant="info" slots="text"/>
 
-For Magento application testing, use the Magento Application Testing (MFTF) framework to run functional tests. See [Application testing](test-app-mftf.md).
+For application testing, use the Magento Application Testing (MFTF) framework to run functional tests. See [Application testing](test-app-mftf.md).
 
 ## Prepare the Docker environment for testing
 
@@ -34,7 +34,7 @@ For Magento application testing, use the Magento Application Testing (MFTF) fram
    git clone git@github.com:magento/<cloud-suite-package-repository>.git
    ```
 
-   For example:
+   For example, clone the ECE-Tools package:
 
    ```bash
    git clone git@github.com:magento/ece-tools.git
@@ -170,9 +170,9 @@ modules:
       ...
 ```
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="help" slots="text"/>
 
-You can locate the test configuration file in the root directory for each package. (See [Test resources](#test-resources)).
+You can locate the test configuration file in the root directory for each package. See [Test resources](#test-resources).
 
 ### Run a specific test
 
@@ -205,7 +205,7 @@ PostDeployCest: Test post deploy | {"ADMIN_EMAIL":"admin@example.com"}
 ✔ PostDeployCest: Test post deploy | {"ADMIN_EMAIL":"admin@example.com"} (210.41s)
 ```
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="help" slots="text"/>
 
 You can see the available tests for each package in the package source files. See [Test resources](#test-resources).
 
@@ -249,7 +249,7 @@ For help with Codeception command options, use the `.vendor/bin/codecept run --h
 
 <!--Link definitions-->
 
-[Cloud Suite for Commerce]: https://devdocs.magento.com/cloud/release-notes/cloud-tools.html
+[Cloud Suite for Commerce]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html
 [Codeception testing framework for PHP]: https://github.com/codeception/codeception
 [magento/ece-tools codeception.dist.yml]: https://github.com/magento/ece-tools/blob/2002.1.11/codeception.dist.yml
 [magento/magento-cloud-components codeception.dist.yml]: https://github.com/magento/magento-cloud-components/blob/1.0.11/codeception.dist.yml

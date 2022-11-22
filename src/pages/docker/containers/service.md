@@ -1,6 +1,6 @@
 ---
 title: Docker services containers
-description: placeholder
+description: Learn about the Cloud Docker for Commerce service containers, images used, and useful guidance.
 ---
 
 # Service containers
@@ -71,7 +71,7 @@ php vendor/bin/ece-docker build:compose --es-env-var=ES_JAVA_OPTS="-Xms512m -Xmx
 
 See [Important Elasticsearch configuration][] in the Elasticsearch documentation for details about available configuration options.
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="help" slots="text"/>
 
 If your Cloud project uses Adobe Commerce version 2.3.5 or earlier with MySQL search, add the `--no-es` option to skip the Elasticsearch container configuration when you generate the Docker Compose configuration file: `ece-docker build:compose --no-es`.
 
@@ -129,9 +129,9 @@ Use the `--os-env-var` option to customize the OpenSearch container when you gen
 php vendor/bin/ece-docker build:compose --os-env-var=OPENSEARCH_JAVA_OPTS="-Xms512m -Xmx512m" --os-env-var=bootstrap.memory_lock=true
 ```
 
-See [Important OpenSearch configuration] in the OpenSearch documentation for details about available configuration options.
+See [Important OpenSearch configuration][] in the OpenSearch documentation for details about available configuration options.
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="help" slots="text"/>
 
 If your Cloud project uses Adobe Commerce version 2.4.4 or earlier with MySQL or Elasticsearch search, add the `--no-os` option to skip the OpenSearch container configuration when you generate the Docker Compose configuration file: `ece-docker build:compose --no-os`
 
@@ -306,7 +306,7 @@ In some cases, you might require a Docker environment without Varnish, for examp
 ./vendor/bin/ece-docker build:compose --mode="developer" --php <version> --no-varnish
 ```
 
-You can specify `VARNISHD_PARAMS` and other environment variables using ENV to specify custom values for required parameters. This is usually done by adding the configuration to the `docker-compose.override.yml` file.
+You can specify `VARNISHD_PARAMS` and other environment variables using ENV to specify custom values for required parameters. This is done by adding the configuration to the `docker-compose.override.yml` file.
 
 **To clear the Varnish cache**:
 
@@ -366,7 +366,7 @@ The NGINX configuration for this container is the standard Adobe Commerce [nginx
 
 Developers can use Zookeeper to manage locks to prevent the launch of duplicate cron jobs and cron groups for Adobe Commerce and Magento Open Source projects running on servers with multiple nodes.
 
-For Adobe Commerce projects on Adobe cloud infrastructure, lock provider settings are configured automatically during provisioning. See [Cloud variables](https://devdocs.magento.com/cloud/env/variables-cloud.html).
+For Adobe Commerce projects on Adobe cloud infrastructure, lock provider settings are configured automatically during provisioning. See [Cloud variables](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html).
 
 For projects hosted on other infrastructure, developers can add the Zookeeper container to the Docker environment and [configure the service][Configure the lock provider].
 
@@ -382,7 +382,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 <!--Link definitions-->
 
 [centos]: https://hub.docker.com/_/centos
-[Configure the lock provider]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html#instgde-cli-lockconfig
+[Configure the lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html
 [debian:jessie]: https://hub.docker.com/_/debian
 [Docker override file]: https://docs.docker.com/compose/extends/
 [FPM]: https://php-fpm.org
@@ -398,7 +398,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [nginx]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
 [opensearch-docker]: https://hub.docker.com/r/magento/magento-cloud-docker-opensearch
 [php-cloud]: https://hub.docker.com/r/magento/magento-cloud-docker-php
-[PHP extensions]: https://devdocs.magento.com/cloud/project/magento-app-php-application.html#php-extensions
+[PHP extensions]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions
 [rabbitmq]: https://hub.docker.com/_/rabbitmq
 [redis]: https://hub.docker.com/_/redis
 [tls]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx

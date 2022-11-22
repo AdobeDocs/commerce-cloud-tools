@@ -1,6 +1,6 @@
 ---
 title: Configuration sources
-description: placeholder
+description: See an overview about the different configuration sources for the Cloud Docker for Commerce tool.
 ---
 
 # Configuration sources
@@ -20,8 +20,8 @@ When you build the Docker Compose configuration file, the `ece-docker build:comp
 
 You need the following project configuration files to emulate a Cloud project in the Docker environment.
 
--  [.magento.app.yaml][]
--  [.magento/services.yaml][services.yaml]
+-  [.magento.app.yaml][application]
+-  [.magento/services.yaml][services]
 
 Typically, these files supply the configuration settings in the generated `docker-compose.yml` file when you build and deploy a Cloud Docker environment from an Adobe Commerce on cloud infrastructure project directory.
 
@@ -85,7 +85,7 @@ services:
 
 ### Hooks
 
-The [hooks] section specifies the hook name and command list:
+The [hooks][] section specifies the hook name and command list:
 
 ```yaml
 hooks:
@@ -115,7 +115,7 @@ Array variables must be encoded with base64 encoding for JSON.
 
 ### Mounts
 
-The [mounts] section specifies the path parameters for named mounts:
+The [mounts][] section specifies the path parameters for named mounts:
 
 ```yaml
 # The mounts that will be performed when the package is deployed.
@@ -142,7 +142,7 @@ Use the command help to view the available options:
 php ./vendor/bin/ece-docker build:compose -h
 ```
 
-<InlineAlert variant="tip" slots="text"/>
+<InlineAlert variant="success" slots="text"/>
 
 See [Service configuration options](containers.md#service-configuration-options) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
@@ -341,8 +341,8 @@ services:
 
 <!--Link definitions-->
 
-[hooks]: https://devdocs.magento.com/cloud/project/magento-app-properties.html#hooks
-[.magento.app.yaml]: https://devdocs.magento.com/cloud/project/magento-app.html
-[services.yaml]: https://devdocs.magento.com/cloud/project/services.html
-[mounts]: https://devdocs.magento.com/cloud/project/magento-app-properties.html#mounts
-[available services]: https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html
+[hooks]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property.html
+[application]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html
+[services]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html
+[mounts]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
+[available services]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html

@@ -13,9 +13,9 @@ You use the `ece-docker build:compose` command to generate the Docker Compose co
 
 When you run the `ece-docker build:compose` command, it regenerates the `docker-compose.yml` configuration file and overwrites the existing `docker-compose.yml` configuration file. You can save custom configurations across builds by adding the settings to a `docker-compose.override.yml` file. See a detailed example in the [Docker quick reference](docker-quick-reference.md).
 
-## Set the launch mode
+## Launch mode
 
-You can launch a Docker environment in production or developer mode by setting the `mode` option on the `ece-docker build:compose` command:
+You can launch a Docker environment in _production_ or _developer_ mode by setting the `mode` option on the `ece-docker build:compose` command:
 
 -  **Production mode**—The `--mode="production"` setting supports an active production environment with read-only file system permissions. This is the default configuration setting for launching a Docker environment. Selecting this option builds the Docker environment in production mode and verifies configured service versions. See [Production mode launch instructions](production-mode.md).
 

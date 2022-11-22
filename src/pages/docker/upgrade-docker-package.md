@@ -1,9 +1,9 @@
 ---
 title: Upgrade the Docker package
-description: Follow these steps to upgrade the Cloud Docker package.
+description: Follow these steps to upgrade the Cloud Docker for Commerce package.
 ---
 
-# Upgrade Docker package
+# Upgrade Cloud Docker package
 
 We recommend that you use the latest version of Cloud Docker for Commerce. The version requirement is specified in the `composer.json` file for your project. Use the following instructions for the upgrade process.
 
@@ -11,7 +11,7 @@ We recommend that you use the latest version of Cloud Docker for Commerce. The v
 
 Cloud Docker for Commerce releases sometimes introduce changes to the format and options in the `docker-compose.yml` file. We recommend creating a backup of your existing `docker-compose.yml` file before upgrading so you can review the changes. If you have custom configurations that you want to preserve across builds, move them to the [`docker-compose.override.yml`](docker-quick-reference.md#override-configuration) file before you rebuild or upgrade the Docker environment.
 
-**To update the Cloud Docker for Commerce package for On-premises projects:**
+**To update the Cloud Docker for Commerce package:**
 
 1. On your local workstation, update the Cloud Docker for Commerce package using Composer.
 

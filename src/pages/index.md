@@ -36,7 +36,7 @@ Learn more about our automated hosting platform with a self-service approach to 
 
 ### Tools
 
-[Cloud Docker for Commerce](../pages/docker/)
+[Cloud Docker for Commerce](/docker/)
 
 Use the Cloud Docker tool for development and testing.
 

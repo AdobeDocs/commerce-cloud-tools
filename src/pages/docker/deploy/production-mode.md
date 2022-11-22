@@ -5,9 +5,7 @@ description: Start the Docker environment in production mode.
 
 # Production mode
 
-Production mode is the default configuration setting for launching the Docker environment with read-only filesystem permissions. This option builds the Docker environment in production mode and verifies configured service versions.
-
-See [Configure Docker](deploy-docker-environment.md) for details about customizing the Docker configuration.
+Production mode simulates your Commerce application in production so that you can verify configured services. Production mode is the default configuration setting for launching the Docker environment with read-only filesystem permissions.
 
 **Prerequisites:**
 

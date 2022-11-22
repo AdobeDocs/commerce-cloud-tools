@@ -1,25 +1,19 @@
 ---
 title: Developer mode
-description: Start the Docker environment and in developer mode.
+description: Start the Docker environment in developer mode.
 ---
 
 # Developer mode
 
 Developer mode supports an active development environment with full, writable file system permissions. This option builds the Docker environment in developer mode and verifies configured service versions.
 
-## Performance considerations
-
 On macOS and Windows systems, performance is slower in developer mode because of additional file synchronization operations. However, you can improve performance by using either the `manual-native` or the `mutagen` file synchronization option when you generate the `docker-compose.yml` file. See [Synchronizing data in Docker](synchronize-data.md).
 
 <InlineAlert variant="info" slots="text"/>
 
-The `ece-tools` version 2002.0.18 and later supports developer mode.
+The `ece-tools` package supports developer mode starting with version 2002.0.18.
 
 Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files—ZIP, SQL, GZ, and BZ2—are not necessary to sync. You can find exclusions to these file types in the `mutagen.sh` file.
-
-## Launch Docker in developer mode
-
-See [Configure Docker](deploy-docker-environment.md) for details about customizing the Docker configuration.
 
 **Prerequisites:**
 

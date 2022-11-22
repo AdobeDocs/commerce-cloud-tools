@@ -1,20 +1,11 @@
 ---
-title: Prerequisites for local development
-description: placeholder
+title: Local development
+description: Learn how to use Cloud Docker for Commerce for local development.
 ---
 
-# Prerequisites for local development
+# Local development
 
-To use Docker as your local development method, you should be familiar with and install the following software:
-
-- [Docker](https://www.docker.com/get-started)
-- Developer mode on macOS systems might require the [Mutagen](https://mutagen.io/documentation/introduction/installation) option for file synchronization.
-- [Git](https://git-scm.com) for interaction between your local system and Adobe Commerce on cloud infrastructure source repositories
-- Optional:
-   - PHP version 8.1
-   - [Composer](https://getcomposer.org) version 2.2.4
-
-## Docker engine
+Cloud Docker for Commerce is the recommended tool for effective local development and testing of Adobe Commerce.
 
 Cloud Docker for Commerce requires the following Docker resources to support local Docker development.
 
@@ -22,7 +13,36 @@ Cloud Docker for Commerce requires the following Docker resources to support loc
 -  Memory: 6.00 GB
 -  Swap: 1.00 GB
 
-You can configure Docker resources from the Docker Desktop.
+<InlineAlert variant="success" slots="text"/>
+
+You can allot these resources from the _Preferences_ panel in Docker Desktop. Click the **Settings** icon next to your username, then choose the **Resources** tab.
+
+In addition, you should be familiar with and install the following software:
+
+- [Docker](https://www.docker.com/get-started)
+- Developer mode on macOS systems might require the [Mutagen](https://mutagen.io/documentation/introduction/installation) option for file synchronization.
+- [Git](https://git-scm.com) for interaction between your local system and Adobe Commerce on cloud infrastructure source repositories
+- Optional—[See PHP and Composer](#php-and-composer):
+   - PHP version 8.1
+   - [Composer](https://getcomposer.org) version 2.2.4
+
+## Composer authentication keys
+
+You need authentication keys to install Adobe Commerce in your local development environment. These are different than the authentication keys included in the code repository `auth.json` file.
+
+Before setting up a local workspace, gather the following credentials and account information:
+
+-  **Authentication keys (Composer keys)**
+
+    Authentication keys are 32-character authentication tokens that provide secure access to the Adobe Commerce Composer repository (repo.magento.com), and any other Git services required for development such as GitHub. Your account can have multiple authentication keys. For the workspace setup, start with one specific key for your code repository. If you do not have any keys, contact the Account Owner to create them, or create the [authentication keys][] yourself.
+
+-  **(Optional) Cloud Project account**
+
+   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.corp.adobe.com/docs/commerce-cloud-service/start/onboarding.html) for details.
+
+-  **(Optional) Encryption Key**
+
+   When importing an existing Adobe Commerce instance, capture the encryption key used to protect your access and data for the Adobe Commerce database. For details on this key, see [Resolve issues with encryption key][].
 
 ## PHP and Composer
 

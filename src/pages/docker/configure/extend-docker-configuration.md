@@ -1,6 +1,6 @@
 ---
 title: Extend the Docker configuration
-description:
+description: Learn how to extend your Cloud Docker for Commerce configuration using multiple compose files.
 ---
 
 # Extend the Docker configuration
@@ -202,7 +202,7 @@ Use the following attributes to specify the PHP extension configuration in the `
 
 <InlineAlert variant="info" slots="text"/>
 
-For more information about extension types and extension installation, see How to install more PHP extensions section of the [PHP, Docker Official Images][] page in _Docker Hub_.
+For information about extension types and extension installation, see the **How to install more PHP extensions** section of the [PHP, Docker Official Images][] page in _Docker Hub_.
 
 #### Example: Core extension configuration
 

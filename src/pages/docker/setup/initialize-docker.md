@@ -1,21 +1,19 @@
 ---
-title: Initializing Cloud Docker for Commerce
-description:
+title: Initialize Cloud Docker for Commerce
+description: Learn how to begin preparing your Adobe Commerce project to use with the Cloud Docker for Commerce tool.
 ---
 
-# Initializing Cloud Docker for Commerce
+# Initialize Cloud Docker
 
 Cloud Docker for Commerce is one of the packages in the Cloud Suite for Commerce designed to deploy and manage local Adobe Commerce Docker environments for both cloud and on-premises projects.
 
-If you are using Adobe Commerce on Cloud, you most likely have the `magento/magento-cloud-docker` package installed together with the `magento/ece-tools` package.
-
-An on-premises installation requires the stand-alone `magento/magento-cloud-docker` package available in the [Cloud Docker GitHub repository][docker-repo].
-
-## Initialize the Commerce project
+<InlineAlert variant="success" slots="text"/>
 
 Cloud Docker for Commerce supports the Adobe Commerce installation for both cloud and on-premises projects. The initialization steps are different for each project type.
 
-### Cloud projects
+## Cloud infrastructure projects
+
+Adobe Commerce on cloud infrastructure tooling contains the `magento/magento-cloud-docker` package, which is installed and updated automatically with the `magento/ece-tools` package.
 
 **To install an Adobe Commerce on cloud infrastructure project**:
 
@@ -31,9 +29,9 @@ Cloud Docker for Commerce supports the Adobe Commerce installation for both clou
 
 1. Add your [access credentials][magento-creds] to the `auth.json` file.
 
-### On-premises projects
+## On-premises projects
 
-When you initialize an Adobe Commerce project for Docker development, you must create a [.magento.docker.yml](configuration-sources.md#unified-configuration) configuration source file to create the Docker containers for the local environment.
+An on-premises installation requires the stand-alone `magento/magento-cloud-docker` package available in the [Cloud Docker GitHub repository][docker-repo]. When you initialize an Adobe Commerce project for Docker development, you must create a [.magento.docker.yml](configuration-sources.md#unified-configuration) configuration source file to create the Docker containers for the local environment.
 
 **To install an Adobe Commerce on-premises project**:
 

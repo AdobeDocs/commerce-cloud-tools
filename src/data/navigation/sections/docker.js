@@ -8,36 +8,46 @@ module.exports = [
     path: "/docker/containers/",
     pages: [
       {
-        title: "Service containers",
-        path: "/docker/containers/service/",
-      },
-      {
         title: "CLI containers",
         path: "/docker/containers/cli/",
+      },
+      {
+        title: "Service containers",
+        path: "/docker/containers/service/",
       },
     ],
   },
   {
-    title: "Install",
-    path: "/docker/initialization/",
+    title: "Setup",
+    path: "/docker/setup/",
     pages: [
       {
-        title: "Local development",
-        path: "/docker/local-development/",
+        title: "Initialize Docker",
+        path: "/docker/setup/initialize-docker/",
       },
       {
         title: "File synchronization",
-        path: "/docker/synchronize-data/",
+        path: "/docker/setup/synchronize-data/",
       },
     ],
   },
   {
     title: "Deploy",
-    path: "/docker/initialization/",
+    path: "/docker/deploy/",
+    pages: [
+      {
+        title: "Production mode",
+        path: "/docker/deploy/production-mode/",
+      },
+      {
+        title: "Developer mode",
+        path: "/docker/deploy/developer-mode/",
+      },
+    ],
   },
   {
     title: "Configure",
-    path: "/docker/configuration-sources/",
+    path: "/docker/configure/configuration-sources/",
   },
   {
     title: "Test",

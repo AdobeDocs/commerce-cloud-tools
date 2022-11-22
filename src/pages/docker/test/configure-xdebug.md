@@ -1,6 +1,6 @@
 ---
 title: Configure Xdebug
-description:
+description: Learn how to configure Xdebug for use with the Cloud Docker for Commerce tool.
 ---
 
 # Configure Xdebug
@@ -91,7 +91,7 @@ If you use Microsoft Windows, take the following steps before continuing:
 
 1. Select **Use path mappings**. In the _File/Directory_ pane, the root of the project for the `serverName` displays.
 
-1. In the **Absolute path on the server** column, click ![Edit](https://devdocs.magento.com/common/images/cloud/cloud-install_docker_php-storm-edit.png) and add a value to the `MAGENTO_ROOT` option. The default value is: `/app`
+1. In the **Absolute path on the server** column, click ![Edit](../../_images/xdebug/edit.png) and add a value to the `MAGENTO_ROOT` option. The default value is: `/app`
 
 1. Change the Xdebug port to 9001 in the **PHP** > **Debug** > **Xdebug** > **Debug Port** panel.
 
@@ -103,7 +103,7 @@ The following steps describe debugging web requests and CLI commands.
 
 **To debug web requests**:
 
-1. In your PhpStorm project, click ![Start listening for connections](https://devdocs.magento.com/common/images/cloud/cloud-install_docker_php-storm_xdebug-start-listening.png) (**Start listening**) in the top navigation bar.
+1. In your PhpStorm project, click ![Start listening for connections](../../_images/xdebug/listening.png) (**Start listening**) in the top navigation bar.
 
 1. Add breakpoints in the `pub/index.php` file.
 
@@ -117,7 +117,7 @@ You can debug any Adobe Commerce command or PHP script using the following steps
 
 **To debug CLI commands**:
 
-1. In your PhpStorm project, open the **Build, Extension, Deployment** > **Docker** panel, and then click `+` to add a new Docker server and update the following settings:
+1. In your PhpStorm project, open the **Build, Extension, Deployment** > **Docker** panel, and then click `+` to add a Docker server and update the following settings:
 
    -  **Name**—Enter a name for the server, for example `Docker Cloud`.
    -  **Connect to Docker daemon with**—
@@ -139,7 +139,7 @@ You can debug any Adobe Commerce command or PHP script using the following steps
 
 1. Click **Save**.
 
-1. Open the _Run/Debug Configuration_ window and add a new **PHP script** with the following settings:
+1. Open the _Run/Debug Configuration_ window and add a **PHP script** with the following settings:
 
    - **Name**—Enter `bin/magento`
    - **Configuration** > **File**—Select the path to the `bin/magento` file in your local environment.
@@ -152,13 +152,13 @@ You can install and use the Xdebug Helper Chrome extension to debug your PhP cod
 
 **To use Xdebug Helper with Chrome**:
 
-1. Install the [Xdebug Helper extension][] from the Chrome store.
+1. Install the [Xdebug Helper extension](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) from the Chrome store.
 
 1. Enable the extension in Chrome as shown in the following figure.
 
-   ![Enable the Xdebug extension in Chrome](https://devdocs.magento.com/common/images/cloud/cloud-install_docker_php-storm_xdebug-chrome.png)
+   ![Enable the Xdebug extension in Chrome](../../_images/xdebug/enable.png)
 
-1. In _Chrome_, click ![Xdebug helper icon](https://devdocs.magento.com/common/images/cloud/cloud-xdebug_helper-icon.png) in the Chrome toolbar.
+1. In _Chrome_, click ![Xdebug helper icon](../../_images/xdebug/helper-icon.png) in the Chrome toolbar.
 
 1. From the _Xdebug helper_ menu, click **Options**.
 
@@ -166,8 +166,4 @@ You can install and use the Xdebug Helper Chrome extension to debug your PhP cod
 
 1. Click **Save**.
 
-   ![Xdebug Helper options](https://devdocs.magento.com/common/images/cloud/cloud-xdebug_helper-options.png)
-
-<!-- link definitions -->
-
-[Xdebug Helper extension]: https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en
+   ![Xdebug Helper options](../../_images/xdebug/helper-options.png)
