@@ -43,15 +43,63 @@ module.exports = [
         title: "Developer mode",
         path: "/docker/deploy/developer-mode/",
       },
+      {
+        title: "Docker quick reference",
+        path: "/docker/quick-reference/",
+      },
     ],
   },
   {
     title: "Configure",
-    path: "/docker/configure/configuration-sources/",
+    path: "/docker/configure/",
+    pages: [
+      {
+        title: "Configuration sources",
+        path: "/docker/configure/configuration-sources/",
+      },
+      {
+        title: "Manage the database",
+        path: "/docker/configure/manage-database/",
+      },
+      {
+        title: "Manage the cron jobs",
+        path: "/docker/configure/manage-cron-jobs/",
+      },
+      {
+        title: "Multiple sites",
+        path: "/docker/configure/multiple-sites/",
+      },
+      {
+        title: "Custom Docker configuration",
+        path: "/docker/configure/custom-docker-compose/",
+      },
+      {
+        title: "Extend Docker",
+        path: "/docker/configure/extend-docker-configuration/",
+      },
+    ],
   },
   {
     title: "Test",
     path: "/docker/test/",
+    pages: [
+      {
+        title: "Application testing",
+        path: "/docker/test/application-testing/",
+      },
+      {
+        title: "Code testing",
+        path: "/docker/test/code-testing/",
+      },
+      {
+        title: "Configure Xdebug",
+        path: "/docker/test/configure-xdebug/",
+      },
+      {
+        title: "Add Blackfire.io",
+       path: "/docker/configure/multiple-sites/",
+      },
+    ],
   },
   {
     title: "Upgrade",

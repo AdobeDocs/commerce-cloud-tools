@@ -5,15 +5,11 @@ description: See a list of common Docker commands.
 
 # Cloud Docker quick reference
 
-This Quick Reference provides information about using Docker Compose commands, the Docker Compose configuration generator, and the Cloud Docker for Commerce CLI to configure, deploy, and use your Docker environment for application development. See the following topics for more detailed instructions:
-
--  [Install prerequisites](initialization.md)
--  [Deploy environment](deploy-docker-environment.md)
--  [Configure and manage your project and environment](manage-docker-environment.md)
+A quick reference of common commands for Docker Compose and Cloud Docker for Commerce CLI.
 
 ## Docker Compose
 
-Docker Compose is a tool for defining and running multi-container Docker applications. The following table lists the `docker-compose` commands for building, deploying, and operating Cloud Docker for Commerce. You can also use [Cloud Docker CLI](#cloud-docker-cli) commands to complete Docker Compose tasks.
+The following table lists the `docker-compose` commands for building, deploying, and operating Cloud Docker for Commerce.
 
 | Action                                                | Command                                                    |
 | :---------------------------------------------------- | :--------------------------------------------------------- |
@@ -22,7 +18,7 @@ Docker Compose is a tool for defining and running multi-container Docker applica
 | Deploy environment                                    | `docker-compose run --rm deploy cloud-deploy`              |
 | Run post-deploy hooks                                 | `docker-compose run --rm deploy cloud-post-deploy`         |
 | Connect to CLI container                              | `docker-compose run --rm deploy bash`                      |
-| Use `ece-tools` command                    | `docker-compose run --rm deploy ece-command <command>`     |
+| Use `ece-tools` command                               | `docker-compose run --rm deploy ece-command <command>`     |
 | Use Magento command                                   | `docker-compose run --rm deploy magento-command <command>` |
 | Stop and remove Docker environment (removes volumes)  | `docker-compose down -v`                                   |
 | Stop Docker environment without destroying containers | `docker-compose stop`                                      |
@@ -32,9 +28,9 @@ Docker Compose is a tool for defining and running multi-container Docker applica
 
 <InlineAlert variant="info" slots="text"/>
 
-The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker-compose run`][] in the _Docker command-line reference_.
+The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker-compose run`](https://docs.docker.com/compose/reference/run/) in the _Docker command-line reference_.
 
-## Docker Compose configuration generator
+## Configuration generator
 
 Use the Cloud Docker for Commerce `.vendor/bin/ece-docker build:compose` CLI commands to generate the Docker configuration files and build your environment.
 
@@ -50,7 +46,7 @@ See [Service versions](containers.md) for additional information about the servi
 
 ### Override configuration
 
-Because the `ece-docker build:compose` command overwrites the base configuration, we recommend saving your customizations in an override configuration file. You can use this method to merge multiple custom configurations. See [Docker Docs: Multiple Compose files][].
+Because the `ece-docker build:compose` command overwrites the base configuration, we recommend saving your customizations in an override configuration file. You can use this method to merge multiple custom configurations. See [Docker Docs: Multiple Compose files](https://docs.docker.com/compose/extends/#multiple-compose-files).
 
 The `docker-compose up` command considers the base `docker-compose.yml` configuration by default. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration.
 
@@ -68,18 +64,10 @@ Use the Cloud Docker for Commerce `bin/magento-docker` CLI commands to run `dock
 ./bin/magento-docker ece-redeploy
 ```
 
-The following example shows the `./bin/magento-docker` command and output when connecting to the bash shell:
+Use the following to connect to the bash shell and begin using the Cloud Docker CLI:
 
 ```bash
 ./bin/magento-docker bash
-```
-
-```terminal
-Starting project_redis_1 ... done
-Starting project_db_1    ... done
-Starting project_elasticsearch_1 ... done
-[ ok ] Starting enhanced syslogd: rsyslogd.
-root@deploy:/app#
 ```
 
 | Action                                                                                                         | Command                                |
@@ -100,13 +88,10 @@ root@deploy:/app#
 | Access database                                                                                                | `./bin/magento-docker ece-db`          |
 | Run a command in a PHP container<br/>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
 
+<InlineAlert variant="help" slots="text1, text2"/>
+
 Use the following command to view the magento-docker CLI command help:
 
 ```bash
 ./bin/magento-docker -h
 ```
-
-<!-- Link definitions -->
-
-[Docker Docs: Multiple Compose files]: https://docs.docker.com/compose/extends/#multiple-compose-files
-[`docker-compose run`]: https://docs.docker.com/compose/reference/run/

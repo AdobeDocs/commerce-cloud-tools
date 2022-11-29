@@ -1,6 +1,6 @@
 ---
 title: Docker container architecture
-description: placeholder
+description: Learn about the container architecture for Cloud Docker for Commerce.
 ---
 
 # Container Architecture

@@ -1,9 +1,9 @@
 ---
-title: Manage the Docker environment
-description:
+title: Configure the Docker environment
+description: Learn how to manage the Cloud Docker for Commerce environment with Composer updates, email, and host management.
 ---
 
-# Manage the Docker environment
+# Configure the Docker environment
 
 Cloud Docker for Commerce uses Docker Compose to build and deploy Adobe Commerce to a multi-container Docker application. You can generate the Docker Compose configuration to build and deploy Docker from the following sources:
 
@@ -18,7 +18,7 @@ When you build the Docker Compose configuration file, the `ece-docker build:comp
 
 ## Run Composer with Docker
 
-You can run composer using the `docker` command before you create the container instance. This technique is useful to create an application instance during the CI/CD build process, or even during first time setup.
+You can run composer using the `docker` command before you create the container instance. This technique is useful to create an application instance during the CI/CD build process, or even during first-time setup.
 
 When you run composer with Docker commands, you must use the [Docker Hub PHP Image Tag][] that matches the Adobe Commerce application version. The following example uses PHP 7.3. You run this command from the project root directory.
 
