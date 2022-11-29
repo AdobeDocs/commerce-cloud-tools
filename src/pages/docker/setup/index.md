@@ -7,28 +7,24 @@ description: Learn how to use Cloud Docker for Commerce for local development.
 
 Cloud Docker for Commerce is the recommended tool for effective local development and testing of Adobe Commerce.
 
-Cloud Docker for Commerce requires the following Docker resources to support local Docker development.
+Prerequisites include the following software:
+
+- [Docker](https://www.docker.com/get-started)—Tools for managing images and building containers
+- [Mutagen](https://mutagen.io/documentation/introduction/installation)—Developer mode on macOS systems might require this option for file synchronization
+- [Git](https://git-scm.com)—For interaction between your local system and Adobe Commerce on cloud infrastructure source repositories
+- Optional—[See PHP and Composer](#php-and-composer):
+   - PHP version 8.1
+   - [Composer](https://getcomposer.org) version 2.2.4
+
+## Docker settings
+
+Cloud Docker for Commerce requires the following Docker resources to support local Docker development. You can allot these resources from the _Preferences_ panel in Docker Desktop. Click the **Settings** icon next to your username, then choose the **Resources** tab.
 
 -  CPUs: 2
 -  Memory: 6.00 GB
 -  Swap: 1.00 GB
 
-<InlineAlert variant="success" slots="text"/>
-
-You can allot these resources from the _Preferences_ panel in Docker Desktop. Click the **Settings** icon next to your username, then choose the **Resources** tab.
-
-In addition, you should be familiar with and install the following software:
-
-- [Docker](https://www.docker.com/get-started)
-- Developer mode on macOS systems might require the [Mutagen](https://mutagen.io/documentation/introduction/installation) option for file synchronization.
-- [Git](https://git-scm.com) for interaction between your local system and Adobe Commerce on cloud infrastructure source repositories
-- Optional—[See PHP and Composer](#php-and-composer):
-   - PHP version 8.1
-   - [Composer](https://getcomposer.org) version 2.2.4
-
-## Composer authentication keys
-
-You need authentication keys to install Adobe Commerce in your local development environment. These are different than the authentication keys included in the code repository `auth.json` file.
+## Commerce credentials
 
 Before setting up a local workspace, gather the following credentials and account information:
 
@@ -46,7 +42,7 @@ Before setting up a local workspace, gather the following credentials and accoun
 
 ## PHP and Composer
 
-Cloud Docker for Commerce does not require PHP and Composer to be installed locally. We provide an installation script, [init-docker.sh][] to perform PHP and Composer operations.
+Cloud Docker for Commerce does not require PHP and Composer to be installed locally. We provide an installation script to perform PHP and Composer operations.
 
 The `init-docker.sh` script runs the following command, which installs the template dependencies and sets both the PHP version and the Cloud Docker for Commerce image version.
 
@@ -56,7 +52,7 @@ docker run --rm -e "MAGENTO_ROOT=/app" -v "$(pwd)":/app -v ~/.composer/cache:/ro
 
 The script option settings determine the PHP version and Cloud Docker for Commerce image version. The script also adds the default hostname, `magento2.docker`, to your `/etc/hosts` file.
 
-> Options in `init-docker.sh`
+The following table lists the available options to use with the `init-docker.sh` script:
 
 | Option          | Description |
 | :-------------- | :---------- |
@@ -81,7 +77,7 @@ bin/init-docker.sh --php 8.1 --add-host no
 
 On initial project installation, you can use cURL to run the installation script and install the template dependencies. See [Update the hosts file and install dependencies](initialization.md#update-the-hosts-file-and-install-dependencies).
 
-### Web server configuration
+## Web server configuration
 
 Cloud Docker for Commerce binds to port `80` on your host environment. Because macOS provides built-in Apache service, and may occupy port `80`, you must stop the service. Also, if you have a web server enabled on your workstation, you must stop the service before launching the Docker environment.
 
@@ -89,7 +85,7 @@ Cloud Docker for Commerce binds to port `80` on your host environment. Because m
 sudo apachectl stop
 ```
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="error" slots="text"/>
 
 If you start your Docker environment with Apache running, the following error displays: `Cannot start service tls: Ports are not available: port is already allocated`
 

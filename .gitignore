@@ -4,6 +4,9 @@
 .history
 .idea
 .editorconfig
+.code-workspace
+.trash
+Thumbs.db
 
 # npm yarn
 node_modules

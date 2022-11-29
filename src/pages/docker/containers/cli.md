@@ -104,4 +104,4 @@ To add the Node container to the Docker environment, you must specify the Node v
 [magento/magento-cloud-docker-php]: https://hub.docker.com/r/magento/magento-cloud-docker-php
 [php]: https://hub.docker.com/_/php
 [node]: https://hub.docker.com/_/node
-[ece-tools CLI commands]: https://devdocs.magento.com/cloud/reference/ece-tools-reference.html
+[ece-tools CLI commands]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html
