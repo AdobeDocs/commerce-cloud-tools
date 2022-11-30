@@ -5,9 +5,9 @@ description: Learn how to configure Xdebug for use with the Cloud Docker for Com
 
 # Configure Xdebug
 
-Xdebug is an extension for debugging your PHP code. Cloud Docker for Commerce provides a separate container to handle Xdebug requests in the Docker environment. Use this container to enable Xdebug and debug PHP code in your Docker environment without affecting your Adobe Commerce on cloud infrastructure project configuration.
+Xdebug is an extension for debugging your PHP code.
 
-The following instructions explain how to configure Xdebug and PhpStorm to debug in your local Docker environment.
+Cloud Docker for Commerce provides a separate container to handle Xdebug requests in the Docker environment. Use this container to enable Xdebug and debug PHP code in your Docker environment without affecting your Adobe Commerce on cloud infrastructure project configuration. The following explains how to configure Xdebug and PhpStorm to debug in your local Docker environment.
 
 If you use Microsoft Windows, take the following steps before continuing:
 

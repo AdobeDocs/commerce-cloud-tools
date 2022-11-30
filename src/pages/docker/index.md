@@ -1,6 +1,6 @@
 ---
 title: Cloud Docker for Commerce | Commerce Cloud Tools
-description: Use the Cloud Docker tool to deploy Adobe Commerce to a Docker environment for development, testing, and automation tasks.
+description: Use the Cloud Docker for Commerce tool to deploy Adobe Commerce to a Docker environment for development, testing, and automation tasks.
 ---
 
 # Cloud Docker for Commerce
