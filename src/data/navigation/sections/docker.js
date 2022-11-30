@@ -96,8 +96,8 @@ module.exports = [
         path: "/docker/test/configure-xdebug/",
       },
       {
-        title: "Add Blackfire.io",
-       path: "/docker/configure/multiple-sites/",
+        title: "Configure Blackfire",
+        path: "/docker/test/blackfire/",
       },
     ],
   },

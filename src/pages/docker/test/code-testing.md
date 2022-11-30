@@ -1,24 +1,27 @@
 ---
-title: Cloud code testing for Commerce
-description:
+title: Code testing for Commerce cloud tools
+description: Learn about using the integrated test suite for each Cloud tools package.
 ---
 
 # Code testing
 
-In a Cloud Docker for Commerce development environment, you can use the integrated test suite in each [Cloud Suite for Commerce][] package for application code testing. The test suites, which use the [Codeception testing framework for PHP][], provide acceptance tests to validate code intended for contribution to Commerce Cloud package repositories.
-
-Before you run tests, you must prepare your Docker environment and update the test configuration file. See [Prepare the test environment](#prepare-the-docker-environment-for-testing).
+In a Cloud Docker for Commerce development environment, you can use the integrated test suite in each [Cloud Suite for Commerce][] package for application code testing.
 
 ## Test resources
 
-Use the following table to review the test configuration files and available tests for each package.
+The test suites, which use the [Codeception testing framework for PHP][], provide acceptance tests to validate code intended for contribution to Commerce Cloud package repositories.
 
-| Package                       | Test configuration                                                         | Test folder <br/>(`src/Test/Functional/Acceptance`)                 |
-| ----------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| magento/ece-tools     | [codeception.dist.yml][magento/ece-tools codeception.dist.yml]     | [Acceptance tests][magento/ece-tools Acceptance tests]     |
-| magento/magento-cloud-components | [codeception.dist.yml][magento/magento-cloud-components codeception.dist.yml] | [Acceptance tests][magento/magento-cloud-components Acceptance tests] |
-| magento/magento-cloud-docker | [codeception.dist.yml][magento/magento-cloud-docker codeception.dist.yml] | [Acceptance tests][magento/magento-cloud-docker Acceptance tests] |
-| magento/magento-cloud-components | [codeception.dist.yml][magento/magento-cloud-patches codeception.dist.yml] | [Acceptance tests][magento/magento-cloud-patches Acceptance tests] |
+- **Acceptance tests** are in the package `src/Test/Functional/Acceptance` folder.
+- **Test configuration** is the `codeception.dist.yml` file in the package folder.
+
+Use the following table to access the files and available tests for each Cloud package. The links use the `develop` branch, so be sure to select the appropriate tag for your project:
+
+| Package          | Test configuration link                                                       | Acceptance test link                                  |
+| ---------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------- |
+| ECE-tools        | [codeception.dist.yml][magento/ece-tools codeception.dist.yml]                | [magento/ece-tools Acceptance tests][]                |
+| Cloud components | [codeception.dist.yml][magento/magento-cloud-components codeception.dist.yml] | [magento/magento-cloud-components Acceptance tests][] |
+| Cloud Docker     | [codeception.dist.yml][magento/magento-cloud-docker codeception.dist.yml]     | [magento/magento-cloud-docker Acceptance tests][]     |
+| Cloud patches    | [codeception.dist.yml][magento/magento-cloud-patches codeception.dist.yml]    | [magento/magento-cloud-patches Acceptance tests][]    |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -155,7 +158,7 @@ Add credentials to your Docker environment using any of the following methods:
 
 ## Run tests
 
-By default, functional tests produce a short output. You can receive more detailed output by editing the `codeception.dist.yml` test configuration file to set the `printOutput:` property to `true`.
+Before you run tests, you must prepare your Docker environment and update the test configuration file. See [Prepare the test environment](#prepare-the-docker-environment-for-testing). By default, functional tests produce a short output. You can receive more detailed output by editing the `codeception.dist.yml` test configuration file to set the `printOutput:` property to `true`.
 
 ```yaml
 modules:
@@ -251,13 +254,13 @@ For help with Codeception command options, use the `.vendor/bin/codecept run --h
 
 [Cloud Suite for Commerce]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html
 [Codeception testing framework for PHP]: https://github.com/codeception/codeception
-[magento/ece-tools codeception.dist.yml]: https://github.com/magento/ece-tools/blob/2002.1.11/codeception.dist.yml
-[magento/magento-cloud-components codeception.dist.yml]: https://github.com/magento/magento-cloud-components/blob/1.0.11/codeception.dist.yml
-[magento/magento-cloud-patches codeception.dist.yml]: https://github.com/magento/magento-cloud-patches/blob/1.0.18/codeception.dist.yml
+[magento/ece-tools codeception.dist.yml]: https://github.com/magento/ece-tools/blob/develop/codeception.dist.yml
+[magento/magento-cloud-components codeception.dist.yml]: https://github.com/magento/magento-cloud-components/blob/develop/codeception.dist.yml
+[magento/magento-cloud-patches codeception.dist.yml]: https://github.com/magento/magento-cloud-patches/blob/develop/codeception.dist.yml
 [magento/magento-cloud-docker codeception.dist.yml]: https://github.com/magento/magento-cloud-docker/blob/develop/codeception.dist.yml
-[magento/ece-tools Acceptance tests]: https://github.com/magento/ece-tools/tree/2002.1.11/src/Test/Functional/Acceptance
-[magento/magento-cloud-components Acceptance tests]: https://github.com/magento/magento-cloud-components/tree/1.0.11/Test/Functional/Acceptance
-[magento/magento-cloud-docker Acceptance tests]: https://github.com/magento/magento-cloud-docker/tree/1.3.2/Test/Functional/Acceptance
-[magento/magento-cloud-patches Acceptance tests]: https://github.com/magento/magento-cloud-patches/tree/1.0.18/src/Test/Functional/Acceptance
+[magento/ece-tools Acceptance tests]: https://github.com/magento/ece-tools/tree/develop/src/Test/Functional/Acceptance
+[magento/magento-cloud-components Acceptance tests]: https://github.com/magento/magento-cloud-components/tree/develop/Test/Functional/Acceptance
+[magento/magento-cloud-docker Acceptance tests]: https://github.com/magento/magento-cloud-docker/tree/develop/src/Test/Functional/Acceptance
+[magento/magento-cloud-patches Acceptance tests]: https://github.com/magento/magento-cloud-patches/tree/develop/src/Test/Functional/Acceptance
 [vlucas/phpdotenv]: https://github.com/vlucas/phpdotenv
 [Codeception CLI documentation]: https://github.com/Codeception/Codeception/blob/2.5/src/Codeception/Command/Run.php

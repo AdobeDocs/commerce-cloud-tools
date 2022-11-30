@@ -1,17 +1,17 @@
 ---
-title: Configure Blackfire.io
-description: Learn how to configure Blackfire.io and automate performance testing.
+title: Configure Blackfire
+description: Learn how to configure Blackfire and automate performance testing.
 ---
 
-# Configure Blackfire.io
+# Configure Blackfire
 
-You can add Blackfire.io to your Cloud Docker for Commerce environment to fully automate performance testing.
+You can add Blackfire to your Cloud Docker for Commerce environment to fully automate performance testing.
 
 Blackfire.io for Adobe Commerce on cloud infrastructure is a PHP profiler and automated performance testing tool for use in development, integration, staging, and production environments. It enables you to locate and investigate performance issues in your environment at the code level and creates a performance profile by tracking every PHP call, method, and SQL query performed by your code.
 
 <InlineAlert variant="warning" slots="text"/>
 
-You must have a Blackfire license and account to use Blackfire.io with Adobe Commerce on cloud infrastructure projects. See [Blackfire.io for Adobe Commerce on cloud infrastructure][].
+You must have a Blackfire license and account to use Blackfire with Adobe Commerce on cloud infrastructure projects. See [Blackfire.io][] for Adobe Commerce on cloud infrastructure.
 
 **To add Blackfire.io to your project configuration**:
 
@@ -50,7 +50,7 @@ You must have a Blackfire license and account to use Blackfire.io with Adobe Com
 
    If you are using file synchronization, synchronize files as needed. See [Launch Docker in developer mode](../deploy/developer-mode.md).
 
-1. Add context to use locally customized PHP images as described in [Extend the Docker configuration](extend-docker-configuration.md).
+1. Add context to use locally customized PHP images as described in [Extend the Docker configuration](../configure/extend-docker-configuration.md).
 
 1. Install Adobe Commerce in your Docker environment.
 
@@ -77,7 +77,7 @@ You must have a Blackfire license and account to use Blackfire.io with Adobe Com
 1. Enable the Varnish cache for the Adobe Commerce application.
 
    ```bash
-   docker-compose run --rm deploy magento-command config:set  system/full_page_cache/caching_application 2 --lock-env
+   docker-compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
    ```
 
    ```bash
@@ -100,9 +100,9 @@ You must have a Blackfire license and account to use Blackfire.io with Adobe Com
 
 1. Install a profiling client as described in the [Blackfire documentation][].
 
-1. Profile the Adobe Commerce website. See the [Blackfire.io documentation][].
+1. Profile the Adobe Commerce website.
 
 <!--Link definitions-->
 
-[Blackfire.io for Adobe Commerce on cloud infrastructure]: https://blackfire.io/magento
+[Blackfire.io]: https://blackfire.io/magento
 [Blackfire documentation]: https://support.blackfire.io/en/collections/145130-blackfire-on-magento-cloud.html
