@@ -146,7 +146,6 @@ php ./vendor/bin/ece-docker build:compose -h
 
 See [Service configuration options](containers.md#service-configuration-options) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
-
 <!--Link definitions-->
 
 [hooks]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property.html
