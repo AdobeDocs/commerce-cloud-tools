@@ -5,7 +5,7 @@ description:
 
 # Application testing
 
-In a Cloud Docker development environment, you can use the [Magento Functional Testing Framework (MFTF)][MFTF docs] for Magento application testing. In this environment, you run MFTF commands using the `mftf-command` ([CLI container command](containers-cli.md#cli-container-commands)). For example, the following command generates the MFTF tests:
+In a Cloud Docker development environment, you can use the [Magento Functional Testing Framework (MFTF)][MFTF docs] for Magento application testing. In this environment, you run MFTF commands using the `mftf-command` ([CLI container command](../containers/cli.md#cli-container-commands)). For example, the following command generates the MFTF tests:
 
 ```bash
 docker-compose run test mftf-command generate:tests --debug=none
@@ -37,7 +37,7 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    ./vendor/bin/ece-docker build:compose --with-selenium --with-test
    ```
 
-1. Start the Cloud Docker for Commerce environment. Optionally, you can set up Cloud Docker for Commerce to work in [Developer Mode](developer-mode.md).
+1. Start the Cloud Docker for Commerce environment. Optionally, you can set up Cloud Docker for Commerce to work in [Developer Mode](../deploy/developer-mode.md).
 
    ```bash
    ./bin/magento-docker up
@@ -118,4 +118,4 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
 
 <!-- link definitions -->
 
-[MFTF docs]: https://devdocs.magento.com/mftf/docs/introduction.html
+[MFTF docs]: https://developer.adobe.com/commerce/testing/functional-testing-framework/

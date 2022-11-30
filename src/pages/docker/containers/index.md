@@ -15,12 +15,10 @@ The following CLI containers, most of which are based on a PHP-CLI version 7 Doc
 
 | Name                 | Service          | Key & options | Available Versions | Notes                                                            |
 |----------------------|------------------|---------------|--------------------|------------------------------------------------------------------|
-| [node](containers-cli.md#node-container) | Node  | `--node` | 6, 8, 10, 11 | Optional Node container used for gulp or other NPM-based commands |
-| [cron](containers-cli.md#cron-container) | Cron Jobs | `--with-cron` | none | Optional PHP Container runs cron tasks |
-| [build](containers-cli.md#build-container) | Build Container  | none | none | PHP Container, runs build process |
-| [deploy](containers-cli.md#deploy-container) | Deploy Container | none | none | PHP Container, runs the deploy process |
-
-See [CLI containers](cli.md).
+| [node](cli.md#node-container) | Node  | `--node` | 6, 8, 10, 11 | Optional Node container used for gulp or other NPM-based commands |
+| [cron](cli.md#cron-container) | Cron Jobs | `--with-cron` | none | Optional PHP Container runs cron tasks |
+| [build](cli.md#build-container) | Build Container  | none | none | PHP Container, runs build process |
+| [deploy](cli.md#deploy-container) | Deploy Container | none | none | PHP Container, runs the deploy process |
 
 ## Service containers
 
@@ -40,19 +38,19 @@ The following table shows the options to customize service container configurati
 
 | Name             | Service              | Key & options           | Available Versions                            | Notes                        |
 |------------------|----------------------|-------------------------|-----------------------------------------------|------------------------------|
-| [db](containers-service.md#database-container) | MariaDB or MySQL | `--db`, `--db-image` (MySQL)<br/>`--expose-db-port`<br/>`--db-increment`<br/>`--db-offset`<br/>`--with-entrypoint`<br/>`--with-mariadb-config` | 10.0, 10.1, 10.2, 10.3, 10.4<br/>5.6, 5.7, 8.0 | Use the increment and offset options to customize the [auto-increment settings][Using AUTO_INCREMENT] for replication.<br/><br/>Use the `--with-entrypoint` and `--with-mariadb-config` options to automatically configure database directories in the Docker environment<br/><br/>**Example build commands**:<br/>`ece-docker build:compose --db <mariadb-version>`<br/>`ece-docker build:compose --db <mysql-version> --db-image` |
-| [elasticsearch](containers-service.md#elasticsearch-container) | Elasticsearch | `--es`<br/>`--es-env-var`<br/>`--no-es` | 5.2, 6.5, 6.8, 7.5, 7.6, 7.7, 7.9, 7.10, 7.11 | Use the options to specify the Elasticsearch version,  customize Elasticsearch configuration options, or to build a Docker environment without Elasticsearch. |
-| [opensearch](containers-service.md#opensearch-container) | OpenSearch | `--os`<br/>`--os-env-var`<br/>`--no-os` | 1.1, 1.2 | Use the options to specify the Openseach version, customize OpenSearch configuration options, or to build a Docker environment without OpenSearch.|
-| [fpm](containers-service.md#fpm-container) | PHP FPM | `--php`<br/>`--with-xdebug` | 7.2, 7.3, 7.4, 8.0 | Used for all incoming requests. Optionally, install a specific php version or add Xdebug to debug PHP code in the Docker environment. |
-| [mailhog](containers-service.md#mailhog-container) | MailHog | `--no-mailhog`<br/>`--mailhog-http-port`<br/>`--mailhog-smtp-port` | latest | Email service to replace Sendmail service, which can cause issues in Docker environment |
-| [node](containers-cli.md#node-container) | Node | `--node` | 6, 8, 10, 11 | Node container to run gulp or other NPM based commands in the Docker environment. Use the `--node` option to install a specific node version. |
-| [rabbitmq](containers-service.md#rabbitmq-container) | RabbitMQ  | `--rmq` | 3.5, 3.7, 3.8 | Use the `--rmq` option to install a specific RabbitMQ version. |
-| [redis](containers-service.md#redis-container) | Redis | `--redis` | 3.2, 5.0, 6.0 | Standard redis container |
-| [selenium](containers-service.md#selenium-container) | Selenium | `--with-selenium`<br/>`--selenium-version`<br/>`--selenium-image` | Any | Enables application testing using the Magento Functional Testing Framework (MFTF) |
-| [test](containers-service.md#test-container) | PHP CLI | `--with-test` | Any | Optional container with a writable file system for running tests |
-| [tls](containers-service.md#tls-container) | SSL Endpoint | `--tls-port`<br/>`--no-tls` | nginx 1.19 | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).<br/>Use the `--no-tls` option to disable tls. |
-| [varnish](containers-service.md#varnish-container) | Varnish | `--no-varnish` | 4, 6.2, 6.6 | Varnish is provisioned by default. Use the `--no-varnish` option to skip Varnish service installation. |
-| [zookeeper](containers-service.md#zookeeper-container) | Zookeeper | `--with-zookeeper`<br/>`--zookeeper-version`<br/>`--zookeeper-image` | latest (default)<br/>User-specified version | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.<br/>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
+| [db](service.md#database-container) | MariaDB or MySQL | `--db`, `--db-image` (MySQL)<br/>`--expose-db-port`<br/>`--db-increment`<br/>`--db-offset`<br/>`--with-entrypoint`<br/>`--with-mariadb-config` | 10.0, 10.1, 10.2, 10.3, 10.4<br/>5.6, 5.7, 8.0 | Use the increment and offset options to customize the [auto-increment settings][Using AUTO_INCREMENT] for replication.<br/><br/>Use the `--with-entrypoint` and `--with-mariadb-config` options to automatically configure database directories in the Docker environment<br/><br/>**Example build commands**:<br/>`ece-docker build:compose --db <mariadb-version>`<br/>`ece-docker build:compose --db <mysql-version> --db-image` |
+| [elasticsearch](service.md#elasticsearch-container) | Elasticsearch | `--es`<br/>`--es-env-var`<br/>`--no-es` | 5.2, 6.5, 6.8, 7.5, 7.6, 7.7, 7.9, 7.10, 7.11 | Use the options to specify the Elasticsearch version,  customize Elasticsearch configuration options, or to build a Docker environment without Elasticsearch. |
+| [opensearch](service.md#opensearch-container) | OpenSearch | `--os`<br/>`--os-env-var`<br/>`--no-os` | 1.1, 1.2 | Use the options to specify the Openseach version, customize OpenSearch configuration options, or to build a Docker environment without OpenSearch.|
+| [fpm](service.md#fpm-container) | PHP FPM | `--php`<br/>`--with-xdebug` | 7.2, 7.3, 7.4, 8.0 | Used for all incoming requests. Optionally, install a specific php version or add Xdebug to debug PHP code in the Docker environment. |
+| [mailhog](service.md#mailhog-container) | MailHog | `--no-mailhog`<br/>`--mailhog-http-port`<br/>`--mailhog-smtp-port` | latest | Email service to replace Sendmail service, which can cause issues in Docker environment |
+| [node](cli.md#node-container) | Node | `--node` | 6, 8, 10, 11 | Node container to run gulp or other NPM based commands in the Docker environment. Use the `--node` option to install a specific node version. |
+| [rabbitmq](service.md#rabbitmq-container) | RabbitMQ  | `--rmq` | 3.5, 3.7, 3.8 | Use the `--rmq` option to install a specific RabbitMQ version. |
+| [redis](service.md#redis-container) | Redis | `--redis` | 3.2, 5.0, 6.0 | Standard redis container |
+| [selenium](service.md#selenium-container) | Selenium | `--with-selenium`<br/>`--selenium-version`<br/>`--selenium-image` | Any | Enables application testing using the Magento Functional Testing Framework (MFTF) |
+| [test](service.md#test-container) | PHP CLI | `--with-test` | Any | Optional container with a writable file system for running tests |
+| [tls](service.md#tls-container) | SSL Endpoint | `--tls-port`<br/>`--no-tls` | nginx 1.19 | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).<br/>Use the `--no-tls` option to disable tls. |
+| [varnish](service.md#varnish-container) | Varnish | `--no-varnish` | 4, 6.2, 6.6 | Varnish is provisioned by default. Use the `--no-varnish` option to skip Varnish service installation. |
+| [zookeeper](service.md#zookeeper-container) | Zookeeper | `--with-zookeeper`<br/>`--zookeeper-version`<br/>`--zookeeper-image` | latest (default)<br/>User-specified version | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.<br/>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
 
 Use the following command to view all available options for the `ece-docker build:compose` command:
 
@@ -117,7 +115,7 @@ You do not interact with most of these volumes, which are used by the Docker con
 
 ### Rebuild a clean environment
 
-The `docker-compose down` command removes all components of your local Docker instance, including containers, networks, volumes, and images. However, this command does not affect [the persistent database volume](containers-service.md#database-container) or the `magento-sync` volume used for file synchronization.
+The `docker-compose down` command removes all components of your local Docker instance, including containers, networks, volumes, and images. However, this command does not affect [the persistent database volume](service.md#database-container) or the `magento-sync` volume used for file synchronization.
 
 **To remove all data and rebuild a clean environment**:
 

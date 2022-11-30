@@ -10,11 +10,11 @@ You can create the Docker Compose configuration to build and deploy the Docker c
 -  [Adobe Commerce on cloud infrastructure project configuration files](#cloud-configuration-for-commerce) for Cloud projects
 -  [Unified configuration](#unified-configuration) (`.magento.docker.yml`) for On-premises projects
 -  [CLI configuration](#cli-configuration) using `ece-docker build:compose` command options
--  [Custom Docker Compose configuration file](#build-a-custom-docker-compose-configuration) supports installation for both Cloud and On-premises projects
+-  [Custom Docker Compose configuration file](custom-docker-compose.md) supports installation for both Cloud and On-premises projects
 
 <InlineAlert variant="info" slots="text"/>
 
-When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](docker-quick-reference.md#override-configuration).
+When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](../quick-reference.md#override-configuration).
 
 ## Cloud configuration for Commerce
 
@@ -144,7 +144,7 @@ php ./vendor/bin/ece-docker build:compose -h
 
 <InlineAlert variant="success" slots="text"/>
 
-See [Service configuration options](containers.md#service-configuration-options) for additional information about the service configuration options for the `ece-docker build:compose` command.
+See [Service configuration options](../containers/index.md#service-configuration-options) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
 <!--Link definitions-->
 

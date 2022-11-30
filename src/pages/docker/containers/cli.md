@@ -48,7 +48,7 @@ See the [scripts in the Cloud Docker for Commerce GitHub repository][scripts] to
 ## Build container
 
 - **Container name**: build
-- **Docker base image**: [magento/magento-cloud-docker-php], which is based on the Docker [php][] image
+- **Docker base image**: [magento/magento-cloud-docker-php][], which is based on the Docker [php][] image
 
 The Build container mimics the behavior of the Adobe Commerce on cloud infrastructure build process so that testing the build and deploy process is as close to testing in production as possible.
 
@@ -61,7 +61,7 @@ docker-compose run --rm build magento-command setup:static-content:deploy
 ## Cron container
 
 - **Container name**: cron
-- **Docker base image**: [magento/magento-cloud-docker-php], which is based on the Docker [php][] image
+- **Docker base image**: [magento/magento-cloud-docker-php][], which is based on the Docker [php][] image
 
 The Cron container runs operations in the background immediately after the Docker environment starts. This container uses the cron configuration defined in the [`crons` property of the `.magento.app.yaml` file](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html). This container has no custom configuration.
 
@@ -74,7 +74,7 @@ For details on managing cron jobs in the Cloud Docker environment, see [Manage c
 ## Deploy container
 
 - **Container name**: deploy
-- **Docker base image**: [magento/magento-cloud-docker-php], which is based on the [php][] Docker image
+- **Docker base image**: [magento/magento-cloud-docker-php][], which is based on the [php][] Docker image
 
 The Deploy container mimics the Adobe Commerce on cloud infrastructure deploy process so that testing the build and deploy process is as close to testing in production as possible.
 

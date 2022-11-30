@@ -9,11 +9,11 @@ Production mode simulates your Commerce application in production so that you ca
 
 **Prerequisites:**
 
-Complete the [installation steps](initialization.md).
+Complete the [installation steps](../setup/initialize-docker.md).
 
 **To launch the Docker environment in production mode**:
 
-1. In your local environment, start the Docker configuration generator. You can use the service configuration options, such as `--php`, to [specify a version][services].
+1. In your local environment, start the Docker configuration generator. You can use the service configuration options, such as `--php`, to [specify a version](../containers/index.md#service-configuration-options).
 
    ```bash
    ./vendor/bin/ece-docker build:compose

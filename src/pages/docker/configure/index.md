@@ -10,11 +10,11 @@ Cloud Docker for Commerce uses Docker Compose to build and deploy Adobe Commerce
 - [Adobe Commerce on cloud infrastructure project configuration files](configuration-sources.md#cloud-configuration-for-commerce) for Cloud projects
 - [Unified configuration](configuration-sources.md#unified-configuration) for On-premises projects
 - [CLI configuration](configuration-sources.md#cli-configuration) using `ece-docker build:compose` command options to override configuration values at runtime
-- [Custom Docker Compose configuration file](configuration-sources.md#build-a-custom-docker-compose-configuration) supports installation for both Cloud and On-premises projects
+- [Custom Docker Compose configuration file](custom-docker-compose.md) supports installation for both Cloud and On-premises projects
 
 <InlineAlert variant="info" slots="text"/>
 
-When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](docker-quick-reference.md#override-configuration).
+When you build the Docker Compose configuration file, the `ece-docker build:compose` command overwrites the existing `docker-compose.yml` configuration file. You can save customizations for the Docker Compose configuration in a `docker-compose.override.yml` file. If the `docker-compose.override.yml` file is present, then the override configuration merges with the base configuration. See [Override configuration](../quick-reference.md#override-configuration).
 
 ## Run Composer with Docker
 
@@ -62,7 +62,7 @@ echo "127.0.0.1 magento2.test" | sudo tee -a /etc/hosts
 
 ## Set up email
 
-The default Cloud Docker for Commerce configuration includes the [MailHog](containers-service.md#mailhog-container) service as a replacement for the Sendmail service. Sendmail can cause performance issues in the local Docker environment.
+The default Cloud Docker for Commerce configuration includes the [MailHog](../containers/service.md#mailhog-container) service as a replacement for the Sendmail service. Sendmail can cause performance issues in the local Docker environment.
 
 After you start the Docker environment, go to the following URL to access the MailHog service and view outgoing emails: `http://magento2.docker:8025`
 

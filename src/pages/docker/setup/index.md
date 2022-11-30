@@ -34,7 +34,7 @@ Before setting up a local workspace, gather the following credentials and accoun
 
 -  **(Optional) Cloud Project account**
 
-   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.corp.adobe.com/docs/commerce-cloud-service/start/onboarding.html) for details.
+   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/start/onboarding.html) for details.
 
 -  **(Optional) Encryption Key**
 
@@ -75,7 +75,7 @@ To install PHP 8.1 and skip adding the domain to the `etc/hosts` file:
 bin/init-docker.sh --php 8.1 --add-host no
 ```
 
-On initial project installation, you can use cURL to run the installation script and install the template dependencies. See [Update the hosts file and install dependencies](initialization.md#update-the-hosts-file-and-install-dependencies).
+On initial project installation, you can use cURL to run the installation script and install the template dependencies. See [Update the hosts file and install dependencies](initialize-docker.md#update-the-hosts-file-and-install-dependencies).
 
 ## Web server configuration
 

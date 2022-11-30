@@ -5,7 +5,7 @@ description:
 
 # Manage the database
 
-The Cloud Docker development environment provides MySQL services through a MariaDB (default) or MySQL database deployed to the [Docker database container](containers-service.md#database-container). You connect to the database using `docker-compose` commands. You can also import data from an existing Adobe Commerce on cloud infrastructure project into the database container using the `magento-cloud db:dump` command.
+The Cloud Docker development environment provides MySQL services through a MariaDB (default) or MySQL database deployed to the [Docker database container](../containers/service.md#database-container). You connect to the database using `docker-compose` commands. You can also import data from an existing Adobe Commerce on cloud infrastructure project into the database container using the `magento-cloud db:dump` command.
 
 ## Connect to the database
 
@@ -134,8 +134,6 @@ return [
    +--------------------------+
    ```
 
-[db-image]: https://hub.docker.com/_/mariadb
-
 ## Import a database dump
 
 <InlineAlert variant="warning" slots="text"/>
@@ -156,7 +154,7 @@ Before you import a database from an existing Adobe Commerce installation into a
 
 1. Place the resulting SQL file into the `.docker/mysql/docker-entrypoint-initdb.d` folder.
 
-   The `ece-tools` package imports and processes the SQL file the next time you build and start the Docker environment using the `docker-compose up` command. When you build, you must add the `--with-entrypoint` option to the `ece-docker build:compose` command. This option configures the directories for the imported database. See [Service configuration options][].
+   The `ece-tools` package imports and processes the SQL file the next time you build and start the Docker environment using the `docker-compose up` command. When you build, you must add the `--with-entrypoint` option to the `ece-docker build:compose` command. This option configures the directories for the imported database. See [Service configuration options](../containers/index.md#service-configuration-options).
 
 <InlineAlert variant="help" slots="text"/>
 
@@ -184,9 +182,10 @@ db:
 
 <InlineAlert variant="info" slots="text"/>
 
->See [Docker service containers](containers.md#service-containers) for details about the Database container and container configuration.
+>See [Docker service containers](../containers/index.md#service-containers) for details about the Database container and container configuration.
 
 <!--Link definitions-->
 
 [Add the encryption key]: https://devdocs.magento.com/cloud/setup/first-time-setup-import-import.html#encryption-key
 [mysqldump]: https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
+[db-image]: https://hub.docker.com/_/mariadb

@@ -31,7 +31,7 @@ Adobe Commerce on cloud infrastructure tooling contains the `magento/magento-clo
 
 ## On-premises projects
 
-An on-premises installation requires the stand-alone `magento/magento-cloud-docker` package available in the [Cloud Docker GitHub repository][docker-repo]. When you initialize an Adobe Commerce project for Docker development, you must create a [.magento.docker.yml](configuration-sources.md#unified-configuration) configuration source file to create the Docker containers for the local environment.
+An on-premises installation requires the stand-alone `magento/magento-cloud-docker` package available in the [Cloud Docker GitHub repository][docker-repo]. When you initialize an Adobe Commerce project for Docker development, you must create a [.magento.docker.yml](../configure/configuration-sources.md#unified-configuration) configuration source file to create the Docker containers for the local environment.
 
 **To install an Adobe Commerce on-premises project**:
 
@@ -51,7 +51,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
    composer require --no-update --dev magento/ece-tools magento/magento-cloud-docker
    ```
 
-1. Create the default configuration source file, [.magento.docker.yml](configuration-sources.md#unified-configuration) to build the Docker containers for the local environment.
+1. Create the default configuration source file, [.magento.docker.yml](../configure/configuration-sources.md#unified-configuration) to build the Docker containers for the local environment.
 
    ```yaml
    name: magento
@@ -94,7 +94,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
 
 <InlineAlert variant="info" slots="text"/>
 
-This default configuration file provides the minimum configuration for the Docker environment. See [Configure and manage your project and environment](manage-docker-environment.md).
+This default configuration file provides the minimum configuration for the Docker environment. See [Configure the Docker environment](../configure/index.md).
 
 ## Update the hosts file and install dependencies
 
@@ -133,6 +133,6 @@ After you complete the installation, you can begin using the Docker environment.
 <!--Link definitions-->
 
 [cloud-repo]: https://github.com/magento/magento-cloud
-[compoer-install]: https://devdocs.magento.com/guides/v2.4/install-gde/composer.html
+[compoer-install]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/composer.html
 [docker-repo]: https://github.com/magento/magento-cloud-docker
-[magento-creds]: https://devdocs.magento.com/guides/v2.3/install-gde/prereq/connect-auth.html
+[magento-creds]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html

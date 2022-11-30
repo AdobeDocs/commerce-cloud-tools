@@ -5,9 +5,9 @@ description:
 
 # Code testing
 
-In a Cloud Docker for Commerce development environment, you can use the integrated test suite in each [Cloud Suite for Commerce][] package for Magento code testing. The test suites, which use the [Codeception testing framework for PHP][], provide acceptance tests to validate code intended for contribution to Commerce Cloud package repositories.
+In a Cloud Docker for Commerce development environment, you can use the integrated test suite in each [Cloud Suite for Commerce][] package for application code testing. The test suites, which use the [Codeception testing framework for PHP][], provide acceptance tests to validate code intended for contribution to Commerce Cloud package repositories.
 
-Before you run tests, you must prepare your Docker environment and update the test configuration file. (See [Prepare the test environment](#prepare-the-docker-environment-for-testing).)
+Before you run tests, you must prepare your Docker environment and update the test configuration file. See [Prepare the test environment](#prepare-the-docker-environment-for-testing).
 
 ## Test resources
 
@@ -22,7 +22,7 @@ Use the following table to review the test configuration files and available tes
 
 <InlineAlert variant="info" slots="text"/>
 
-For application testing, use the Magento Application Testing (MFTF) framework to run functional tests. See [Application testing](test-app-mftf.md).
+For application testing, use the Magento Application Testing (MFTF) framework to run functional tests. See [Application testing](application-testing.md).
 
 ## Prepare the Docker environment for testing
 

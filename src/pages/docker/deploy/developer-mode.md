@@ -7,7 +7,7 @@ description: Start the Docker environment in developer mode.
 
 Developer mode supports an active development environment with full, writable file system permissions. This option builds the Docker environment in developer mode and verifies configured service versions.
 
-On macOS and Windows systems, performance is slower in developer mode because of additional file synchronization operations. However, you can improve performance by using either the `manual-native` or the `mutagen` file synchronization option when you generate the `docker-compose.yml` file. See [Synchronizing data in Docker](synchronize-data.md).
+On macOS and Windows systems, performance is slower in developer mode because of additional file synchronization operations. However, you can improve performance by using either the `manual-native` or the `mutagen` file synchronization option when you generate the `docker-compose.yml` file. See [Synchronizing data in Docker](../setup/synchronize-data.md).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -17,12 +17,12 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
 
 **Prerequisites:**
 
--  Complete the [installation steps](initialization.md).
--  [Install file synchronization tools](synchronize-data.md) if needed.
+-  Complete the [installation steps](../setup/initialize-docker.md).
+-  [Install file synchronization tools](../setup/synchronize-data.md) if needed.
 
 **To launch the Docker environment in developer mode**:
 
-1. In your local project root, generate the Docker Compose configuration file. You can use the service configuration options, such as `--php`, to [specify a version](containers.md#service-configuration-options).
+1. In your local project root, generate the Docker Compose configuration file. You can use the service configuration options, such as `--php`, to [specify a version](../containers/index.md#service-configuration-options).
 
    ```bash
    ./vendor/bin/ece-docker build:compose --mode="developer"
@@ -40,7 +40,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
 
    <InlineAlert variant="help" slots="text"/>
 
-   You can further customize the Docker Compose configuration file by adding additional options to the `build:compose` command. For example, you can set the software version for a service, or add Xdebug configuration. See [service configuration options](containers.md#service-configuration-options).
+   You can further customize the Docker Compose configuration file by adding additional options to the `build:compose` command. For example, you can set the software version for a service, or add Xdebug configuration. See [service configuration options](../containers/index.md#service-configuration-options).
 
 1. _Optional_: If you have a custom PHP configuration file, copy the default configuration DIST file to your custom configuration file and make any necessary changes.
 

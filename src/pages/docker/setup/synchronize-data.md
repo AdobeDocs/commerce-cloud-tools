@@ -5,7 +5,7 @@ description: Learn to synchronize data in the Docker development environment.
 
 # Synchronize data
 
-You can launch a Docker environment in [developer mode](developer-mode.md), which provides an active development environment with full, writable file system permissions.
+You can launch a Docker environment in [developer mode](../deploy/developer-mode.md), which provides an active development environment with full, writable file system permissions.
 
 If you choose this option, the Adobe Commerce application works only if the Docker containers have access to the Adobe Commerce application data. You can provide access either by directly mapping the current working directory or by using a file synchronization tool.
 
@@ -17,8 +17,8 @@ The Cloud Docker for Commerce `docker-build` command provides the `--sync-engine
 | --------------- | ------------------- |
 | `native`        | Maps the current working directory to the `/app` directory on each volume, which provides direct access to the data without requiring any synchronization. The `native` option is the default and works for Linux hosts. On macOS or Windows hosts, this option results in extremely slow performance in the Docker environment. |
 | `manual-native` | Provides manual control over synchronization. Requires running manual commands. This option provides the best performance for macOS and Windows. |
-| `mutagen`       | Uses **Mutagen** for file synchronization. When you select Mutagen, you must [install Mutagen](https://mutagen.io/documentation/introduction/installation) on your host operating system before you [launch Docker in developer mode](developer-mode.md). Use this option on macOS or Windows hosts. |
-| `docker-sync`   | **Deprecated in 1.2.3**: Uses **docker-sync** for file synchronization. When you select docker-sync, you must [install docker-sync](https://docker-sync.readthedocs.io/en/latest/#) on your host operating system before you [launch Docker in developer mode](developer-mode.md). Use this option on macOS or Windows hosts. |
+| `mutagen`       | Uses **Mutagen** for file synchronization. When you select Mutagen, you must [install Mutagen](https://mutagen.io/documentation/introduction/installation) on your host operating system before you [launch Docker in developer mode](../deploy/developer-mode.md). Use this option on macOS or Windows hosts. |
+| `docker-sync`   | **Deprecated in 1.2.3**: Uses **docker-sync** for file synchronization. When you select docker-sync, you must [install docker-sync](https://docker-sync.readthedocs.io/en/latest/#) on your host operating system before you [launch Docker in developer mode](../deploy/developer-mode.md). Use this option on macOS or Windows hosts. |
 
 ### Native option
 
@@ -51,5 +51,3 @@ On macOS or Windows systems, we recommend using the `mutagen` or `manual-native`
 ```bash
 ./vendor/bin/ece-docker build:compose --mode="developer" --sync-engine="mutagen"
 ```
-
-See [launch Docker in developer mode](developer-mode.md).

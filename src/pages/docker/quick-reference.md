@@ -42,7 +42,7 @@ php ./vendor/bin/ece-docker build:compose -h
 
 <InlineAlert variant="info" slots="text"/>
 
-See [Service versions](containers.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
+See [Service versions](../docker/containers/index.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
 ### Override configuration
 

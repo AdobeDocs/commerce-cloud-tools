@@ -9,7 +9,7 @@ The following containers provide the services required to build, deploy, and run
 
 <InlineAlert variant="info" slots="text"/>
 
-See [Service configuration options](containers.md#service-containers) to customize container configuration when you build the Docker compose configuration file.
+See [Service configuration options](index.md#service-containers) to customize container configuration when you build the Docker compose configuration file.
 
 ## Database container
 
@@ -22,7 +22,7 @@ You can configure the database container to use either MariaDB or MySQL for the 
 - `magento-db: /var/lib/mysql`
 - `.docker/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d`
 
-To use MySQL for the database, add the `--db image` option when you generate the Docker Compose configuration file. See [Service configuration options](containers.md#service-containers).
+To use MySQL for the database, add the `--db image` option when you generate the Docker Compose configuration file. See [Service configuration options](index.md#service-containers).
 
 When a database container initializes, it creates a database with the specified name and uses the configuration variables specified in the docker-compose configuration. The initial start-up process also executes files with `.sh`, `.sql`, and `.sql.gz` extensions that are found in the `/docker-entrypoint-initdb.d` directory. Files are executed in alphabetical order. See [mariadb Docker documentation][].
 
@@ -53,7 +53,7 @@ You can inject a MySQL configuration into the database container at creation by 
          - innodb-buffer-pool-size=134217728
    ```
 
-See [Manage the database](manage-database.md) for details about using the database.
+See [Manage the database](../configure/manage-database.md) for details about using the database.
 
 ## Elasticsearch container
 
@@ -203,7 +203,7 @@ If you use the `mutagen` file synchronization tools, the `php.ini` file is avail
 
 You can add custom PHP extensions and manage their status from the `runtime` section of the `.magento.app.yaml` file. See [PHP extensions][]. To test custom extensions without updating the Adobe Commerce on cloud infrastructure environment configuration, you can add the custom configuration to the [`docker-compose.override.yml`][Docker override file]. Configuration settings in this file are applied only when you build and deploy to the Docker environment.
 
-Optionally, you can add Xdebug to your Cloud Docker environment to debug your PHP code. See [Configure Xdebug for Docker](configure-xdebug.md).
+Optionally, you can add Xdebug to your Cloud Docker environment to debug your PHP code. See [Configure Xdebug for Docker](../test/configure-xdebug.md).
 
 ## MailHog container
 
@@ -255,7 +255,7 @@ docker-compose run --rm redis redis-cli -h redis
 - **Docker base image**: [selenium/standalone-chrome/](https://hub.docker.com/r/selenium/standalone-chrome), based on the [selenium/standalone-chrome/](https://hub.docker.com/r/selenium/standalone-chrome/h) Docker image
 - **Ports exposed**: `4444`
 
-The Selenium container enables the [Magento Functional Testing Framework (MFTF)](https://devdocs.magento.com/mftf/docs/introduction.html) for application testing in the Cloud Docker environment. See [Magento application testing](test-app-mftf.md).
+The Selenium container enables the [Magento Functional Testing Framework (MFTF)](https://devdocs.magento.com/mftf/docs/introduction.html) for application testing in the Cloud Docker environment. See [Application testing](../test/application-testing.md).
 
 ## Test container
 
@@ -263,7 +263,7 @@ The Selenium container enables the [Magento Functional Testing Framework (MFTF)]
 - **Docker base image**: [magento/magento-cloud-docker-php][php-cloud], based on the [magento/magento-cloud-docker-php][php-cloud] Docker image
 - **Ports exposed**: None
 
-The Test container, based on the [magento/magento-cloud-docker-php][php-cloud] Docker image, has a writable file system and is used for application testing in the Cloud Docker environment. See [Magento application testing](test-app-mftf.md).
+The Test container, based on the [magento/magento-cloud-docker-php][php-cloud] Docker image, has a writable file system and is used for application testing in the Cloud Docker environment. See [Application testing](../test/application-testing.md).
 
 ## TLS container
 
@@ -320,14 +320,14 @@ docker-compose exec varnish varnishadm ban req.url '~' '.'
 - **Docker base image**: [magento/magento-cloud-docker-nginx][nginx], based on the `[centos]` Docker image
 - **Ports exposed**: None
 
-The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](containers.md#request-flow).
+The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](../containers/index.md#request-flow).
 
 This container provides two NGINX configuration options for building the Docker configuration:
 
 -  `--nginx-worker-processes`—to set the number of worker processes for NGINX. The default is `1`.
 -  `--nginx-worker-connections`—to set the maximum number of connections that each worker process can handle simultaneously. The default is `1024`.
 
-The NGINX configuration for this container is the standard Adobe Commerce [nginx config], which includes the configuration to auto-generate NGINX certificates for the container. You can customize the NGINX configuration by mounting a new configuration file using a volume.
+The NGINX configuration for this container is the standard Adobe Commerce [nginx config][], which includes the configuration to auto-generate NGINX certificates for the container. You can customize the NGINX configuration by mounting a new configuration file using a volume.
 
 **To mount the custom NGINX configuration file using volumes**:
 

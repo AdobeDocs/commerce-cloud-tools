@@ -30,7 +30,7 @@ You must have a Blackfire license and account to use Blackfire.io with Adobe Com
            client_token: CLIENT_TOKEN
    ```
 
-1. Generate the `docker-compose.yml` file for developer mode, adding any required [build or service configuration options](quick-reference.md) and [file synchronization options](synchronize-data.md#file-synchronization-options) if needed.
+1. Generate the `docker-compose.yml` file for developer mode, adding any required [build or service configuration options](../quick-reference.md) and [file synchronization options](../setup/synchronize-data.md#file-synchronization-options) if needed.
 
    ```bash
    ./vendor/bin/ece-docker build:compose --mode="developer"
@@ -48,7 +48,7 @@ You must have a Blackfire license and account to use Blackfire.io with Adobe Com
 
    <InlineAlert variant="info" slots="text"/>
 
-   If you are using file synchronization, synchronize files as needed. See [Launch Docker in developer mode](developer-mode.md).
+   If you are using file synchronization, synchronize files as needed. See [Launch Docker in developer mode](../deploy/developer-mode.md).
 
 1. Add context to use locally customized PHP images as described in [Extend the Docker configuration](extend-docker-configuration.md).
 

@@ -50,7 +50,7 @@ If you use Microsoft Windows, take the following steps before continuing:
           condition: service_started
    ```
 
-1. Follow the steps to [launch the Docker environment in Developer mode](developer-mode.md).
+1. Follow the steps to [launch the Docker environment in Developer mode](../deploy/developer-mode.md).
 
    The default Docker environment configuration sets the following Xdebug configuration variables:
 
