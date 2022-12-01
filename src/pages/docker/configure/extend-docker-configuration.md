@@ -109,7 +109,7 @@ You can add PHP extensions to the PHP container by adding the extension configur
 
       In this case, the `bcmath` PHP core extension installs from `docker-php-source` images.
 
-   <InlineAlert variant="info" slots="text"/>
+   <!-- <InlineAlert variant="info" slots="text"/> -->
 
    The configuration you specify depends on the location of the extension source files and method of installation. You can add PHP core extensions from the official Docker PHP images, from the PECL repository, or using an installation script. For details on the configuration attributes and format for the `getConfig` method, see [PHP extension configuration reference](#php-extension-configuration-reference).
 

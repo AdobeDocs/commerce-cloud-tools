@@ -19,7 +19,7 @@ For Cloud Docker for Commerce 1.2 and later, you can specify custom images and i
 
 This command generates the following `docker-compose.yaml` file.
 
-```terminal
+```yaml
 version: '2.1'
 services:
   db:
@@ -172,7 +172,7 @@ networks:
 
 This command generates the following images in the Docker environment:
 
-```conf
+```yaml
 services:
   db:
     image: 'mariadb-v1:10.3'

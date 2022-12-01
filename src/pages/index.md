@@ -1,6 +1,6 @@
 ---
 title: Commerce Cloud Tools
-description: This is the overview page of the Commerce Cloud Tools.
+description: This is the overview page of the Commerce Cloud Tools documentation.
 ---
 
 <Hero slots="image, heading, text"/>
@@ -9,7 +9,7 @@ description: This is the overview page of the Commerce Cloud Tools.
 
 # Commerce Cloud Tools
 
-This is the overview page of the Commerce Cloud Tools.
+Learn how to deploy Adobe Commerce to a local, cloud-like environment using these developer tools.
 
 <Resources slots="heading, links"/>
 

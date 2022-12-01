@@ -158,7 +158,9 @@ You can install and use the Xdebug Helper Chrome extension to debug your PhP cod
 
    ![Enable the Xdebug extension in Chrome](../../_images/xdebug/enable.png)
 
-1. In _Chrome_, click ![Xdebug helper icon](../../_images/xdebug/helper-icon.png) in the Chrome toolbar.
+1. In _Chrome_, click the debug icon in the Chrome toolbar.
+
+   ![Xdebug helper icon](../../_images/xdebug/helper-icon.png)
 
 1. From the _Xdebug helper_ menu, click **Options**.
 
