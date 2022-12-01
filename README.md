@@ -29,7 +29,7 @@ Install the following for local documentation site builds:
    yarn install
    ```
 
-1. Build site dependencies.
+1. (Optional) Build site dependencies. This is useful if you want to refresh the build artefacts without serving the site, but `yarn dev` performs this step.
 
    ```bash
    yarn build
@@ -53,14 +53,14 @@ Install the following for local documentation site builds:
 
 ## Available Commands
 
-Command | Description
-------- | -----------
-`yarn build` | Compile site files.
-`yarn clean` | Clean build artifacts.
-`yarn dev` | Launch dev server preview.
-`yarn serve` | Serve the existing site files for testing preview.
-`yarn start` | Compile site files and serve for testing preview.
-`yarn test:links` | Test for broken links.
+| Command | Description |
+| ------- | ----------- |
+| `yarn build` | Compile site files. |
+| `yarn clean` | Clean build artifacts. |
+| `yarn dev` | Launch dev server preview. |
+| `yarn serve` | Serve the existing site files for testing preview. |
+| `yarn start` | Compile site files and serve for testing preview. |
+| `yarn test:links` | Test for broken links. |
 
 ## Repository Template
 
@@ -94,7 +94,5 @@ adobe.io/{product}/community
 adobe.io/{product}/community/code_of_conduct
 adobe.io/{product}/community/contribute
 ```
-
-#### Launching a deploy
 
 You can deploy using the GitHub actions deploy workflow see [deploy instructions](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites).
