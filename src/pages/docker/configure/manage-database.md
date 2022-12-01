@@ -11,7 +11,7 @@ The Cloud Docker development environment provides MySQL services through a Maria
 
 You can connect to the database through the Docker container or through the database port. Before you begin, locate the database credentials in the `database` section of the `.docker/config.php` file. The examples use the following default credentials:
 
-> Filename: `.docker/config.php`
+Filename: `.docker/config.php`
 
 ```php?start_inline=1
 return [
@@ -182,7 +182,7 @@ db:
 
 <InlineAlert variant="info" slots="text"/>
 
->See [Docker service containers](../containers/index.md#service-containers) for details about the Database container and container configuration.
+See [Docker service containers](../containers/index.md#service-containers) for details about the Database container and container configuration.
 
 <!--Link definitions-->
 
