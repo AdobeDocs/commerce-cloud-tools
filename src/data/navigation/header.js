@@ -1,6 +1,6 @@
 module.exports = [
     {
-      title: "Commerce Cloud Tools",
+      title: "Cloud Tools",
       path: "/",
     },
     {
