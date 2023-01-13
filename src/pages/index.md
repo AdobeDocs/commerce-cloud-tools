@@ -15,9 +15,10 @@ Learn how to deploy Adobe Commerce to a local, cloud-like environment using thes
 
 #### Resources
 
-- [Adobe Commerce on cloud infrastructure guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html)
-- [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs) (Adobe Developer site)
-- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League site)
+- [Commerce on cloud infrastructure guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html)
+- [Cloud tools release notes](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html)
+- [Commerce Developer Documentation](https://developer.adobe.com/commerce/docs)
+- [Commerce User Documentation](https://experienceleague.adobe.com/docs/commerce.html)
 
 ## Overview
 
