@@ -59,7 +59,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
        mode: 'production'
    services:
        php:
-           version: '7.3'
+           version: '8.1'
            extensions:
                enabled:
                    - xsl
@@ -71,9 +71,9 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
        redis:
            version: '5.0'
            image: 'redis'
-       elasticsearch:
-           version: '7.5'
-           image: 'magento/magento-cloud-docker-elasticsearch'
+       opensearch:
+           version: '1.2'
+           image: 'magento/magento-cloud-docker-opensearch'
    hooks:
        build: |
            set -e
