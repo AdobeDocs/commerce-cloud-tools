@@ -9,6 +9,8 @@ A quick reference of common commands for Docker Compose and Cloud Docker for Com
 
 ## Docker Compose
 
+Cloud Docker for Commerce uses the Docker Compose tool. The commands reflected in this guide are based on the latest usage defined in the [docker compose CLI reference](https://docs.docker.com/compose/reference/).
+
 The following table lists the `docker compose` commands for building, deploying, and operating Cloud Docker for Commerce.
 
 | Action                                                | Command                                                    |
