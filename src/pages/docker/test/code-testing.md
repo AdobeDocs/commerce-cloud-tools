@@ -114,7 +114,7 @@ Add credentials to your Docker environment using any of the following methods:
 
 **To load credentials from the environment configuration file**:
 
-1. Run the following commands to write credentials to the `./.env` file.
+1. Run the following commands to write credentials to the `./.env` file:
 
    ```bash
    echo "REPO_USERNAME=your_public_key" >> ./.env

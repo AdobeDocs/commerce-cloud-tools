@@ -36,7 +36,7 @@ sysctl -w vm.max_map_count=262144
 
 1. Reboot your system.
 
-1. Run the following command to verify the change.
+1. Verify the change.
 
    ```bash
    sysctl vm.max_map_count

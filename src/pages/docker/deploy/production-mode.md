@@ -5,7 +5,9 @@ description: Start the Docker environment in production mode.
 
 # Production mode
 
-Production mode simulates your Commerce application in production so that you can verify configured services. Production mode is the default configuration setting for launching the Docker environment with read-only filesystem permissions.
+Production mode simulates your Commerce application in production so that you can verify configured services.
+
+Production mode is the default configuration setting for launching the Docker environment with read-only filesystem permissions.
 
 **Prerequisites:**
 
@@ -28,7 +30,7 @@ Complete the [installation steps](../setup/initialize-docker.md).
 1. Build files to containers and run in the background.
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 1. Install Adobe Commerce in your Docker environment.
@@ -36,41 +38,41 @@ Complete the [installation steps](../setup/initialize-docker.md).
    -  Build Adobe Commerce in the Docker container.
 
       ```bash
-      docker-compose run --rm build cloud-build
+      docker compose run --rm build cloud-build
       ```
 
    -  Deploy Adobe Commerce in the Docker container.
 
       ```bash
-      docker-compose run --rm deploy cloud-deploy
+      docker compose run --rm deploy cloud-deploy
       ```
 
    -  Run post-deploy hooks.
 
       ```bash
-      docker-compose run --rm deploy cloud-post-deploy
+      docker compose run --rm deploy cloud-post-deploy
       ```
 
 1. Configure and connect Varnish.
 
    ```bash
-   docker-compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
+   docker compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
    ```
 
    ```bash
-   docker-compose run --rm deploy magento-command setup:config:set --http-cache-hosts=varnish
+   docker compose run --rm deploy magento-command setup:config:set --http-cache-hosts=varnish
    ```
 
 1. Clear the cache.
 
    ```bash
-   docker-compose run --rm deploy magento-command cache:clean
+   docker compose run --rm deploy magento-command cache:clean
    ```
 
 1. _Optional_: Restart services if the static content does not synchronize with all images after generation on build phase.
 
    ```bash
-   docker-compose restart
+   docker compose restart
    ```
 
 1. Access the local storefront by opening one of the following URLs in a browser:

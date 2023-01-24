@@ -5,7 +5,9 @@ description: Learn how to manage the Cloud Docker for Commerce environment with 
 
 # Configure the Docker environment
 
-Cloud Docker for Commerce uses Docker Compose to build and deploy Adobe Commerce to a multi-container Docker application. You can generate the Docker Compose configuration to build and deploy Docker from the following sources:
+Cloud Docker for Commerce uses Docker Compose to build and deploy Adobe Commerce to a multi-container Docker application.
+
+You can generate the Docker Compose configuration to build and deploy Docker from the following sources:
 
 - [Adobe Commerce on cloud infrastructure project configuration files](configuration-sources.md#cloud-configuration-for-commerce) for Cloud projects
 - [Unified configuration](configuration-sources.md#unified-configuration) for On-premises projects
@@ -42,23 +44,25 @@ When you build your Docker image with this variable, Cloud Docker uses this vers
 
 Sometimes you might want to run Docker on a different host and port, for example if you need more than one Docker instance.
 
-To configure the custom host and port, add the `host` and `port` options to the `build:compose` command.
+**To configure the custom host and port**:
 
-```bash
-./vendor/bin/ece-docker build:compose --host=magento2.test --port=8080
-```
+1. Add the `host` and `port` options to the `build:compose` command.
 
-You must add or update the custom host name in your `/etc/hosts` file.
+   ```bash
+   ./vendor/bin/ece-docker build:compose --host=magento2.test --port=8080
+   ```
 
-```conf
-127.0.0.1 magento2.test
-```
+1. Add or update the custom host name in your `/etc/hosts` file.
 
-Alternatively, you can run the following command to add it to the file:
+   ```conf
+   127.0.0.1 magento2.test
+   ```
 
-```bash
-echo "127.0.0.1 magento2.test" | sudo tee -a /etc/hosts
-```
+   Alternatively, you can run the following command to add it to the file:
+
+   ```bash
+   echo "127.0.0.1 magento2.test" | sudo tee -a /etc/hosts
+   ```
 
 ## Set up email
 

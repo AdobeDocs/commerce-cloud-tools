@@ -57,17 +57,17 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
    -  Deploy Adobe Commerce in the Docker container.
 
       ```bash
-      docker-compose run --rm deploy cloud-deploy
+      docker compose run --rm deploy cloud-deploy
       ```
 
       ```bash
-      docker-compose run --rm deploy magento-command deploy:mode:set developer
+      docker compose run --rm deploy magento-command deploy:mode:set developer
       ```
 
    -  Run post-deploy hooks.
 
       ```bash
-      docker-compose run --rm deploy cloud-post-deploy
+      docker compose run --rm deploy cloud-post-deploy
       ```
 
    <!-- <InlineAlert variant="help" slots="text"/> -->
@@ -77,23 +77,23 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
 1. Enable the Varnish cache for the Adobe Commerce application.
 
    ```bash
-   docker-compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
+   docker compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
    ```
 
    ```bash
-   docker-compose run --rm deploy magento-command setup:config:set  --http-cache-hosts=varnish
+   docker compose run --rm deploy magento-command setup:config:set  --http-cache-hosts=varnish
    ```
 
 1. Clear the cache.
 
    ```bash
-   docker-compose run --rm deploy magento-command cache:clean
+   docker compose run --rm deploy magento-command cache:clean
    ```
 
 1. Make sure that necessary containers are up and running.
 
    ```bash
-   docker-compose ps
+   docker compose ps
    ```
 
 **To use Blackfire.io for performance testing in Cloud Docker**:

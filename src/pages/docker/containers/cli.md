@@ -5,7 +5,9 @@ description: Learn about the Cloud Docker for Commerce CLI containers, images us
 
 # CLI containers
 
-The following CLI containers, most of which are based on a [PHP-CLI version 7 image][], provide `magento-cloud` and `ece-tools` commands to perform file system operations and interact with the application:
+The following CLI containers, most of which are based on a [PHP-CLI version 7 image][], provide `magento-cloud` and `ece-tools` commands to perform file system operations and interact with the application.
+
+Operations include:
 
 - `build`—extends the CLI container to perform operations with writable filesystem, similar to the build phase
 - `deploy`—extends the CLI container to use read-only file system, similar to the deploy phase
@@ -14,10 +16,8 @@ The following CLI containers, most of which are based on a [PHP-CLI version 7 im
 
 For example, you can check the state of your project using the _ideal-state_ wizard:
 
-Run the `ece-tools` ideal-state command.
-
 ```bash
-docker-compose run --rm deploy ece-command wizard:ideal-state
+docker compose run --rm deploy ece-command wizard:ideal-state
 ```
 
 Sample response:
@@ -52,10 +52,10 @@ See the [scripts in the Cloud Docker for Commerce GitHub repository][scripts] to
 
 The Build container mimics the behavior of the Adobe Commerce on cloud infrastructure build process so that testing the build and deploy process is as close to testing in production as possible.
 
-You can also run build commands manually from the build container to perform individual steps from the build process. For example, you can run the following command to deploy static content.
+You can run build commands manually from the build container to perform individual steps from the build process. For example, you can run the following command to deploy static content:
 
 ```bash
-docker-compose run --rm build magento-command setup:static-content:deploy
+docker compose run --rm build magento-command setup:static-content:deploy
 ```
 
 ## Cron container
@@ -81,7 +81,7 @@ The Deploy container mimics the Adobe Commerce on cloud infrastructure deploy pr
 You can run `build` and `deploy` commands manually from the deploy container. The following example reindexes the Adobe Commerce store:
 
 ```bash
-docker-compose run --rm deploy magento-command index:reindex
+docker compose run --rm deploy magento-command index:reindex
 ```
 
 ## Node container

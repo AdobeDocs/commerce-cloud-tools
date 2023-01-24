@@ -41,15 +41,15 @@ You can stop containers and restore them afterwards using the following methods.
 
 | Action | Command |
 | ------ | ------- |
-| Suspend containers to continue your work later | `docker-compose stop` |
-| Stop and remove all containers, images, and volumes | `docker-compose down` |
-| Start containers from a suspended state | `docker-compose start` |
+| Suspend containers to continue your work later | `docker compose stop` |
+| Stop and remove all containers, images, and volumes | `docker compose down` |
+| Start containers from a suspended state | `docker compose start` |
 
 Use the following command to stop and remove the Docker configuration:
 
-   ```bash
-   docker-compose down -v
-   ```
+```bash
+docker compose down -v
+```
 
 <InlineAlert variant="warning" slots="text"/>
 

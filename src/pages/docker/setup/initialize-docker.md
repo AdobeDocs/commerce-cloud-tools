@@ -5,7 +5,7 @@ description: Learn how to begin preparing your Adobe Commerce project to use wit
 
 # Initialize Cloud Docker
 
-Cloud Docker for Commerce is one of the packages in the Cloud Suite for Commerce designed to deploy and manage local Adobe Commerce Docker environments for both cloud and on-premises projects.
+Cloud Docker for Commerce is one of the packages in the Cloud Suite for Commerce designed to deploy and manage local Adobe Commerce projects into Docker environments.
 
 <InlineAlert variant="success" slots="text"/>
 
@@ -17,7 +17,7 @@ Adobe Commerce on cloud infrastructure tooling contains the `magento/magento-clo
 
 **To install an Adobe Commerce on cloud infrastructure project**:
 
-1. Download an application template from the [Magento Cloud repository][cloud-repo]. Be careful to select the branch that corresponds with the Commerce version.
+1. Download an application template from the [Cloud template repository][cloud-repo]. Be careful to select the branch that corresponds with the Commerce version.
 
 1. Optionally, you can clone the latest template.
 
@@ -35,7 +35,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
 
 **To install an Adobe Commerce on-premises project**:
 
-1. Create a project using [Composer][composer-install].
+1. Create a project using [Composer](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/composer.html#prerequisites).
 
    ```bash
     composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
@@ -51,7 +51,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
    composer require --no-update --dev magento/ece-tools magento/magento-cloud-docker
    ```
 
-1. Create the default configuration source file, [.magento.docker.yml](../configure/configuration-sources.md#unified-configuration) to build the Docker containers for the local environment.
+1. Create the default configuration source file—[.magento.docker.yml](../configure/configuration-sources.md#unified-configuration)—to build the Docker containers for the local environment.
 
    ```yaml
    name: magento
@@ -122,7 +122,7 @@ Before you use Cloud Docker for Commerce, you must update the `etc/hosts` file a
    curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.2.0/init-docker.sh | bash -s -- --php 7.4
    ```
 
-   If required, you can add options to the `init-docker.sh` initialization script to customize your Docker environment. Run the following command to see the available options:
+   If necessary, you can add options to the `init-docker.sh` initialization script to customize your Docker environment. Run the following command to see the available options:
 
    ```bash
    curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.1.1/init-docker.sh | bash -s -- --help
@@ -133,6 +133,5 @@ After you complete the installation, you can begin using the Docker environment.
 <!--Link definitions-->
 
 [cloud-repo]: https://github.com/magento/magento-cloud
-[compoer-install]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/composer.html
 [docker-repo]: https://github.com/magento/magento-cloud-docker
 [magento-creds]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html

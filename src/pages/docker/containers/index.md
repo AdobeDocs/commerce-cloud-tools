@@ -5,9 +5,9 @@ description: Learn about the container architecture for Cloud Docker for Commerc
 
 # Container Architecture
 
-The [`magento-cloud-docker` repository][docker-repo] contains build information to create a Docker environment with the required specifications for Adobe Commerce on cloud infrastructure. The build configuration creates a Docker instance with CLI and service containers required to run Adobe Commerce on cloud infrastructure in a local Docker environment. You can customize the Docker containers available in the repository and add more as needed.
+The `magento-cloud-docker` package contains build information to create a Docker environment with the required specifications for Adobe Commerce.
 
-Cloud Docker for Commerce generates the `docker-compose.yml` file to the required specifications. Then, you use docker-compose to create the container instances and to build and deploy the Adobe Commerce site.
+The build configuration creates a Docker instance with CLI and service containers required to preview and test an Adobe Commerce project in a local Docker environment. Cloud Docker for Commerce generates the `docker-compose.yml` file to the required specifications. Then, you use docker-compose to create the container instances and to build and deploy the Adobe Commerce site.
 
 ## CLI Containers
 
@@ -20,14 +20,16 @@ The following CLI containers, most of which are based on a PHP-CLI version 7 Doc
 | [build](cli.md#build-container) | Build Container  | none | none | PHP Container, runs build process |
 | [deploy](cli.md#deploy-container) | Deploy Container | none | none | PHP Container, runs the deploy process |
 
+See [CLI containers](cli.md).
+
 ## Service containers
 
 Cloud Docker for Commerce references the `.magento.app.yaml` and `.magento/services.yaml` configuration files to determine the services you need. When you start the Docker configuration generator using the `ece-docker build:compose` command, use the optional build parameters to override a default service version or specify custom configuration.
 
-For example, the following command starts the Docker configuration generator in developer mode and specifies PHP version 7.2:
+For example, the following command starts the Docker configuration generator in developer mode and specifies PHP version 8.1:
 
 ```bash
-./vendor/bin/ece-docker build:compose --mode="developer" --php 7.2
+./vendor/bin/ece-docker build:compose --mode="developer" --php 8.1
 ```
 
 See [Service containers](service.md).
@@ -40,7 +42,7 @@ The following table shows the options to customize service container configurati
 |------------------|----------------------|-------------------------|-----------------------------------------------|------------------------------|
 | [db](service.md#database-container) | MariaDB or MySQL | `--db`, `--db-image` (MySQL)<br/>`--expose-db-port`<br/>`--db-increment`<br/>`--db-offset`<br/>`--with-entrypoint`<br/>`--with-mariadb-config` | 10.0, 10.1, 10.2, 10.3, 10.4<br/>5.6, 5.7, 8.0 | Use the increment and offset options to customize the [auto-increment settings][Using AUTO_INCREMENT] for replication.<br/><br/>Use the `--with-entrypoint` and `--with-mariadb-config` options to automatically configure database directories in the Docker environment<br/><br/>**Example build commands**:<br/>`ece-docker build:compose --db <mariadb-version>`<br/>`ece-docker build:compose --db <mysql-version> --db-image` |
 | [elasticsearch](service.md#elasticsearch-container) | Elasticsearch | `--es`<br/>`--es-env-var`<br/>`--no-es` | 5.2, 6.5, 6.8, 7.5, 7.6, 7.7, 7.9, 7.10, 7.11 | Use the options to specify the Elasticsearch version,  customize Elasticsearch configuration options, or to build a Docker environment without Elasticsearch. |
-| [opensearch](service.md#opensearch-container) | OpenSearch | `--os`<br/>`--os-env-var`<br/>`--no-os` | 1.1, 1.2 | Use the options to specify the Openseach version, customize OpenSearch configuration options, or to build a Docker environment without OpenSearch.|
+| [opensearch](service.md#opensearch-container) | OpenSearch | `--os`<br/>`--os-env-var`<br/>`--no-os` | 1.1, 1.2 | Use the options to specify the OpenSearch version, customize OpenSearch configuration options, or to build a Docker environment without OpenSearch.|
 | [fpm](service.md#fpm-container) | PHP FPM | `--php`<br/>`--with-xdebug` | 7.2, 7.3, 7.4, 8.0 | Used for all incoming requests. Optionally, install a specific php version or add Xdebug to debug PHP code in the Docker environment. |
 | [mailhog](service.md#mailhog-container) | MailHog | `--no-mailhog`<br/>`--mailhog-http-port`<br/>`--mailhog-smtp-port` | latest | Email service to replace Sendmail service, which can cause issues in Docker environment |
 | [node](cli.md#node-container) | Node | `--node` | 6, 8, 10, 11 | Node container to run gulp or other NPM based commands in the Docker environment. Use the `--node` option to install a specific node version. |
@@ -73,7 +75,7 @@ You can remove Varnish from the configuration, in which case the traffic passes 
 
 ## Sharing data between host machine and container
 
-You can share files easily between your machine and a Docker container by placing the files in the `.docker/mnt` directory. You can find the files in the `/mnt` directory the next time you build and start the Docker environment using the `docker-compose up` command.
+You can share files easily between your machine and a Docker container by placing the files in the `.docker/mnt` directory. You can find the files in the `/mnt` directory the next time you build and start the Docker environment using the `docker compose up` command.
 
 ## Sharing project data
 
@@ -101,21 +103,21 @@ You can customize this configuration by updating the [`mounts`][mount-configurat
 
 ### File synchronization
 
-Additionally, you can share data into the containers using file synchronization. See the [File synchronization](../setup/synchronize-data.md) and [Developer mode](../deploy/developer-mode.md) documentation.
+Also, you can share data into the containers using file synchronization. See the [File synchronization](../setup/synchronize-data.md) and [Developer mode](../deploy/developer-mode.md) documentation.
 
 ## Container Volumes
 
 Cloud Docker for Commerce uses Docker volumes to maintain data throughout the lifecycle of the Docker containers. These volumes can be defined in several ways:
 
-- in a `docker-compose.yml` or other docker-compose files
-- in the Dockerfile from the [magento-cloud-docker repository](https://github.com/magento/magento-cloud-docker)
-- in the upstream Docker image
+- Docker Compose files such as `docker-compose.yml`
+- Dockerfile from the [magento-cloud-docker repository](https://github.com/magento/magento-cloud-docker)
+- Upstream Docker image
 
 You do not interact with most of these volumes, which are used by the Docker containers and follow the docker-compose lifecycle. The only exception to this is the `magento-sync` directory that is an external volume used by the Mutagen application to transport data into the containers from the host operating system.
 
 ### Rebuild a clean environment
 
-The `docker-compose down` command removes all components of your local Docker instance, including containers, networks, volumes, and images. However, this command does not affect [the persistent database volume](service.md#database-container) or the `magento-sync` volume used for file synchronization.
+The `docker compose down` command removes all components of your local Docker instance, including containers, networks, volumes, and images. However, this command does not affect [the persistent database volume](service.md#database-container) or the `magento-sync` volume used for file synchronization.
 
 **To remove all data and rebuild a clean environment**:
 
@@ -134,7 +136,7 @@ ERROR: Volume magento-sync declared as external, but could not be found. Please 
 All containers use the Docker logging method. You can view the logs using the `docker-compose` command. The following example uses the `-f` option to _follow_ the log output of the TLS container:
 
 ```bash
-docker-compose logs -f tls
+docker compose logs -f tls
 ```
 
 Now you can see all requests that are passing through the TLS container and check for errors.
