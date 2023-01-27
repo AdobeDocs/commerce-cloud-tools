@@ -7,7 +7,7 @@ description: Learn about the container architecture for Cloud Docker for Commerc
 
 The `magento-cloud-docker` package contains build information to create a Docker environment with the required specifications for Adobe Commerce.
 
-The build configuration creates a Docker instance with CLI and service containers required to preview and test an Adobe Commerce project in a local Docker environment. Cloud Docker for Commerce generates the `docker-compose.yml` file to the required specifications. Then, you use docker-compose to create the container instances and to build and deploy the Adobe Commerce site.
+The build configuration creates a Docker instance with CLI and service containers required to preview and test an Adobe Commerce project in a local Docker environment. Cloud Docker for Commerce generates the `docker-compose.yml` file to the required specifications. Then, use `docker compose` to create the container instances and build and deploy the Adobe Commerce site.
 
 ## CLI Containers
 

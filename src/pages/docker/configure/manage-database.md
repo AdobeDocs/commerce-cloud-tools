@@ -7,7 +7,7 @@ description: Learn how to access and manage the database in the Cloud Docker for
 
 The Cloud Docker development environment provides MySQL services through a MariaDB (default) or MySQL database deployed to the [Docker database container](../containers/service.md#database-container).
 
-You connect to the database using `docker-compose` commands. You can also import data from an existing Adobe Commerce on cloud infrastructure project into the database container using the `magento-cloud db:dump` command.
+You connect to the database using `docker compose` commands. You can also import data from an existing Adobe Commerce on cloud infrastructure project into the database container using the `magento-cloud db:dump` command.
 
 ## Connect to the database
 
