@@ -5,7 +5,7 @@ description: Learn how to extend your Cloud Docker for Commerce configuration us
 
 # Extend the Docker configuration
 
-You can use the built-in extension mechanism of Docker to specify [multiple compose files][].
+You can use the built-in Docker extension mechanism to specify [multiple compose files][].
 
 The following example replaces the default value of the `ENABLE_SENDMAIL` environment variable.
 

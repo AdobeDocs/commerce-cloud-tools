@@ -13,7 +13,7 @@ You connect to the database using `docker compose` commands. You can also import
 
 You can connect to the database through the Docker container or through the database port. Before you begin, locate the database credentials in the `database` section of the `.docker/config.php` file.
 
-The examples use the following default credentials:
+The procedures in this topic use the following default credentials:
 
 ```php?start_inline=1
 return [
