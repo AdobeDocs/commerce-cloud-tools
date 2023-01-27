@@ -5,9 +5,9 @@ description: Start the Docker environment in developer mode.
 
 # Developer mode
 
-Developer mode supports an active development environment with full, writable file system permissions. This option builds the Docker environment in developer mode and verifies configured service versions.
+Developer mode supports an active development environment with full, writable file system permissions.
 
-On macOS and Windows systems, performance is slower in developer mode because of additional file synchronization operations. However, you can improve performance by using either the `manual-native` or the `mutagen` file synchronization option when you generate the `docker-compose.yml` file. See [Synchronizing data in Docker](../setup/synchronize-data.md).
+This option builds the Docker environment in developer mode and verifies configured service versions. On macOS and Windows systems, performance is slower in developer mode because of additional file synchronization operations. However, you can improve performance by using either the `manual-native` or the `mutagen` file synchronization option when you generate the `docker-compose.yml` file. See [Synchronizing data in Docker](../setup/synchronize-data.md).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -32,7 +32,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
 
    The `--mode` option in this step determines the mode in a later `deploy` step.
 
-   If required, set the option for [synchronizing data in Docker][sync]. For example:
+   If necessary, set the option for [synchronizing data in Docker][sync]. For example:
 
    ```bash
    ./vendor/bin/ece-docker build:compose --mode="developer" --sync-engine="mutagen"
@@ -51,7 +51,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
 1. Build files to containers and run in the background.
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 1. If you selected the `manual-native` option, start the file synchronization.
@@ -62,7 +62,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
    ./bin/magento-docker copy-to --all
    ```
 
-   Additionally, you can provide a specific directory from the local machine to copy to the Docker volume, for example `vendor`:
+   Also, you can provide a specific directory from the local machine to copy to the Docker volume, for example `vendor`:
 
    ```bash
    ./bin/magento-docker copy-to vendor
@@ -74,7 +74,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
    ./bin/magento-docker copy-from --all
    ```
 
-   Additionally, you can provide a specific directory from the Docker volume to copy from, such as `vendor`:
+   Also, you can provide a specific directory from the Docker volume to copy from, such as `vendor`:
 
    ```bash
    ./bin/magento-docker copy-from vendor
@@ -86,28 +86,28 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
    bash ./mutagen.sh
    ```
 
-<InlineAlert variant="help" slots="text"/>
+   **Important**:
 
-If you host your Docker environment on Windows and the session start fails, update the `mutagen.sh` file to change the value for the `--symlink-mode` option to `portable`.
+   If you host your Docker environment on Windows and the session start fails, update the `mutagen.sh` file to change the value for the `--symlink-mode` option to `portable`.
 
 1. Install Adobe Commerce in your Docker environment.
 
-   -  For Adobe Commerce version 2.4 and 2.4.1 only, run the following command to apply patches before you deploy.
+   -  For Adobe Commerce version 2.4 and 2.4.1 only, apply patches before you deploy.
 
       ```bash
-      docker-compose run --rm deploy php ./vendor/bin/ece-patches apply
+      docker compose run --rm deploy php ./vendor/bin/ece-patches apply
       ```
 
    -  Deploy Adobe Commerce in the Docker container.
 
       ```bash
-      docker-compose run --rm deploy cloud-deploy
+      docker compose run --rm deploy cloud-deploy
       ```
 
    -  Run post-deploy hooks.
 
        ```bash
-       docker-compose run --rm deploy cloud-post-deploy
+       docker compose run --rm deploy cloud-post-deploy
        ```
 
    <!-- <InlineAlert variant="info" slots="text"/> -->
@@ -117,17 +117,17 @@ If you host your Docker environment on Windows and the session start fails, upda
 1. Configure and connect Varnish.
 
    ```bash
-   docker-compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
+   docker compose run --rm deploy magento-command config:set system/full_page_cache/caching_application 2 --lock-env
    ```
 
    ```bash
-   docker-compose run --rm deploy magento-command setup:config:set --http-cache-hosts=varnish
+   docker compose run --rm deploy magento-command setup:config:set --http-cache-hosts=varnish
    ```
 
 1. Clear the cache.
 
    ```bash
-   docker-compose run --rm deploy magento-command cache:clean
+   docker compose run --rm deploy magento-command cache:clean
    ```
 
 1. Access the local storefront by opening one of the following URLs in a browser:

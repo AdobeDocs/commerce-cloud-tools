@@ -5,7 +5,9 @@ description:
 
 # Configure multiple websites or stores
 
-Cloud Docker supports multiple websites or stores by adding subdomains to your configuration. See [Understanding websites, stores, and store views][].
+Cloud Docker supports multiple websites or stores by adding subdomains to your configuration.
+
+See [Understanding websites, stores, and store views][].
 
 **To add support for multiple websites and stores**:
 

@@ -5,12 +5,12 @@ description: Learn how to use the MFTF for Commerce application testing in the C
 
 # Application testing
 
-In a Cloud Docker development environment, you can use the [Magento Functional Testing Framework (MFTF)][MFTF docs] for application testing. In this environment, you run MFTF commands using the `mftf-command` ([CLI container command](../containers/cli.md#cli-container-commands)).
+In a Cloud Docker development environment, you can use the [Magento Functional Testing Framework (MFTF)][MFTF docs] for application testing.
 
-For example, the following command generates the MFTF tests:
+In this environment, you run MFTF commands using the `mftf-command` ([CLI container command](../containers/cli.md#cli-container-commands)). For example, the following command generates the MFTF tests:
 
 ```bash
-docker-compose run test mftf-command generate:tests --debug=none
+docker compose run test mftf-command generate:tests --debug=none
 ```
 
 <InlineAlert variant="info" slots="text"/>
@@ -61,7 +61,7 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    ```
 
    ```bash
-   docker-compose run deploy bash -c "echo \"$CONFIG\" > /app/dev/tests/acceptance/.env"
+   docker compose run deploy bash -c "echo \"$CONFIG\" > /app/dev/tests/acceptance/.env"
    ```
 
    <!-- <InlineAlert variant="info" slots="text"/> -->
@@ -71,51 +71,51 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
 1. Disable the Magento settings that conflict with MFTF functionality.
 
    ```bash
-   docker-compose run deploy magento-command config:set admin/security/admin_account_sharing 1
+   docker compose run deploy magento-command config:set admin/security/admin_account_sharing 1
    ```
 
    ```bash
-   docker-compose run deploy magento-command config:set admin/security/use_form_key 0
+   docker compose run deploy magento-command config:set admin/security/use_form_key 0
    ```
 
    ```bash
-   docker-compose run deploy magento-command config:set web/secure/use_in_adminhtml 0
+   docker compose run deploy magento-command config:set web/secure/use_in_adminhtml 0
    ```
 
 1. Enable the Varnish cache for the Magento application.
 
    ```bash
-   docker-compose run deploy magento-command config:set  system/full_page_cache/caching_application 2 --lock-env
+   docker compose run deploy magento-command config:set  system/full_page_cache/caching_application 2 --lock-env
    ```
 
    ```bash
-   docker-compose run deploy magento-command setup:config:set  --http-cache-hosts=varnish
+   docker compose run deploy magento-command setup:config:set  --http-cache-hosts=varnish
    ```
 
 1. Clear the cache.
 
    ```bash
-   docker-compose run deploy magento-command cache:clean
+   docker compose run deploy magento-command cache:clean
    ```
 
 1. Generate MFTF tests.
 
    ```bash
-   docker-compose run test mftf-command build:project
+   docker compose run test mftf-command build:project
    ```
 
    ```bash
-   docker-compose run test mftf-command generate:tests --debug=none
+   docker compose run test mftf-command generate:tests --debug=none
    ```
 
 1. Run the generated tests.
 
    ```bash
-   docker-compose run test mftf-command run:test AdminLoginTest --debug=none
+   docker compose run test mftf-command run:test AdminLoginTest --debug=none
    ```
 
    ```bash
-   docker-compose run test mftf-command run:test AddProductBySkuWithEmptyQtyTest --debug=none
+   docker compose run test mftf-command run:test AddProductBySkuWithEmptyQtyTest --debug=none
    ```
 
 <!-- link definitions -->

@@ -7,9 +7,7 @@ description: Deploy your Commerce application in a Docker environment designed f
 
 By default, Cloud Docker for Commerce deploys Adobe Commerce to a read-only file system in the Docker environment.
 
-This deployment mirrors the read-only file system in the Production environment. You can deploy a Docker environment in developer mode, which provides an active development environment with full, writable file system permissions.
-
-You use the `ece-docker build:compose` command to generate the Docker Compose configuration file from specified configuration settings and to deploy Adobe Commerce on cloud infrastructure to a local Docker environment. You supply the configuration settings from multiple sources depending on your requirements. See [Configure sources](../configure/configuration-sources.md).
+The default deployment mirrors the read-only file system in the cloud infrastructure Production environment. You can deploy a Docker environment in developer mode, which provides an active development environment with full, writable file system permissions. The `ece-docker build:compose` command generates the Docker Compose configuration file from project configuration settings and to deploy Adobe Commerce on cloud infrastructure to a local Docker environment. You supply the configuration settings from multiple sources depending on your requirements. See [Configure sources](../configure/configuration-sources.md).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -41,15 +39,15 @@ You can stop containers and restore them afterwards using the following methods.
 
 | Action | Command |
 | ------ | ------- |
-| Suspend containers to continue your work later | `docker-compose stop` |
-| Stop and remove all containers, images, and volumes | `docker-compose down` |
-| Start containers from a suspended state | `docker-compose start` |
+| Suspend containers to continue your work later | `docker compose stop` |
+| Stop and remove all containers, images, and volumes | `docker compose down` |
+| Start containers from a suspended state | `docker compose start` |
 
 Use the following command to stop and remove the Docker configuration:
 
-   ```bash
-   docker-compose down -v
-   ```
+```bash
+docker compose down -v
+```
 
 <InlineAlert variant="warning" slots="text"/>
 
