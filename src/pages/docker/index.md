@@ -26,5 +26,5 @@ The Cloud Docker for Commerce guide assumes that you have some working knowledge
 You can refer to the Commerce Developer and User guides below:
 
 - [Adobe Commerce on Cloud Infrastructure guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html)—Customize deployment into a hosted, pre-provisioned infrastructure
-- [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs) (Adobe Developer site)—Develop, customize, integrate, extend, and use advanced capabilities
+- [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs/) (Adobe Developer site)—Develop, customize, integrate, extend, and use advanced capabilities
 - [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League)—Plan, implement, operate, upgrade, and maintain your Commerce projects
