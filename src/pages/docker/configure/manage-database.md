@@ -5,13 +5,15 @@ description: Learn how to access and manage the database in the Cloud Docker for
 
 # Manage the database
 
-The Cloud Docker development environment provides MySQL services through a MariaDB (default) or MySQL database deployed to the [Docker database container](../containers/service.md#database-container). You connect to the database using `docker-compose` commands. You can also import data from an existing Adobe Commerce on cloud infrastructure project into the database container using the `magento-cloud db:dump` command.
+The Cloud Docker development environment provides MySQL services through a MariaDB (default) or MySQL database deployed to the [Docker database container](../containers/service.md#database-container).
+
+You connect to the database using `docker compose` commands. You can also import data from an existing Adobe Commerce on cloud infrastructure project into the database container using the `magento-cloud db:dump` command.
 
 ## Connect to the database
 
-You can connect to the database through the Docker container or through the database port. Before you begin, locate the database credentials in the `database` section of the `.docker/config.php` file. The examples use the following default credentials:
+You can connect to the database through the Docker container or through the database port. Before you begin, locate the database credentials in the `database` section of the `.docker/config.php` file.
 
-Filename: `.docker/config.php`
+The procedures in this topic use the following default credentials:
 
 ```php?start_inline=1
 return [
@@ -51,7 +53,7 @@ return [
 1. Connect to the CLI container.
 
    ```bash
-   docker-compose run --rm deploy bash
+   docker compose run --rm deploy bash
    ```
 
 1. Connect to the database with a username and password.
@@ -86,7 +88,7 @@ return [
 1. Find the port used by the database. The port can change each time you restart Docker.
 
    ```bash
-   docker-compose ps
+   docker compose ps
    ```
 
    Sample response:
@@ -154,7 +156,7 @@ Before you import a database from an existing Adobe Commerce installation into a
 
 1. Place the resulting SQL file into the `.docker/mysql/docker-entrypoint-initdb.d` folder.
 
-   The `ece-tools` package imports and processes the SQL file the next time you build and start the Docker environment using the `docker-compose up` command. When you build, you must add the `--with-entrypoint` option to the `ece-docker build:compose` command. This option configures the directories for the imported database. See [Service configuration options](../containers/index.md#service-configuration-options).
+   The `ece-tools` package imports and processes the SQL file the next time you build and start the Docker environment using the `docker compose up` command. When you build, you must add the `--with-entrypoint` option to the `ece-docker build:compose` command. This option configures the directories for the imported database. See [Service configuration options](../containers/index.md#service-configuration-options).
 
 <InlineAlert variant="help" slots="text"/>
 

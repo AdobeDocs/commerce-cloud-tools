@@ -9,7 +9,7 @@ The following containers provide the services required to build, deploy, and run
 
 <InlineAlert variant="info" slots="text"/>
 
-See [Service configuration options](index.md#service-containers) to customize container configuration when you build the Docker compose configuration file.
+See [Service configuration options](index.md#service-containers) to customize container configuration when you build the Docker Compose configuration file.
 
 ## Database container
 
@@ -24,9 +24,9 @@ You can configure the database container to use either MariaDB or MySQL for the 
 
 To use MySQL for the database, add the `--db image` option when you generate the Docker Compose configuration file. See [Service configuration options](index.md#service-containers).
 
-When a database container initializes, it creates a database with the specified name and uses the configuration variables specified in the docker-compose configuration. The initial start-up process also executes files with `.sh`, `.sql`, and `.sql.gz` extensions that are found in the `/docker-entrypoint-initdb.d` directory. Files are executed in alphabetical order. See [mariadb Docker documentation][].
+When a database container initializes, it creates a database with the specified name and uses the configuration variables specified in the Docker Compose configuration. The initial start-up process also executes files with `.sh`, `.sql`, and `.sql.gz` extensions that are found in the `/docker-entrypoint-initdb.d` directory. Files are executed in alphabetical order. See [mariadb Docker documentation][].
 
-To prevent accidental data loss, the database is stored in a persistent `magento-db` volume after you stop and remove the Docker configuration. The next time you use the `docker-compose up` command, the Docker environment restores your database from the persistent volume. You must manually destroy the database volume using the `docker volume rm <volume_name>` command.
+To prevent accidental data loss, the database is stored in a persistent `magento-db` volume after you stop and remove the Docker configuration. The next time you use the `docker compose up` command, the Docker environment restores your database from the persistent volume. You must manually destroy the database volume using the `docker volume rm <volume_name>` command.
 
 You can inject a MySQL configuration into the database container at creation by adding the configuration to the `docker-compose-override.yml` file using any of the following methods:
 
@@ -109,7 +109,7 @@ sysctl -w vm.max_map_count=262144
 
 1. Reboot your system.
 
-1. Run the following command to verify the change.
+1. Verify the change.
 
    ```bash
    sysctl vm.max_map_count
@@ -213,7 +213,7 @@ Optionally, you can add Xdebug to your Cloud Docker environment to debug your PH
 
 The default Cloud Docker configuration includes the [MailHog service][] as a replacement for the Sendmail service. Sendmail can cause performance issues in the local Docker environment.
 
-By default, MailHog listens on port 1025 for SMTP and port 8025 for the frontend dashboard and API (HTTP). You can change the default ports using the `--mailhog-http-port` and `--mailhog-smtp-port` options. When you build the Docker compose configuration, you can change the default ports:
+By default, MailHog listens on port 1025 for SMTP and port 8025 for the frontend dashboard and API (HTTP). You can change the default ports using the `--mailhog-http-port` and `--mailhog-smtp-port` options. When you build the Docker Compose configuration, you can change the default ports:
 
 ```bash
 ./vendor/bin/ece-docker build:compose --mailhog-smtp-port=1025 --mailhog-http-port=8025
@@ -221,7 +221,7 @@ By default, MailHog listens on port 1025 for SMTP and port 8025 for the frontend
 
 After updating the configuration and restarting the Docker environment, you can connect to the MailHog service from `http://magento2.docker:8025`, and use port 1025 for SMTP communication.
 
-If needed, you can disable the MailHog service when you generate the Docker compose configuration:
+If needed, you can disable the MailHog service when you generate the Docker Compose configuration:
 
 ```bash
 ./vendor/bin/ece-docker build:compose --no-mailhog
@@ -246,7 +246,7 @@ The Redis container for Cloud Docker for Commerce is a standard container with n
 Connect to and run Redis commands using the `redis-cli` property inside the container:
 
 ```bash
-docker-compose run --rm redis redis-cli -h redis
+docker compose run --rm redis redis-cli -h redis
 ```
 
 ## Selenium container
@@ -311,7 +311,7 @@ You can specify `VARNISHD_PARAMS` and other environment variables using ENV to s
 **To clear the Varnish cache**:
 
 ```bash
-docker-compose exec varnish varnishadm ban req.url '~' '.'
+docker compose exec varnish varnishadm ban req.url '~' '.'
 ```
 
 ## Web container

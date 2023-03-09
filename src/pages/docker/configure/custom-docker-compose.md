@@ -5,13 +5,15 @@ description: Learn how to build a custom Docker Compose configuration for use wi
 
 # Build a custom Docker Compose configuration
 
-Instead of using the Adobe Commerce on cloud infrastructure project configuration to build the `docker-compose.yaml` file, you can use the `ece-docker build:custom:compose` command. Using this command with a JSON configuration is the quickest way to change your environment settings.
+Build a custom configuration using ECE-tools.
 
-You provide the configuration as a JSON array as shown in [Example 1](#example-1-custom-docker-composeyaml-file).
+Instead of using the Adobe Commerce on cloud infrastructure project configuration to build the `docker-compose.yaml` file, you can use the `ece-docker build:custom:compose` command. Using this command with a JSON configuration is the quickest way to change your environment settings. You provide the configuration as a JSON array as shown in [Example 1](#custom-docker-composeyaml-file).
 
-For Cloud Docker for Commerce 1.2 and later, you can specify custom images and image versions using the `ece-docker build:custom:compose` command as shown in [Example 2](#example-2-custom-docker-composeyaml-file-with-custom-images-and-image-versions).
+For Cloud Docker for Commerce 1.2 and later, you can specify custom images and image versions using the `ece-docker build:custom:compose` command as shown in [Example 2](#custom-docker-composeyaml-file-with-custom-images-and-image-versions).
 
-### Example 1: Custom `docker-compose.yaml` file
+## Examples
+
+### Custom `docker-compose.yaml` file
 
 ```bash
 ./vendor/bin/ece-docker build:custom:compose '{"name":"magento","system":{"mode":"production","host":"magento2.test","port":"8080","db":{"increment_increment":3,"increment_offset":2},"mailhog":{"smtp_port":"1026","http_port":"8026"}},"services":{"php":{"version":"7.3","enabled":true,"extensions":{"enabled":["xsl"]}},"mysql":{"version":"10.2","image":"mariadb","enabled":true}, "mailhog": {"enabled":true}}}'
@@ -164,7 +166,7 @@ networks:
     driver: bridge
 ```
 
-### Example 2: Custom `docker-compose.yaml` file with custom images and image versions
+### Custom `docker-compose.yaml` file with custom images and image versions
 
 ```bash
 ./vendor/bin/ece-docker build:custom:compose '{"name":"magento","system":{"mode":"production","host":"magento2.test","port":"8080","db":{"increment_increment":3,"increment_offset":2},"mailhog":{"smtp_port":"1026","http_port":"8026"}},"services":{"php":{"image":"php-v1","version":"7.4","enabled":true},"php-cli":{"image-pattern":"%s:%s-cli"},"php-fpm":{"image-pattern":"%s:%s-fpm"},"mysql":{"image":"mariadb-v1","version":"10.3","image-pattern":"%s:%s","enabled":true},"redis":{"image":"redis-v1","enabled":"true","version":"5"},"elasticsearch":{"image":"elasticsearch-v1","image-pattern":"%s:%s","enabled":true,"version":"7.6"},"varnish":{"image":"varnish-v1","image-pattern":"%s:%s","enabled":true,"version":"6.2"},"nginx":{"image":"nginx-v1","version":"1.19","image-pattern":"%s:%s","enabled":"true"},"test":{"enabled":true}},"mounts":{"var":{"path":"var"},"app-etc":{"path":"app\/etc"},"pub-media":{"path":"pub\/media"},"pub-static":{"path":"pub\/static"}}}'

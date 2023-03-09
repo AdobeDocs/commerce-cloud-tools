@@ -42,7 +42,7 @@ Before setting up a local workspace, gather the following credentials and accoun
 
 ## PHP and Composer
 
-Cloud Docker for Commerce does not require PHP and Composer to be installed locally. We provide an installation script to perform PHP and Composer operations.
+Cloud Docker for Commerce does not require PHP and Composer to be installed locally. Adobe provides an installation script to perform PHP and Composer operations.
 
 The `init-docker.sh` script runs the following command, which installs the template dependencies and sets both the PHP version and the Cloud Docker for Commerce image version.
 
@@ -56,7 +56,7 @@ The following table lists the available options to use with the `init-docker.sh`
 
 | Option          | Description |
 | :-------------- | :---------- |
-| `-p`, `--php`   | PHP version (for installing dependencies). You must specify a PHP version that is compatible with the Adobe Commerce version deployed to the Cloud Docker environment. |
+| `-p`, `--php`   | PHP version (for installing dependencies). Specify a PHP version that is compatible with the Adobe Commerce version deployed to the Cloud Docker environment. |
 | `-i`, `--image` |  Cloud Docker for Commerce image version (for installing dependencies).<br/>**Default**: `1.1` |
 | `--host`        | Domain name to add to the `/etc/hosts` file.<br/>**Default**: `magento2.docker` |
 | `--add-host`    | Add domain name to `/etc/hosts` file.<br/>**Default**: true (`yes`) |

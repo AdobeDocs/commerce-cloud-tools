@@ -5,7 +5,9 @@ description: Learn how to extend your Cloud Docker for Commerce configuration us
 
 # Extend the Docker configuration
 
-You can use the built-in extension mechanism of Docker to specify [multiple compose files][]. The following example replaces the default value of the `ENABLE_SENDMAIL` environment variable.
+You can use the built-in Docker extension mechanism to specify [multiple compose files][].
+
+The following example replaces the default value of the `ENABLE_SENDMAIL` environment variable.
 
 1. Create a `docker-compose-dev.yml` file inside your project root directory and add the following content:
 
@@ -20,7 +22,7 @@ You can use the built-in extension mechanism of Docker to specify [multiple comp
 1. Pass both configuration files while executing your commands. For example:
 
    ```bash
-   docker-compose -f docker-compose.yml -f docker-compose-dev.yml run deploy bash
+   docker compose -f docker-compose.yml -f docker-compose-dev.yml run deploy bash
    ```
 
 ## Specify Docker build sources
@@ -40,7 +42,7 @@ services:
 Use the `--force-recreate` option to refresh the container build to update the container configuration and test iteratively:
 
 ```bash
-docker-compose up -d --force-recreate --build
+docker compose up -d --force-recreate --build
 ```
 
 ## Add a version of existing service
@@ -143,7 +145,7 @@ You can add PHP extensions to the PHP container by adding the extension configur
       ];
       ```
 
-   -  If you add the extension to the `.magento.app.yaml` for your Cloud project, you must regenerate the Docker compose configuration file and restart the Docker container.
+   -  If you add the extension to the `.magento.app.yaml` for your Cloud project, you must regenerate the Docker Compose configuration file and restart the Docker container.
 
 1. Add any required `.ini` files to the PHP FPM container configuration.
 
@@ -204,7 +206,7 @@ Use the following attributes to specify the PHP extension configuration in the `
 
 For information about extension types and extension installation, see the **How to install more PHP extensions** section of the [PHP, Docker Official Images][] page in _Docker Hub_.
 
-#### Example: Core extension configuration
+### Example: Core extension configuration
 
 The following example shows the configuration for adding the PHP core extension `gd` in the `ExtensionResolver.php` file.
 
@@ -249,7 +251,7 @@ public static function getConfig(): array
 ...
 ```
 
-#### Example: Configuration for extension installed using a script
+### Example: Configuration for extension installed using a script
 
 The following example shows the configuration for installing the `ioncube` extension using an installation script.
 
