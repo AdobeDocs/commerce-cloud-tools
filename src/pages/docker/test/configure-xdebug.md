@@ -11,7 +11,7 @@ Cloud Docker for Commerce provides a separate container to handle Xdebug request
 
 If you use Microsoft Windows, take the following steps before continuing:
 
-1. Open your Docker settings.
+1. Open **UICONTROL Settings** from the Docker menu or Docker Dashboard.
 1. Select the **Expose daemon on tcp://localhost:2375 without TLS** checkbox.
 1. Wait for the settings to apply.
 
