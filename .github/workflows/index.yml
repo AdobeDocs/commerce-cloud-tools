@@ -2,7 +2,7 @@
 name: Indexing
 on:
   schedule:
-    - cron: '0 20 * * SAT'
+    - cron: '0 20 1 * SAT'
   workflow_dispatch:
     inputs:
       mode:
