@@ -143,9 +143,9 @@ The following plugins are installed by default and **cannot** be skipped:
 
 -  OpenSearch 1.1:
    -  opensearch-notebooks
--  OpenSearch 1.2:
+-  OpenSearch 1.2, 2.3 and 2.4:
    -  opensearch-observability
--  OpenSearch 1.1 and 1.2:
+-  OpenSearch 1.1, 1.2, 2.3 and 2.4:
    -  analysis-icu
    -  analysis-phonetic
    -  opensearch-alerting
@@ -159,6 +159,14 @@ The following plugins are installed by default and **cannot** be skipped:
    -  opensearch-reports-scheduler
    -  opensearch-security
    -  opensearch-sql
+-  OpenSearch 2.3, 2.4:
+   -  opensearch-geospatial
+   -  opensearch-ml
+   -  opensearch-notifications
+   -  opensearch-notifications-core
+-  OpenSearch 2.4:
+   -  opensearch-neural-search
+   -  opensearch-security-analytics
 
 >The following example adds the `opensearch-asynchronous-search` plugin to the Docker environment.
 
