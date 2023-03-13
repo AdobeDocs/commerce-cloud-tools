@@ -45,7 +45,7 @@ The `services` section specifies the services configuration for the Docker envir
 ```yaml
 services:
   php:
-    version: "7.3"
+    version: "8.2"
     enabled: true|false
 ```
 
@@ -60,7 +60,7 @@ The PHP service has additional properties: `extensions.enabled` and `extensions.
 ```yaml
 services:
   php:
-    version: "7.2"
+    version: "8.2"
     extensions:
       enabled:
         - xsl
