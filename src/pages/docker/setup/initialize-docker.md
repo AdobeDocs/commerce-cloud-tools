@@ -41,7 +41,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
     composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   This command installs the latest release. To install a specific version, specify the version number, for example `magento/project-enterprise-edition=2.3.5`.
+   This command installs the latest release. To install a specific version, specify the version number, for example `magento/project-enterprise-edition=2.4.6`.
 
 1. Change to the project directory.
 
@@ -59,20 +59,20 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
        mode: 'production'
    services:
        php:
-           version: '8.1'
+           version: '8.2'
            extensions:
                enabled:
                    - xsl
                    - json
                    - redis
        mysql:
-           version: '10.3'
+           version: '10.6'
            image: 'mariadb'
        redis:
-           version: '5.0'
+           version: '7.0'
            image: 'redis'
        opensearch:
-           version: '1.2'
+           version: '2.4'
            image: 'magento/magento-cloud-docker-opensearch'
    hooks:
        build: |
@@ -119,13 +119,13 @@ Before you use Cloud Docker for Commerce, you must update the `etc/hosts` file a
 1. Install the template dependencies and add the default hostname to your `/etc/hosts` file.
 
    ```bash
-   curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.2.0/init-docker.sh | bash -s -- --php 7.4
+   curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.3.5/init-docker.sh | bash -s -- --php 8.2
    ```
 
    If necessary, you can add options to the `init-docker.sh` initialization script to customize your Docker environment. Run the following command to see the available options:
 
    ```bash
-   curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.1.1/init-docker.sh | bash -s -- --help
+   curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.3.5/init-docker.sh | bash -s -- --help
    ```
 
 After you complete the installation, you can begin using the Docker environment.
