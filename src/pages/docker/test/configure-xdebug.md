@@ -20,7 +20,7 @@ If you use Microsoft Windows, take the following steps before continuing:
 1. To enable Xdebug for your Docker environment, generate the Docker Compose configuration file in developer mode with the `--with-xdebug` option and any other required options, for example.
 
    ```bash
-   vendor/bin/ece-docker build:compose --mode="developer" --sync-engine="mutagen" --with-xdebug
+   ./vendor/bin/ece-docker build:compose --mode="developer" --sync-engine="mutagen" --with-xdebug
    ```
 
    This command adds the Xdebug configuration to your `docker-compose.yml` file.
@@ -117,7 +117,7 @@ You can debug any Adobe Commerce command or PHP script using the following steps
 
 **To debug CLI commands**:
 
-1. In your PhpStorm project, open the **Build, Extension, Deployment** > **Docker** panel, and then click `+` to add a Docker server and update the following settings:
+1. In your PhpStorm project, open the **Build, Execution, Deployment** > **Docker** panel, and then click `+` to add a Docker server and update the following settings:
 
    -  **Name**—Enter a name for the server, for example `Docker Cloud`.
    -  **Connect to Docker daemon with**—

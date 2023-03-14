@@ -45,11 +45,11 @@ The `services` section specifies the services configuration for the Docker envir
 ```yaml
 services:
   php:
-    version: "7.3"
+    version: "8.2"
     enabled: true|false
 ```
 
--  `services` can include `php`, `mysql`, `redis`, `elasticsearch`, `rabbitmq`, `cron`, and so on
+-  `services` can include `php`, `mysql`, `redis`, `elasticsearch`, `opensearch`, `rabbitmq`, `cron`, and so on
 -  `version` specifies a [supported service version][Service configuration options]. The version must be compatible with the Adobe Commerce version you deploy.
 -  `enabled` defaults to `true` if not set
 
@@ -60,7 +60,7 @@ The PHP service has additional properties: `extensions.enabled` and `extensions.
 ```yaml
 services:
   php:
-    version: "7.2"
+    version: "8.2"
     extensions:
       enabled:
         - xsl
