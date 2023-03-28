@@ -59,11 +59,20 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    MODULE_WHITELIST=Magento_Framework,Magento_ConfigurableProductWishlist,Magento_ConfigurableProductCatalogSearch
    SELENIUM_HOST=selenium"
    ```
-
+   ```bash
+   CREDENTIALS="magento/MAGENTO_ADMIN_PASSWORD=123123q" 
+   docker compose run deploy bash -c "echo \"$CREDENTIALS\" > /app/dev/tests/acceptance/.credentials"
+   ```
+   
+   
    ```bash
    docker compose run deploy bash -c "echo \"$CONFIG\" > /app/dev/tests/acceptance/.env"
    ```
 
+   ```bash
+   docker compose run deploy bash -c "echo \"$CREDENTIALS\" > /app/dev/tests/acceptance/.credentials"
+
+   ```
    <!-- <InlineAlert variant="info" slots="text"/> -->
 
    In this example, the variable configuration is for testing a Magento application deployed to the Docker environment. To run tests in a remote environment, change the value of `MAGENTO_BASE_URL` to the remote URL and update the credentials as needed.
