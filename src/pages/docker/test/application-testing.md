@@ -59,11 +59,11 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    MODULE_WHITELIST=Magento_Framework,Magento_ConfigurableProductWishlist,Magento_ConfigurableProductCatalogSearch
    SELENIUM_HOST=selenium"
    ```
+
    ```bash
    CREDENTIALS="magento/MAGENTO_ADMIN_PASSWORD=123123q" 
    docker compose run deploy bash -c "echo \"$CREDENTIALS\" > /app/dev/tests/acceptance/.credentials"
    ```
-   
    
    ```bash
    docker compose run deploy bash -c "echo \"$CONFIG\" > /app/dev/tests/acceptance/.env"
