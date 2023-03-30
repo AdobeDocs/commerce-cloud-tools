@@ -1,17 +1,27 @@
 # Adobe Commerce Cloud Tools
 
-This repository contains the content for Commerce Cloud Tools, including:
+This site contains the latest Adobe Commerce and Magento Open Source developer documentation for ongoing releases of Commerce Cloud Tools, including:
 
-- **Cloud Docker**—For the tool, see the [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) repository.
+- **Cloud Docker**—For the Cloud Docker for Commerce source code, see the [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) repository.
+
+## Contributors
+
+Our goal is to provide the Adobe Commerce and Magento Open Source communities with comprehensive and quality technical documentation. We believe that to accomplish that goal we need experts from the community to share their knowledge with us and each other. We are thankful to all of our contributors for improving the documentation.
+
+See the [Contribution Guide](https://developer.adobe.com/commerce/contributor/) for details about contributing to Adobe Commerce and Magento Open Source developer documentation.
+
+## Local development
+
+This repository is a [Gatsby project](https://www.gatsbyjs.com/) that uses the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
 
 Install the following for local documentation site builds:
 
-- [node](https://nodejs.org)— `brew node`
-- [corepack](https://nodejs.org/api/corepack.html)— `brew corepack`
+- [`node`](https://nodejs.org)— `brew node`
+- [`corepack`](https://nodejs.org/api/corepack.html)— `brew corepack`
 
-## Build local and preview the site
+**To build and serve the site**:
 
-1. Clone site and change to site directory.
+1. Clone the repository and change to site directory.
 
 1. Enable the `corepack` package.
 
@@ -29,13 +39,15 @@ Install the following for local documentation site builds:
    yarn install
    ```
 
-1. (Optional) Build site dependencies. This is useful if you want to refresh the build artefacts without serving the site, but `yarn dev` performs this step.
+1. Build site dependencies.
+
+   The `build` command is useful for refreshing the build artifacts without serving the site, but `yarn dev` performs this step.
 
    ```bash
    yarn build
    ```
 
-1. Build site on localhost.
+1. Build site and serve preview on `localhost`.
 
    ```bash
    yarn dev
@@ -43,15 +55,13 @@ Install the following for local documentation site builds:
 
    Use CTRL + C to stop serving the site.
 
-1. After you finish with preview, you can clean local build artifacts.
+1. Clean local build artifacts.
 
    ```bash
    yarn clean
    ```
 
-   You can use `yarn dev` to launch the site again.
-
-## Available Commands
+### Available Commands
 
 | Command | Description |
 | ------- | ----------- |
@@ -62,37 +72,17 @@ Install the following for local documentation site builds:
 | `yarn start` | Compile site files and serve for testing preview. |
 | `yarn test:links` | Test for broken links. |
 
-## Repository Template
+## Resources
 
-This repository uses a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
+See the following resources to learn more about using the theme:
 
-View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.
-
-### Where to ask for help
-
-The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions.
-
-For the documentation developer, please read these sections on how to:
-
-- [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
+- [Arranging content structure](https://github.com/adobe/aio-theme#content-structure)
 - [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme-aio#assets)
-- [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
+- [Using assets](https://github.com/adobe/aio-theme#assets)
+- [Configuring global navigation](https://github.com/adobe/aio-theme#global-navigation)
+- [Configuring side navigation](https://github.com/adobe/aio-theme#side-navigation)
 - [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
+- [Writing enhanced Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
+- [Deploying the site](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites) _(Adobe employees only)_
 
-For more in-depth [instructions](https://github.com/adobe/aio-theme#getting-started).
-
-### How to deploy
-
-For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
-
-```terminal
-adobe.io/{product}/docs
-adobe.io/{product}/community
-adobe.io/{product}/community/code_of_conduct
-adobe.io/{product}/community/contribute
-```
-
-You can deploy using the GitHub actions deploy workflow see [deploy instructions](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites).
+If you have questions, open an issue and ask us. We look forward to hearing from you!
