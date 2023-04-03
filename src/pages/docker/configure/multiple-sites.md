@@ -26,7 +26,7 @@ See [Understanding websites, stores, and store views][].
    127.0.0.1 second.magento2.docker
    ```
 
-After updating the `php.ini` file and adding subdomains, start the Docker environment and complete the following tasks to update the website and store configuration from the [Admin](https://glossary.magento.com/magento-admin):
+After updating the `php.ini` file and adding subdomains, start the Docker environment and complete the following tasks to update the website and store configuration from the Admin:
 
 -  Add specific stores and websites. See [Set up websites, stores, and store views][].
 -  Add the configuration for store and website codes to the `magento-vars.php`. See [Modify Adobe Commerce variables][].
