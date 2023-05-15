@@ -17,9 +17,14 @@ Cloud Docker for Commerce provides an option to deploy Adobe Commerce to a Docke
 
 <InlineAlert variant="help" slots="text"/>
 
-Cloud Docker for Commerce is a Magento Community Engineering project supported by the Magento developer community. For details and support information, see [Get support for Cloud Docker for Commerce](get-support.md).
+Cloud Docker for Commerce is a Magento Community Engineering project supported by the Magento developer community. See [Get support for Cloud Docker for Commerce](get-support.md).
 
 The Cloud Docker environment supports Linux, macOS, and Windows operating systems. The containers should run on any Docker host, but some of the setup scripts require you to install PHP and Composer. See [Cloud Docker package release notes](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-docker.html) in the _Commerce on Cloud Infrastructure guide_ for the latest updates.
+
+## New to Adobe Commerce?
+
+- Visit the [Adobe Commerce product site](https://business.adobe.com/products/magento/magento-commerce.html)
+- Read about the [Cloud infrastructure](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html)
 
 ## Adobe Commerce documentation
 
