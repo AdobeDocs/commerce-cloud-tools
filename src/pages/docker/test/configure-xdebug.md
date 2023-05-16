@@ -11,7 +11,7 @@ Cloud Docker for Commerce provides a separate container to handle Xdebug request
 
 If you use Microsoft Windows, take the following steps before continuing:
 
-1. Open your Docker settings.
+1. Open **Settings** from the Docker menu or Docker Dashboard.
 1. Select the **Expose daemon on tcp://localhost:2375 without TLS** checkbox.
 1. Wait for the settings to apply.
 
@@ -91,7 +91,7 @@ If you use Microsoft Windows, take the following steps before continuing:
 
 1. Select **Use path mappings**. In the _File/Directory_ pane, the root of the project for the `serverName` displays.
 
-1. In the **Absolute path on the server** column, click ![Edit](../../_images/xdebug/edit.png) and add a value to the `MAGENTO_ROOT` option. The default value is: `/app`
+1. In the **Absolute path on the server** column, click **Edit** and add a value to the `MAGENTO_ROOT` option. The default value is: `/app`
 
 1. Change the Xdebug port to 9001 in the **PHP** > **Debug** > **Xdebug** > **Debug Port** panel.
 
@@ -103,7 +103,7 @@ The following steps describe debugging web requests and CLI commands.
 
 **To debug web requests**:
 
-1. In your PhpStorm project, click ![Start listening for connections](../../_images/xdebug/listening.png) (**Start listening**) in the top navigation bar.
+1. In your PhpStorm project, click **Start listening** in the top navigation bar.
 
 1. Add breakpoints in the `pub/index.php` file.
 
