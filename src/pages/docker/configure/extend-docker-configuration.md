@@ -24,7 +24,7 @@ The following example replaces the default value of the `ENABLE_SENDMAIL` enviro
    ```bash
    docker compose -f docker-compose.yml -f docker-compose-dev.yml run deploy bash
    ```
-   
+
 ## Composer configuration
 
 You can specify needed Composer version using the env variable `COMPOSER_VERSION`, if you need to clear Composer cache you can use the variable `COMPOSER_CLEAR_CACHE`.
