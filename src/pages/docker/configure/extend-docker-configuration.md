@@ -27,8 +27,7 @@ The following example replaces the default value of the `ENABLE_SENDMAIL` enviro
 
 ## Composer configuration
 
-You can specify needed Composer version using the env variable `COMPOSER_VERSION`, if you need to clear Composer cache you can use the variable `COMPOSER_CLEAR_CACHE`.
-Each version of PHP Docker images has specific Composer version and by default Composer cache is not cleared during starting Docker container from these images.
+You can configure Composer using environment variables. Each version of the PHP Docker image requires a specific Composer version and, by default, the Composer cache is not cleared when starting the Docker container. Specify the Composer version with the `COMPOSER_VERSION` environment variable. Enable Composer clear cache with the  `COMPOSER_CLEAR_CACHE` environment variable.
 
 **To set the Composer version and clear Composer cache**:
 
