@@ -25,6 +25,29 @@ The following example replaces the default value of the `ENABLE_SENDMAIL` enviro
    docker compose -f docker-compose.yml -f docker-compose-dev.yml run deploy bash
    ```
 
+## Composer configuration
+
+You can configure Composer using environment variables. Each version of the PHP Docker image requires a specific Composer version and, by default, the Composer cache is not cleared when starting the Docker container. Specify the Composer version with the `COMPOSER_VERSION` environment variable. Enable Composer clear cache with the  `COMPOSER_CLEAR_CACHE` environment variable.
+
+**To set the Composer version and clear Composer cache**:
+
+1. Create a `docker-compose-dev.yml` file inside your project root directory and add the following content:
+
+   ```yaml
+   version: '2'
+   services:
+     generic:
+       environment:
+         - COMPOSER_VERSION=2.2.4
+         - COMPOSER_CLEAR_CACHE=true
+   ```
+
+1. Pass both configuration files while executing your commands. For example:
+
+   ```bash
+   docker compose -f docker-compose.yml -f docker-compose-dev.yml run deploy bash
+   ```
+
 ## Specify Docker build sources
 
 To test changes to images or make more extensive changes to the containers, you must build them from source. You can do this by adding the `build:context` configuration to the `docker-compose.override.yml` file.
