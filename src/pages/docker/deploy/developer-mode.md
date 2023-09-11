@@ -1,6 +1,11 @@
 ---
 title: Developer mode
 description: Start the Docker environment in developer mode.
+keywords:
+  - Cloud
+  - Deploy
+  - Docker
+  - Tools
 ---
 
 # Developer mode

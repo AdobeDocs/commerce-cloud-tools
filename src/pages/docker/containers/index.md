@@ -1,6 +1,10 @@
 ---
 title: Docker container architecture
 description: Learn about the container architecture for Cloud Docker for Commerce.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Container Architecture

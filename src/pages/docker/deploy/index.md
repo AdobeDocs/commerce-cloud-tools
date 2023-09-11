@@ -1,6 +1,11 @@
 ---
 title: Deploy the Docker environment
 description: Deploy your Commerce application in a Docker environment designed for Production preview and testing or for Developer activities.
+keywords:
+  - Cloud
+  - Deploy
+  - Docker
+  - Tools
 ---
 
 # Deploy the Docker environment

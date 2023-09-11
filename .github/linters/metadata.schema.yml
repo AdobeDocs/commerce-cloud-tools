@@ -19,6 +19,8 @@ properties:
         - Cloud
         - Configuration
         - Cron
+        - Deploy
+        - Docker
         - Events
         - Extensibility
         - Extensions

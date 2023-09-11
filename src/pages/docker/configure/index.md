@@ -1,6 +1,11 @@
 ---
 title: Configure the Docker environment
 description: Learn how to manage the Cloud Docker for Commerce environment with Composer updates, email, and host management.
+keywords:
+  - Cloud
+  - Configuration
+  - Docker
+  - Tools
 ---
 
 # Configure the Docker environment

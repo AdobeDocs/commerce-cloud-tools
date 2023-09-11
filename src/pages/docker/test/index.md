@@ -1,6 +1,10 @@
 ---
 title: Test
 description: Learn about testing resources available for Adobe Commerce when using the Cloud Docker for Commerce tool.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Testing in Cloud Docker

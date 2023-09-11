@@ -1,6 +1,11 @@
 ---
 title: Upgrade the Docker package
 description: Follow these steps to upgrade the Cloud Docker for Commerce package.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
+  - Upgrade
 ---
 
 # Upgrade Cloud Docker package

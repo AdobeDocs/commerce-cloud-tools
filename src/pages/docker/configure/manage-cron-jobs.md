@@ -1,6 +1,11 @@
 ---
 title: Manage cron jobs
 description: Learn how to manage cron jobs in Cloud Docker for Commerce.
+keywords:
+  - Cloud
+  - Configuration
+  - Docker
+  - Tools
 ---
 
 # Manage cron jobs

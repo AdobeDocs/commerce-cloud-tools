@@ -1,6 +1,11 @@
 ---
 title: Manage the database
 description: Learn how to access and manage the database in the Cloud Docker for Commerce environment.
+keywords:
+  - Cloud
+  - Configuration
+  - Docker
+  - Tools
 ---
 
 # Manage the database

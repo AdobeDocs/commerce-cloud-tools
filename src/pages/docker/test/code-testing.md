@@ -1,6 +1,10 @@
 ---
 title: Code testing for Commerce cloud tools
 description: Learn about using the integrated test suite for each Cloud tools package.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Code testing

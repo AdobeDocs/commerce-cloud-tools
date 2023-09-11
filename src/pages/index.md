@@ -1,6 +1,9 @@
 ---
 title: Commerce Cloud Tools
 description: This is the overview page of the Commerce Cloud Tools documentation.
+keywords:
+  - Cloud
+  - Tools
 ---
 
 <Hero slots="image, heading, text"/>

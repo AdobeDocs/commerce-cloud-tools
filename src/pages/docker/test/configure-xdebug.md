@@ -1,6 +1,10 @@
 ---
 title: Configure Xdebug
 description: Learn how to configure Xdebug for use with the Cloud Docker for Commerce tool.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Configure Xdebug
