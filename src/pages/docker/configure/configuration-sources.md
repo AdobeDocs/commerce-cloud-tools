@@ -1,6 +1,11 @@
 ---
 title: Configuration sources
 description: See an overview about the different configuration sources for the Cloud Docker for Commerce tool.
+keywords:
+  - Cloud
+  - Configuration
+  - Docker
+  - Tools
 ---
 
 # Configuration sources

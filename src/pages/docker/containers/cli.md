@@ -1,6 +1,10 @@
 ---
 title: Docker CLI Containers
 description: Learn about the Cloud Docker for Commerce CLI containers, images used, and useful guidance.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # CLI containers

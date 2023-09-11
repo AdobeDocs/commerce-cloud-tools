@@ -1,6 +1,10 @@
 ---
 title: Get support for Cloud Docker for Adobe Commerce
 description: Read about the community support mechanisms for Cloud Docker for Commerce.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Get support for Cloud Docker

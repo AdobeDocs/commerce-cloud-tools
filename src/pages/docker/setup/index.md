@@ -1,6 +1,10 @@
 ---
 title: Local development
 description: Learn how to use Cloud Docker for Commerce for local development.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Local development

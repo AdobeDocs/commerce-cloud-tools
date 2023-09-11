@@ -1,6 +1,11 @@
 ---
 title: Configure Blackfire
 description: Learn how to configure Blackfire and automate performance testing.
+keywords:
+  - Cloud
+  - Docker
+  - Performance
+  - Tools
 ---
 
 # Configure Blackfire

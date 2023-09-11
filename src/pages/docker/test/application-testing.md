@@ -1,6 +1,10 @@
 ---
 title: Application testing
 description: Learn how to use the MFTF for Commerce application testing in the Cloud Docker environment.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Application testing

@@ -1,6 +1,10 @@
 ---
 title: Initialize Cloud Docker for Commerce
 description: Learn how to begin preparing your Adobe Commerce project to use with the Cloud Docker for Commerce tool.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Initialize Cloud Docker

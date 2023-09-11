@@ -1,6 +1,10 @@
 ---
 title: Synchronize data
 description: Learn to synchronize data in the Docker development environment.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Synchronize data

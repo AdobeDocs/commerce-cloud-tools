@@ -1,6 +1,11 @@
 ---
 title: Custom Docker configuration
 description: Learn how to build a custom Docker Compose configuration for use with Cloud Docker for Commerce.
+keywords:
+  - Cloud
+  - Configuration
+  - Docker
+  - Tools
 ---
 
 # Build a custom Docker Compose configuration

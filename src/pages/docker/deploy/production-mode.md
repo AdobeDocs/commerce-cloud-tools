@@ -1,6 +1,11 @@
 ---
 title: Production mode
 description: Start the Docker environment in production mode.
+keywords:
+  - Cloud
+  - Deploy
+  - Docker
+  - Tools
 ---
 
 # Production mode

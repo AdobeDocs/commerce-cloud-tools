@@ -1,6 +1,10 @@
 ---
 title: Docker development quick reference
 description: See a list of common Docker commands.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Cloud Docker quick reference

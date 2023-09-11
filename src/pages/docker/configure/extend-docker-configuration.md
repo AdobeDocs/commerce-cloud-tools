@@ -1,6 +1,11 @@
 ---
 title: Extend the Docker configuration
 description: Learn how to extend your Cloud Docker for Commerce configuration using multiple compose files.
+keywords:
+  - Cloud
+  - Configuration
+  - Docker
+  - Tools
 ---
 
 # Extend the Docker configuration

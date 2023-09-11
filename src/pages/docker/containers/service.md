@@ -1,6 +1,10 @@
 ---
 title: Docker services containers
 description: Learn about the Cloud Docker for Commerce service containers, images used, and useful guidance.
+keywords:
+  - Cloud
+  - Docker
+  - Tools
 ---
 
 # Service containers
