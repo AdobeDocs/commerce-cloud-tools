@@ -1,6 +1,6 @@
 ---
 title: Set up multiple websites or stores
-description:
+description: Learn how to configure multiple website or stores in the Cloud Docker for Commerce environment.
 ---
 
 # Configure multiple websites or stores
