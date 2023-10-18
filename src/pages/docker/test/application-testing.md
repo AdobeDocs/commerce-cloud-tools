@@ -61,7 +61,7 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    MAGENTO_BACKEND_NAME=admin
    MAGENTO_ADMIN_USERNAME=admin
    MAGENTO_ADMIN_PASSWORD=123123q
-   MODULE_WHITELIST=Magento_Framework,Magento_ConfigurableProductWishlist,Magento_ConfigurableProductCatalogSearch
+   MODULE_ALLOWLIST=Magento_Framework,Magento_ConfigurableProductWishlist,Magento_ConfigurableProductCatalogSearch
    SELENIUM_HOST=selenium"
    ```
 
