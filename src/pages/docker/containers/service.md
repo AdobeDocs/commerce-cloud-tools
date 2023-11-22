@@ -13,7 +13,7 @@ The following containers provide the services required to build, deploy, and run
 
 <InlineAlert variant="info" slots="text"/>
 
-See [Service configuration options](index.md#service-containers) to customize container configuration when you build the Docker Compose configuration file.
+See [Service configuration options](index.md#service-containers) for customizing container configuration when you build the Docker Compose configuration file.
 
 ## Database container
 
@@ -28,9 +28,9 @@ You can configure the database container to use either MariaDB or MySQL for the 
 
 To use MySQL for the database, add the `--db image` option when you generate the Docker Compose configuration file. See [Service configuration options](index.md#service-containers).
 
-When a database container initializes, it creates a database with the specified name and uses the configuration variables specified in the Docker Compose configuration. The initial start-up process also executes files with `.sh`, `.sql`, and `.sql.gz` extensions that are found in the `/docker-entrypoint-initdb.d` directory. Files are executed in alphabetical order. See [mariadb Docker documentation][].
+When a database container initializes, it creates a database with the specified name and uses the configuration variables specified in the Docker Compose configuration. The initial start-up process also executes files with `.sh`, `.sql`, and `.sql.gz` extensions that are found in the `/docker-entrypoint-initdb.d` directory. Files are executed in alphabetical order. See [mariadb Docker documentation][mariadb].
 
-To prevent accidental data loss, the database is stored in a persistent `magento-db` volume after you stop and remove the Docker configuration. The next time you use the `docker compose up` command, the Docker environment restores your database from the persistent volume. You must manually destroy the database volume using the `docker volume rm <volume_name>` command.
+To prevent accidental data loss, the database is stored in a persistent `magento-db` volume after you stop and remove the Docker configuration. The next time you use the `docker compose up` command, the Docker environment restores your database from the persistent volume. Manually destroy the database volume using the `docker volume rm <volume_name>` command.
 
 You can inject a MySQL configuration into the database container at creation by adding the configuration to the `docker-compose-override.yml` file using any of the following methods:
 
@@ -145,6 +145,7 @@ There is a list of OpenSearch plugins: https://opensearch.org/docs/latest/opense
 
 The following plugins are installed by default and **cannot** be skipped:
 
+```text
 -  OpenSearch 1.1:
    -  opensearch-notebooks
 -  OpenSearch 1.2, 2.3 and 2.4:
@@ -171,6 +172,7 @@ The following plugins are installed by default and **cannot** be skipped:
 -  OpenSearch 2.4:
    -  opensearch-neural-search
    -  opensearch-security-analytics
+```
 
 >The following example adds the `opensearch-asynchronous-search` plugin to the Docker environment.
 
@@ -339,7 +341,7 @@ This container provides two NGINX configuration options for building the Docker 
 -  `--nginx-worker-processes`—to set the number of worker processes for NGINX. The default is `1`.
 -  `--nginx-worker-connections`—to set the maximum number of connections that each worker process can handle simultaneously. The default is `1024`.
 
-The NGINX configuration for this container is the standard Adobe Commerce [nginx config][], which includes the configuration to auto-generate NGINX certificates for the container. You can customize the NGINX configuration by mounting a new configuration file using a volume.
+The [NGINX configuration][nginx configs] for this container is the standard for  Adobe Commerce, which includes the configuration to auto-generate NGINX certificates for the container. You can customize the NGINX configuration by mounting a new configuration file using a volume.
 
 **To mount the custom NGINX configuration file using volumes**:
 
@@ -403,10 +405,8 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [Important OpenSearch configuration]: https://opensearch.org/docs/latest/opensearch/install/important-settings/
 [mailhog]: https://hub.docker.com/u/mailhog
 [MailHog service]: https://github.com/mailhog/MailHog
-[mariadb Docker documentation]: https://hub.docker.com/_/mariadb
 [mariadb]: https://hub.docker.com/_/mariadb
-[nginx config]: https://github.com/magento-dockerhub/magento-cloud-docker/blob/master/images/nginx/1.9/etc/vhost.conf
-[nginx configs]: https://github.com/magento/magento-cloud-docker/tree/develop/images/nginx/1.19/etc
+[nginx configs]: https://github.com/magento/magento-cloud-docker/tree/develop/images
 [nginx]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
 [opensearch-docker]: https://hub.docker.com/r/magento/magento-cloud-docker-opensearch
 [php-cloud]: https://hub.docker.com/r/magento/magento-cloud-docker-php
@@ -415,5 +415,4 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [redis]: https://hub.docker.com/_/redis
 [tls]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
 [varnish]: https://hub.docker.com/r/magento/magento-cloud-docker-varnish
-[web config]: https://github.com/magento/docker
 [zoo]: https://hub.docker.com/_/zookeeper
