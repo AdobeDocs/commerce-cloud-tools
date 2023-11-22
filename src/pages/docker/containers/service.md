@@ -341,7 +341,7 @@ This container provides two NGINX configuration options for building the Docker 
 -  `--nginx-worker-processes`—to set the number of worker processes for NGINX. The default is `1`.
 -  `--nginx-worker-connections`—to set the maximum number of connections that each worker process can handle simultaneously. The default is `1024`.
 
-The [NGINX configuration][nginx configs] for this container is the standard for  Adobe Commerce, which includes the configuration to auto-generate NGINX certificates for the container. You can customize the NGINX configuration by mounting a new configuration file using a volume.
+The [NGINX configuration][nginx configs] for this container is the standard for Adobe Commerce, which includes the configuration to auto-generate NGINX certificates for the container. You can customize the NGINX configuration by mounting a new configuration file using a volume.
 
 **To mount the custom NGINX configuration file using volumes**:
 
