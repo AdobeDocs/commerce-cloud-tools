@@ -16,7 +16,7 @@ Blackfire.io for Adobe Commerce on cloud infrastructure is a PHP profiler and au
 
 <InlineAlert variant="warning" slots="text"/>
 
-You must have a Blackfire license and account to use Blackfire with Adobe Commerce on cloud infrastructure projects. See [Blackfire.io][] for Adobe Commerce on cloud infrastructure.
+You must have a Blackfire license and account to use Blackfire with Adobe Commerce on cloud infrastructure projects. See [Adobe Commerce Cloud support][commerce] or [Blackfire for Magento][magento] on the _Blackfire.io website_.
 
 **To add Blackfire.io to your project configuration**:
 
@@ -109,5 +109,6 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
 
 <!--Link definitions-->
 
-[Blackfire.io]: https://blackfire.io/magento
-[Blackfire documentation]: https://support.blackfire.io/en/collections/145130-blackfire-on-magento-cloud.html
+[magento]: https://blackfire.io/magento
+[commerce]: https://docs.blackfire.io/integrations/paas/adobe-commerce-cloud
+[Blackfire documentation]: https://docs.blackfire.io/php/training-resources/book/04-first-profile
