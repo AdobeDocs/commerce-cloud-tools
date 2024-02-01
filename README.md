@@ -2,7 +2,7 @@
 
 This site contains the latest Adobe Commerce and Magento Open Source developer documentation for ongoing releases of Commerce Cloud Tools, including:
 
-- **Cloud Docker**—For the Cloud Docker for Commerce source code, see the [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) repository.
+- **Cloud Docker for Commerce**—For the Cloud Docker for Commerce source code, see the [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) repository.
 
 ## Contributors
 
@@ -53,7 +53,7 @@ Install the following for local documentation site builds:
    yarn dev
    ```
 
-   Use CTRL + C to stop serving the site.
+   Use **CTRL** + **C** to stop serving the site.
 
 1. Clean local build artifacts.
 
@@ -63,14 +63,14 @@ Install the following for local documentation site builds:
 
 ### Available Commands
 
-| Command | Description |
-| ------- | ----------- |
+| Command      | Description |
+| ------------ | ----------- |
 | `yarn build` | Compile site files. |
 | `yarn clean` | Clean build artifacts. |
-| `yarn dev` | Launch dev server preview. |
+| `yarn dev`   | Launch dev server preview. |
 | `yarn serve` | Serve the existing site files for testing preview. |
 | `yarn start` | Compile site files and serve for testing preview. |
-| `yarn test:links` | Test for broken links. |
+| `yarn test`  | Test for broken links. |
 
 ## Resources
 
