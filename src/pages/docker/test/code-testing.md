@@ -252,7 +252,7 @@ Use the following commands to run all available tests for each PHP version:
 
 <InlineAlert variant="help" slots="text"/>
 
-For help with Codeception command options, use the `.vendor/bin/codecept run --help` command, or see the [Codeception CLI documentation][] for the installed version.
+For help with Codeception command options, use the `.vendor/bin/codecept run --help` command, or see the Codeception CLI documentation for the installed version.
 
 <!--Link definitions-->
 
@@ -267,4 +267,3 @@ For help with Codeception command options, use the `.vendor/bin/codecept run --h
 [magento/magento-cloud-docker Acceptance tests]: https://github.com/magento/magento-cloud-docker/tree/develop/src/Test/Functional/Acceptance
 [magento/magento-cloud-patches Acceptance tests]: https://github.com/magento/magento-cloud-patches/tree/develop/src/Test/Functional/Acceptance
 [vlucas/phpdotenv]: https://github.com/vlucas/phpdotenv
-[Codeception CLI documentation]: https://github.com/Codeception/Codeception/blob/2.5/src/Codeception/Command/Run.php

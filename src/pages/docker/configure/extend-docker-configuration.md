@@ -10,7 +10,7 @@ keywords:
 
 # Extend the Docker configuration
 
-You can use the built-in Docker extension mechanism to specify [multiple compose files][].
+You can use the built-in Docker extension mechanism to specify multiple compose files.
 
 The following example replaces the default value of the `ENABLE_SENDMAIL` environment variable.
 
@@ -310,4 +310,3 @@ BASH
 [ExtensionResolver.php]: https://github.com/magento/magento-cloud-docker/tree/develop/src/Compose/Php
 [PECL]: https://pecl.php.net/
 [PHP, Docker Official Images]: https://hub.docker.com/_/php
-[multiple compose files]: https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-files
