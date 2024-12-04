@@ -123,7 +123,7 @@ Before you use Cloud Docker for Commerce, you must update the `etc/hosts` file a
 1. Install the template dependencies and add the default hostname to your `/etc/hosts` file.
 
    ```bash
-   curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.3.5/init-docker.sh | bash -s -- --php 8.2
+   curl -sL https://github.com/magento/magento-cloud-docker/releases/download/1.3.5/init-docker.sh | bash -s -- --php 8.2 --image 1.3.5
    ```
 
    If necessary, you can add options to the `init-docker.sh` initialization script to customize your Docker environment. Run the following command to see the available options:
