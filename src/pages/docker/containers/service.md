@@ -263,6 +263,20 @@ Connect to and run Redis commands using the `redis-cli` property inside the cont
 docker compose run --rm redis redis-cli -h redis
 ```
 
+## Valkey container
+
+- **Container name**: valkey
+- **Docker base image**: [valkey][]
+- **Ports exposed**: `6379`
+
+The Valkey container for Cloud Docker for Commerce is a standard Redis-compatible container with no customizations, no data persistence, and no additional configuration.
+
+Connect to and run Valkey commands using the `Valkey-cli` property inside the container:
+
+```bash
+docker compose run --rm valkey valkey-cli -h valkey
+```
+
 ## Selenium container
 
 - **Container name**: selenium
@@ -413,6 +427,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [PHP extensions]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions
 [rabbitmq]: https://hub.docker.com/_/rabbitmq
 [redis]: https://hub.docker.com/_/redis
+[valkey]: https://hub.docker.com/r/valkey/valkey
 [tls]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
 [varnish]: https://hub.docker.com/r/magento/magento-cloud-docker-varnish
 [zoo]: https://hub.docker.com/_/zookeeper
