@@ -6,7 +6,7 @@ keywords:
   - Tools
 ---
 
-<Hero slots="image, heading, text"/>
+<HeroSimple slots="image, heading, text"/>
 
 ![Commerce Cloud Docker](_images/banner-hex-violet.png)
 
