@@ -348,7 +348,7 @@ docker compose exec varnish varnishadm ban req.url '~' '.'
 - **Docker base image**: [magento/magento-cloud-docker-nginx][nginx], based on the `[centos]` Docker image
 - **Ports exposed**: None
 
-The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](../containers/index.md#request-flow).
+The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](index.md#request-flow).
 
 This container provides two NGINX configuration options for building the Docker configuration:
 
@@ -407,7 +407,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 - `--zookeeper-version`—Specify a specific version to install from Docker Hub.
 - `--zookeeper-image`—Specify the Zookeeper image name to install from a custom image.
 
-<!--Link definitions-->
+&lt;!--Link definitions-->
 
 [centos]: https://hub.docker.com/_/centos
 [Configure the lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html

@@ -254,7 +254,7 @@ Use the following commands to run all available tests for each PHP version:
 
 For help with Codeception command options, use the `.vendor/bin/codecept run --help` command, or see the Codeception CLI documentation for the installed version.
 
-<!--Link definitions-->
+&lt;!--Link definitions-->
 
 [Cloud Suite for Commerce]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html
 [Codeception testing framework for PHP]: https://github.com/codeception/codeception

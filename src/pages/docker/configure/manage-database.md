@@ -155,7 +155,7 @@ Before you import a database from an existing Adobe Commerce installation into a
    magento-cloud db:dump
    ```
 
-   <!-- <InlineAlert variant="info" slots="text"/> -->
+   &lt;!-- <InlineAlert variant="info" slots="text"/> -->
 
    The `magento-cloud db:dump` command runs the [mysqldump][] command with the `--single-transaction` flag, which allows you to back up your database without locking the tables.
 
@@ -191,7 +191,7 @@ db:
 
 See [Docker service containers](../containers/index.md#service-containers) for details about the Database container and container configuration.
 
-<!--Link definitions-->
+&lt;!--Link definitions-->
 
 [Add the encryption key]: https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/staging-production
 [mysqldump]: https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html

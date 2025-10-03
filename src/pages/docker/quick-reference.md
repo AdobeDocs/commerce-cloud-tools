@@ -48,7 +48,7 @@ php ./vendor/bin/ece-docker build:compose -h
 
 <InlineAlert variant="info" slots="text"/>
 
-See [Service versions](../docker/containers/index.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
+See [Service versions](containers/index.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
 ### Override configuration
 
@@ -77,7 +77,7 @@ Use the following to connect to the bash shell and begin using the Cloud Docker 
 ```
 
 | Action                                                                                                         | Command                                |
-| :------------------------------------------------------------------------------------------------------------- | :------------------------------------- |
+|:---------------------------------------------------------------------------------------------------------------| :------------------------------------- |
 | Connect to bash shell                                                                                          | `./bin/magento-docker bash`            |
 | Pull the latest images                                                                                         | `./bin/magento-docker pull`            |
 | Build application                                                                                              | `./bin/magento-docker ece-build`       |
@@ -92,7 +92,7 @@ Use the following to connect to the bash shell and begin using the Cloud Docker 
 | Clears Redis cache                                                                                             | `./bin/magento-docker flush-redis`     |
 | Clears Varnish cache                                                                                           | `./bin/magento-docker flush-varnish`   |
 | Access database                                                                                                | `./bin/magento-docker ece-db`          |
-| Run a command in a PHP container<br/>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
+| Run a command in a PHP container&lt;br/>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
 
 <InlineAlert variant="help" slots="text1, text2"/>
 

@@ -1,0 +1,35 @@
+- pathPrefix:
+    - /commerce/cloud-tools/
+
+- home:
+    - [Commerce](/commerce/docs)
+
+- pages:
+    - [Cloud Tools](/index.md)
+    - [Cloud Docker for Commerce](/docker/index.md)
+
+- subPages:
+    - [Introduction](/docker/index.md)
+    - [Architecture](/docker/containers/index.md)
+        - [CLI containers](/docker/containers/cli/)
+        - [Service containers](/docker/containers/service/)
+    - [Setup](/docker/setup/index.md)
+        - [Initialize Docker](/docker/setup/initialize-docker/)
+        - [File synchronization](/docker/setup/synchronize-data/)
+    - [Deploy](/docker/deploy/index.md)
+        - [Production mode](/docker/deploy/production-mode/)
+        - [Developer mode](/docker/deploy/developer-mode/)
+        - [Docker quick reference](/docker/quick-reference/)
+    - [Configure](/docker/configure/index.md)
+        - [Configuration sources](/docker/configure/configuration-sources/)
+        - [Manage the database](/docker/configure/manage-database/)
+        - [Manage the cron jobs](/docker/configure/manage-cron-jobs/)
+        - [Multiple sites](/docker/configure/multiple-sites/)
+        - [Custom Docker configuration](/docker/configure/custom-docker-compose/)
+        - [Extend Docker](/docker/configure/extend-docker-configuration/)
+    - [Test](/docker/test/index.md)
+        - [Application testing](/docker/test/application-testing/)
+        - [Code testing](/docker/test/code-testing/)
+        - [Configure Xdebug](/docker/test/configure-xdebug/)
+        - [Configure Blackfire](/docker/test/blackfire/)
+    - [Upgrade](/docker/upgrade-docker-package.md)

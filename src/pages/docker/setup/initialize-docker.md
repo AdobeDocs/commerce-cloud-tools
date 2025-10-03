@@ -134,7 +134,7 @@ Before you use Cloud Docker for Commerce, you must update the `etc/hosts` file a
 
 After you complete the installation, you can begin using the Docker environment.
 
-<!--Link definitions-->
+&lt;!--Link definitions-->
 
 [cloud-repo]: https://github.com/magento/magento-cloud
 [docker-repo]: https://github.com/magento/magento-cloud-docker

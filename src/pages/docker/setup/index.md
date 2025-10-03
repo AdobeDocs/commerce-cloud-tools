@@ -58,12 +58,12 @@ The script option settings determine the PHP version and Cloud Docker for Commer
 
 The following table lists the available options to use with the `init-docker.sh` script:
 
-| Option          | Description |
-| :-------------- | :---------- |
-| `-p`, `--php`   | PHP version (for installing dependencies). Specify a PHP version that is compatible with the Adobe Commerce version deployed to the Cloud Docker environment. |
-| `-i`, `--image` |  Cloud Docker for Commerce image version (for installing dependencies).<br/>**Default**: `1.1` |
-| `--host`        | Domain name to add to the `/etc/hosts` file.<br/>**Default**: `magento2.docker` |
-| `--add-host`    | Add domain name to `/etc/hosts` file.<br/>**Default**: true (`yes`) |
+| Option          | Description                                                                                                                                                         |
+| :-------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-p`, `--php`   | PHP version (for installing dependencies). Specify a PHP version that is compatible with the Adobe Commerce version deployed to the Cloud Docker environment.       |
+| `-i`, `--image` | Cloud Docker for Commerce image version (for installing dependencies).&lt;br/>**Default**: `1.1`                                                                    |
+| `--host`        | Domain name to add to the `/etc/hosts` file.&lt;br/>**Default**: `magento2.docker`                                                                                  |
+| `--add-host`    | Add domain name to `/etc/hosts` file.&lt;br/>**Default**: true (`yes`)                                                                                                  |
 
 ### Examples
 
@@ -93,7 +93,7 @@ sudo apachectl stop
 
 If you start your Docker environment with Apache running, the following error displays: `Cannot start service tls: Ports are not available: port is already allocated`
 
-<!--Link definitions-->
+&lt;!--Link definitions-->
 
 [authentication keys]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html
 [Resolve issues with encryption key]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html

@@ -33,7 +33,7 @@ This documentation provides resources for deploying Adobe Commerce to a Docker e
 
 ### Tools
 
-[Cloud Docker for Commerce](/docker/)
+[Cloud Docker for Commerce](/docker/index.md)
 
 Use the Cloud Docker tool for development and testing.
 
