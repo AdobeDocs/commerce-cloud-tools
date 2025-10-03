@@ -226,9 +226,9 @@ Use the following attributes to specify the PHP extension configuration in the `
 | `EXTENSION_TYPE_PECL` | Extensions that can be installed from the [PECL][] repository. |
 | `EXTENSION_TYPE_INSTALLATION_SCRIPT` | For extensions that install using a command sequence. |
 | `EXTENSION_TYPE` | Specifies whether the extension installed from the Docker PHP images, the PECL repository, or using an installation script. Valid values: `EXTENSION_TYPE_CORE`, `EXTENSION_TYPE_PECL`, or `EXTENSION_TYPE_INSTALLATION_SCRIPT`&lt;br/>`EXTENSION_OS_DEPENDENCIES` | For PHP core or PECL extensions, specifies Linux package dependencies. These packages install in the order listed before installing the extension. |
-`EXTENSION_CONFIGURE_OPTIONS` | For PHP core extensions, specifies any configuration options to apply when Docker configures the PHP extension using the `docker-php-ext-configure` command. |
-`EXTENSION_PACKAGE_NAME` | Specifies the extension package name. This value is used to generate the installation command. |
-`EXTENSION_INSTALLATION_SCRIPT` | For extension type `EXTENSION_TYPE_INSTALLATION_SCRIPT`, specifies the Bash script to install the extension. |
+|`EXTENSION_CONFIGURE_OPTIONS` | For PHP core extensions, specifies any configuration options to apply when Docker configures the PHP extension using the `docker-php-ext-configure` command. |
+|`EXTENSION_PACKAGE_NAME` | Specifies the extension package name. This value is used to generate the installation command. |
+|`EXTENSION_INSTALLATION_SCRIPT` | For extension type `EXTENSION_TYPE_INSTALLATION_SCRIPT`, specifies the Bash script to install the extension. |
 
 <InlineAlert variant="info" slots="text"/>
 
