@@ -247,7 +247,7 @@ If needed, you can disable the MailHog service when you generate the Docker Comp
 - **Docker base image**: [apache/activemq-artemis][]
 - **Ports exposed**: `61616`, `61613`, `8161`
 
-The ActiveMQ Artemis container for Cloud Docker for Commerce is a standard ActiveMQ Artemis container with default configuration.
+The ActiveMQ Artemis container for Cloud Docker for Commerce is a standard ActiveMQ Artemis container with the default configuration.
 
 ActiveMQ Artemis is a high-performance messaging broker that implements the Java Message Service (JMS) API and supports multiple protocols including AMQP, STOMP, MQTT, and OpenWire.
 
