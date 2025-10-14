@@ -241,6 +241,88 @@ If needed, you can disable the MailHog service when you generate the Docker Comp
 ./vendor/bin/ece-docker build:compose --no-mailhog
 ```
 
+## ActiveMQ container
+
+- **Container name**: activemq-artemis
+- **Docker base image**: [apache/activemq-artemis][]
+- **Ports exposed**: `61616`, `61613`, `8161`
+
+The ActiveMQ Artemis container for Cloud Docker for Commerce is a standard ActiveMQ Artemis container with default configuration.
+
+ActiveMQ Artemis is a high-performance messaging broker that implements the Java Message Service (JMS) API and supports multiple protocols including AMQP, STOMP, MQTT, and OpenWire.
+
+### Port information
+
+- `61616`: Core protocol port (default for broker connections)
+- `61613`: STOMP protocol port
+- `8161`: Web console port for management UI
+
+### Default credentials
+
+- **Username**: `admin`
+- **Password**: `admin`
+
+### Configuration
+
+The ActiveMQ Artemis container uses the following default environment variables:
+
+- `ARTEMIS_USER=admin`
+- `ARTEMIS_PASSWORD=admin`
+
+You can customize the ActiveMQ Artemis container configuration by adding custom environment variables to the `docker-compose.override.yml` file:
+
+```yaml
+services:
+  activemq-artemis:
+    environment:
+      - ARTEMIS_MIN_MEMORY=512M
+      - ARTEMIS_MAX_MEMORY=2048M
+```
+
+### Accessing the web console
+
+After starting the Docker environment, you can access the ActiveMQ Artemis web console at:
+
+```text
+http://magento2.docker:8161/console
+```
+
+Use the default credentials (`admin`/`admin`) to log in.
+
+### Running ActiveMQ Artemis commands
+
+You can run ActiveMQ Artemis CLI commands directly in the container:
+
+```bash
+docker compose exec activemq-artemis /opt/activemq-artemis/bin/artemis queue stat --user admin --password admin
+```
+
+### Common management commands
+
+Check broker status:
+
+```bash
+docker compose exec activemq-artemis /opt/activemq-artemis/bin/artemis queue stat --user admin --password admin
+```
+
+List addresses and queues:
+
+```bash
+docker compose exec activemq-artemis /opt/activemq-artemis/bin/artemis address show --user admin --password admin
+```
+
+Send a test message:
+
+```bash
+docker compose exec activemq-artemis /opt/activemq-artemis/bin/artemis producer --destination queue://test.queue --message-count 1 --user admin --password admin
+```
+
+Consume messages:
+
+```bash
+docker compose exec activemq-artemis /opt/activemq-artemis/bin/artemis consumer --destination queue://test.queue --user admin --password admin
+```
+
 ## RabbitMQ container
 
 - **Container name**: rabbitmq
@@ -425,6 +507,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [opensearch-docker]: https://hub.docker.com/r/magento/magento-cloud-docker-opensearch
 [php-cloud]: https://hub.docker.com/r/magento/magento-cloud-docker-php
 [PHP extensions]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions
+[apache/activemq-artemis]: https://hub.docker.com/r/apache/activemq-artemis
 [rabbitmq]: https://hub.docker.com/_/rabbitmq
 [redis]: https://hub.docker.com/_/redis
 [valkey]: https://hub.docker.com/r/valkey/valkey

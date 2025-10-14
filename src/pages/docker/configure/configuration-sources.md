@@ -54,7 +54,7 @@ services:
     enabled: true|false
 ```
 
--  `services` can include `php`, `mysql`, `redis`, `elasticsearch`, `opensearch`, `rabbitmq`, `cron`, and so on
+-  `services` can include `php`, `mysql`, `redis`, `elasticsearch`, `opensearch`, `activemq-artemis`, `rabbitmq`, `cron`, and so on
 -  `version` specifies a [supported service version][Service configuration options]. The version must be compatible with the Adobe Commerce version you deploy.
 -  `enabled` defaults to `true` if not set
 
