@@ -1,12 +1,12 @@
 ---
-  name: Validate pull request
-  
-  on: pull_request
+name: Call Validate PR Workflow
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/pages/**'
 
-  permissions:
-    contents: read
-    statuses: write
-  
-  jobs:
-    testing:
-      uses: AdobeDocs/commerce-php/.github/workflows/validate-pr_job.yml@main
+jobs:
+  call_validation:
+    name: Validate PR
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/validate-pr.yml@DEVSITE-1978-linter-bug
