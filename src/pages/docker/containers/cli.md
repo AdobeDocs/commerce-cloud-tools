@@ -37,15 +37,15 @@ All build and deploy processes are defined and configured using ece-tools and th
 
 These commands are available in the Cloud Docker for Commerce environment:
 
-| Command       | Target Containers   |  Notes |
-| ------------- |  ------------------ |------------------ |
-| `cloud-build` | build | Build the application in production mode, configured by the build hook in the `.magento.app.yml` file |
-| `cloud-deploy` | deploy | Deploy the application, configured by the deploy hook in the `.magento.app.yml` file |
-| `cloud-post-deploy` | deploy | Run post deploy hooks, configured by the post deploy hook in the `.magento.app.yml` file |
-| `ece-command` | deploy | Run [ece-tools CLI commands][] |
-| `magento-command` | deploy | Run bin/magento commands |
-| `mftf-command` | deploy | Run MFTF command for testing |
-| `run-cron` | cron | Run cron jobs |
+| Command       | Target Containers   | Notes                                                                                                       |
+| ------------- |  ------------------ |-------------------------------------------------------------------------------------------------------------|
+| `cloud-build` | build | <br/> Build the application in production mode, configured by the build hook in the `.magento.app.yml` file |
+| `cloud-deploy` | deploy | Deploy the application, configured by the deploy hook in the `.magento.app.yml` file                        |
+| `cloud-post-deploy` | deploy | Run post deploy hooks, configured by the post deploy hook in the `.magento.app.yml` file                    |
+| `ece-command` | deploy | Run [ece-tools CLI commands][]                                                                              |
+| `magento-command` | deploy | Run bin/magento commands                                                                                    |
+| `mftf-command` | deploy | Run MFTF command for testing                                                                                |
+| `run-cron` | cron | Run cron jobs                                                                                               |
 
 See the [scripts in the Cloud Docker for Commerce GitHub repository][scripts] to understand the processing for each command.
 
