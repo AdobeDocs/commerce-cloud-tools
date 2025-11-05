@@ -76,23 +76,23 @@ Use the following to connect to the bash shell and begin using the Cloud Docker 
 ./bin/magento-docker bash
 ```
 
-| Action                                                                                                         | Command                                |
-|:---------------------------------------------------------------------------------------------------------------| :------------------------------------- |
-| Connect to bash shell                                                                                          | `./bin/magento-docker bash`            |
-| Pull the latest images                                                                                         | `./bin/magento-docker pull`            |
-| Build application                                                                                              | `./bin/magento-docker ece-build`       |
-| Deploy application                                                                                             | `./bin/magento-docker ece-deploy`      |
-| Run post-deploy hooks                                                                                          | `./bin/magento-docker ece-post-deploy` |
-| Re-build and redeploy application                                                                              | `./bin/magento-docker ece-redeploy`    |
-| Stop containers                                                                                                | `./bin/magento-docker stop`            |
-| Start containers                                                                                               | `./bin/magento-docker start`           |
-| Restart containers                                                                                             | `./bin/magento-docker restart`         |
-| Destroy containers                                                                                             | `./bin/magento-docker down`            |
-| Destroy, re-create, and start containers                                                                       | `./bin/magento-docker up`              |
-| Clears Redis cache                                                                                             | `./bin/magento-docker flush-redis`     |
-| Clears Varnish cache                                                                                           | `./bin/magento-docker flush-varnish`   |
-| Access database                                                                                                | `./bin/magento-docker ece-db`          |
-| Run a command in a PHP container&lt;br/>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
+| Action                                                                                                            | Command                                |
+|:------------------------------------------------------------------------------------------------------------------| :------------------------------------- |
+| Connect to bash shell                                                                                             | `./bin/magento-docker bash`            |
+| Pull the latest images                                                                                            | `./bin/magento-docker pull`            |
+| Build application                                                                                                 | `./bin/magento-docker ece-build`       |
+| Deploy application                                                                                                | `./bin/magento-docker ece-deploy`      |
+| Run post-deploy hooks                                                                                             | `./bin/magento-docker ece-post-deploy` |
+| Re-build and redeploy application                                                                                 | `./bin/magento-docker ece-redeploy`    |
+| Stop containers                                                                                                   | `./bin/magento-docker stop`            |
+| Start containers                                                                                                  | `./bin/magento-docker start`           |
+| Restart containers                                                                                                | `./bin/magento-docker restart`         |
+| Destroy containers                                                                                                | `./bin/magento-docker down`            |
+| Destroy, re-create, and start containers                                                                          | `./bin/magento-docker up`              |
+| Clears Redis cache                                                                                                | `./bin/magento-docker flush-redis`     |
+| Clears Varnish cache                                                                                              | `./bin/magento-docker flush-varnish`   |
+| Access database                                                                                                   | `./bin/magento-docker ece-db`          |
+| Run a command in a PHP container\<br/\>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
 
 <InlineAlert variant="help" slots="text1, text2"/>
 

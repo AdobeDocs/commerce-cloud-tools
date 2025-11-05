@@ -75,6 +75,6 @@ The default Cloud Docker for Commerce configuration includes the [MailHog](../co
 
 After you start the Docker environment, go to the following URL to access the MailHog service and view outgoing emails: `http://magento2.docker:8025`
 
-&lt;!--Link definitions-->
+\<!--Link definitions--\>
 
 [Docker Hub PHP Image Tag]: https://hub.docker.com/r/magento/magento-cloud-docker-php/tags

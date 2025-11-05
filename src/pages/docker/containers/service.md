@@ -489,7 +489,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 - `--zookeeper-version`—Specify a specific version to install from Docker Hub.
 - `--zookeeper-image`—Specify the Zookeeper image name to install from a custom image.
 
-&lt;!--Link definitions-->
+\<!--Link definitions--\>
 
 [centos]: https://hub.docker.com/_/centos
 [Configure the lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html
