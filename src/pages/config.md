@@ -1,10 +1,8 @@
 - pathPrefix:
     - /commerce/cloud-tools/
 
-- home:
-    - [Commerce](https://developer.adobe.com/commerce/docs)
-
 - pages:
+    - [Commerce](https://developer.adobe.com/commerce/docs)
     - [Cloud Tools](/index.md)
     - [Cloud Docker for Commerce](/docker/index.md)
 
