@@ -48,6 +48,6 @@ sysctl -w vm.max_map_count=262144
 
 \<!--Link definitions--\>
 
-[Magento Cloud Community Engineering demos]: https://spark.adobe.com/page/PbxJoujH7oRTc/
+[Magento Cloud Community Engineering demos]: https://express.adobe.com/page/PbxJoujH7oRTc/
 [Magento Community Engineering Slack organization]: https://magentocommeng.slack.com/
 [magento/magento-cloud-docker GitHub repository]: https://github.com/magento/magento-cloud-docker

@@ -153,7 +153,7 @@ See [Service configuration options](../containers/index.md#service-configuration
 
 \<!--Link definitions--\>
 
-[hooks]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property.html
-[application]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html
-[services]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html
-[mounts]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
+[hooks]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property
+[application]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/configure-app-yaml
+[services]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml
+[mounts]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties

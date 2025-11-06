@@ -149,5 +149,5 @@ Now you can see all requests that are passing through the TLS container and chec
 
 \<!-- link definitions --\>
 
-[Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html
-[mount-configuration]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
+[Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.4/en/example-auto-increment.html
+[mount-configuration]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties

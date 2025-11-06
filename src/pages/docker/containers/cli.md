@@ -67,7 +67,7 @@ docker compose run --rm build magento-command setup:static-content:deploy
 - **Container name**: cron
 - **Docker base image**: [magento/magento-cloud-docker-php][], which is based on the Docker [php][] image
 
-The Cron container runs operations in the background immediately after the Docker environment starts. This container uses the cron configuration defined in the [`crons` property of the `.magento.app.yaml` file](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html). This container has no custom configuration.
+The Cron container runs operations in the background immediately after the Docker environment starts. This container uses the cron configuration defined in the [`crons` property of the `.magento.app.yaml` file](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property). This container has no custom configuration.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -106,4 +106,4 @@ To add the Node container to the Docker environment, you must specify the Node v
 [scripts]: https://github.com/magento/magento-cloud-docker/tree/develop/images/php/cli/bin
 [php]: https://hub.docker.com/_/php
 [node]: https://hub.docker.com/_/node
-[ece-tools CLI commands]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html
+[ece-tools CLI commands]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview

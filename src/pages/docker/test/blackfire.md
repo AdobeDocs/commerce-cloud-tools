@@ -109,6 +109,6 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
 
 \<!--Link definitions--\>
 
-[magento]: https://blackfire.io/magento
+[magento]: https://www.blackfire.io/magento/
 [commerce]: https://docs.blackfire.io/integrations/paas/adobe-commerce-cloud
 [Blackfire documentation]: https://docs.blackfire.io/php/training-resources/book/04-first-profile
