@@ -24,7 +24,7 @@ on:
 jobs:
   deployment:
     name: Deployment
-    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@lint-testing
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@main
     with:
       env: ${{ inputs.env }}
       baseSha: ${{ inputs.baseSha }}
