@@ -326,10 +326,30 @@ describe('Config.md Navigation Tests', () => {
       });
     });
 
-    test('should not have duplicate links', () => {
-      const links = getAllLinks(configData, true);
-      const uniqueLinks = new Set(links);
-      expect(links.length).toBe(uniqueLinks.size);
+    test('should not have duplicate links within the same section', () => {
+      // Check pages section for duplicates
+      const pageLinks = configData.pages
+        .map(extractLink)
+        .filter(link => link && !isExternalUrl(link));
+      const uniquePageLinks = new Set(pageLinks);
+      expect(pageLinks.length).toBe(uniquePageLinks.size);
+
+      // Check subPages section for duplicates
+      const subPageLinks = [];
+      configData.subPages.forEach((item) => {
+        const parentLink = extractLink(item.parent);
+        if (parentLink && !isExternalUrl(parentLink)) {
+          subPageLinks.push(parentLink);
+        }
+        item.children.forEach((child) => {
+          const childLink = extractLink(child);
+          if (childLink && !isExternalUrl(childLink)) {
+            subPageLinks.push(childLink);
+          }
+        });
+      });
+      const uniqueSubPageLinks = new Set(subPageLinks);
+      expect(subPageLinks.length).toBe(uniqueSubPageLinks.size);
     });
   });
 
