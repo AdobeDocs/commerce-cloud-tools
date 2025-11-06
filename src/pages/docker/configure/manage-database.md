@@ -195,4 +195,3 @@ See [Docker service containers](../containers/index.md#service-containers) for d
 
 [Add the encryption key]: https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/staging-production
 [mysqldump]: https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
-[db-image]: https://hub.docker.com/_/mariadb

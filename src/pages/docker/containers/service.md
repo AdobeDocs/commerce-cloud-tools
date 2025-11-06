@@ -491,11 +491,8 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 
 \<!--Link definitions--\>
 
-[centos]: https://hub.docker.com/_/centos
 [Configure the lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html
-[debian:jessie]: https://hub.docker.com/_/debian
 [Docker override file]: https://docs.docker.com/compose/extends/
-[FPM]: https://php-fpm.org
 [elasticsearch-docker]: https://hub.docker.com/r/magento/magento-cloud-docker-elasticsearch
 [Important Elasticsearch configuration]: https://www.elastic.co/guide/en/elasticsearch/reference/6.5/important-settings.html
 [Important OpenSearch configuration]: https://opensearch.org/docs/latest/opensearch/install/important-settings/
