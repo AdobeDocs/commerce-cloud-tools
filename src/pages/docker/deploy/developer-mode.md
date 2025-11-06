@@ -37,7 +37,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
 
    The `--mode` option in this step determines the mode in a later `deploy` step.
 
-   If necessary, set the option for [synchronizing data in Docker][sync]. For example:
+   If necessary, set the option for synchronizing data in Docker. For example:
 
    ```bash
    ./vendor/bin/ece-docker build:compose --mode="developer" --sync-engine="mutagen"
