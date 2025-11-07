@@ -13,7 +13,7 @@ A quick reference of common commands for Docker Compose and Cloud Docker for Com
 
 ## Docker Compose
 
-Cloud Docker for Commerce uses the Docker Compose tool. The commands reflected in this guide are based on the latest usage defined in the [docker compose CLI reference](https://docs.docker.com/compose/reference/).
+Cloud Docker for Commerce uses the Docker Compose tool. The commands reflected in this guide are based on the latest usage defined in the [docker compose CLI reference](https://docs.docker.com/reference/cli/docker/compose/).
 
 The following table lists the `docker compose` commands for building, deploying, and operating Cloud Docker for Commerce.
 
@@ -34,7 +34,7 @@ The following table lists the `docker compose` commands for building, deploying,
 
 <InlineAlert variant="info" slots="text"/>
 
-The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker composer run`](https://docs.docker.com/engine/reference/commandline/compose_run/) in the _Docker command-line reference_.
+The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker composer run`](https://docs.docker.com/reference/cli/docker/compose/run/) in the _Docker command-line reference_.
 
 ## Configuration generator
 
@@ -52,7 +52,7 @@ See [Service versions](containers/index.md) for additional information about the
 
 ### Override configuration
 
-Because the `ece-docker build:compose` command overwrites the base configuration, Adobe recommends saving your customizations in an override configuration file. You can use this method to merge multiple custom configurations. See [Docker Docs: Multiple Compose files](https://docs.docker.com/compose/extends/#multiple-compose-files).
+Because the `ece-docker build:compose` command overwrites the base configuration, Adobe recommends saving your customizations in an override configuration file. You can use this method to merge multiple custom configurations. See [Docker Docs: Multiple Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/extends/).
 
 The `docker compose up` command considers the base `docker compose.yml` configuration by default. If the `docker compose.override.yml` file is present, then the override configuration merges with the base configuration.
 

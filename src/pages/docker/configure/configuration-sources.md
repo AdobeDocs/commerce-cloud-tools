@@ -55,7 +55,7 @@ services:
 ```
 
 -  `services` can include `php`, `mysql`, `redis`, `elasticsearch`, `opensearch`, `activemq-artemis`, `rabbitmq`, `cron`, and so on
--  `version` specifies a [supported service version][Service configuration options]. The version must be compatible with the Adobe Commerce version you deploy.
+-  `version` specifies a supported service version. The version must be compatible with the Adobe Commerce version you deploy.
 -  `enabled` defaults to `true` if not set
 
 #### PHP service
@@ -153,8 +153,7 @@ See [Service configuration options](../containers/index.md#service-configuration
 
 \<!--Link definitions--\>
 
-[hooks]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property.html
-[application]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html
-[services]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml.html
-[mounts]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
-[available services]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html
+[hooks]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property
+[application]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/configure-app-yaml
+[services]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml
+[mounts]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties

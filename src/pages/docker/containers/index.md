@@ -149,8 +149,5 @@ Now you can see all requests that are passing through the TLS container and chec
 
 \<!-- link definitions --\>
 
-[Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html
-[docker-repo]: https://github.com/magento/magento-cloud-docker
-[nginx]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
-[mount-configuration]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
-[lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html
+[Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.4/en/example-auto-increment.html
+[mount-configuration]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties

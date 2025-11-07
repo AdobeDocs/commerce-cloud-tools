@@ -13,7 +13,7 @@ Cloud Docker for Commerce is the recommended tool for effective local developmen
 
 Prerequisites include the following software:
 
-- [Docker](https://www.docker.com/get-started)—Tools for managing images and building containers
+- [Docker](https://www.docker.com/get-started/)—Tools for managing images and building containers
 - [Mutagen](https://mutagen.io/documentation/introduction/installation)—Developer mode on macOS systems might require this option for file synchronization
 - [Git](https://git-scm.com)—For interaction between your local system and Adobe Commerce on cloud infrastructure source repositories
 - Optional—[See PHP and Composer](#php-and-composer):
@@ -38,7 +38,7 @@ Before setting up a local workspace, gather the following credentials and accoun
 
 -  **(Optional) Cloud Project account**
 
-   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/start/onboarding.html) for details.
+   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/start/onboarding) for details.
 
 -  **(Optional) Encryption Key**
 
@@ -95,5 +95,5 @@ If you start your Docker environment with Apache running, the following error di
 
 \<!--Link definitions--\>
 
-[authentication keys]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html
-[Resolve issues with encryption key]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html
+[authentication keys]: https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys
+[Resolve issues with encryption key]: https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key

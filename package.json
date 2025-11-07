@@ -8,12 +8,11 @@
   },
   "scripts": {
     "dev": "node ./dev.mjs",
-    "buildNavigation": "npx --yes github:AdobeDocs/adp-devsite-utils buildNavigation -v",
-    "buildRedirections": "npx --yes github:AdobeDocs/adp-devsite-utils buildRedirections -v",
-    "renameFiles": "npx --yes github:AdobeDocs/adp-devsite-utils renameFiles -v",
-    "normalizeLinks": "npx --yes github:AdobeDocs/adp-devsite-utils normalizeLinks -v",
-    "buildSiteWideBanner": "npx --yes github:AdobeDocs/adp-devsite-utils buildSiteWideBanner -v",
-    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v"
+    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v",
+    "lint:md": "npx --yes markdownlint-cli2 'src/pages/**/*.md' '*.md'",
+    "lint:md:fix": "npx --yes markdownlint-cli2 --fix 'src/pages/**/*.md' '*.md'",
+    "test": "npx --yes jest",
+    "test:config": "npx --yes jest tests/config.test.js"
   },
   "devDependencies": {
     "express": "5.1.0"

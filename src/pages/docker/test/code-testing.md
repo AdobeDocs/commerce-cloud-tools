@@ -197,7 +197,7 @@ For example, the following test for `magento/ece-tools` code verifies that the p
 
 **Sample response:**
 
-```terminal
+```shell-session
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed:
@@ -256,7 +256,7 @@ For help with Codeception command options, use the `.vendor/bin/codecept run --h
 
 \<!--Link definitions--\>
 
-[Cloud Suite for Commerce]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html
+[Cloud Suite for Commerce]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite
 [Codeception testing framework for PHP]: https://github.com/codeception/codeception
 [magento/ece-tools codeception.dist.yml]: https://github.com/magento/ece-tools/blob/develop/codeception.dist.yml
 [magento/magento-cloud-components codeception.dist.yml]: https://github.com/magento/magento-cloud-components/blob/develop/codeception.dist.yml
