@@ -197,7 +197,7 @@ For example, the following test for `magento/ece-tools` code verifies that the p
 
 **Sample response:**
 
-```terminal
+```shell-session
 Codeception PHP Testing Framework v2.5.6
 Powered by PHPUnit 6.5.14 by Sebastian Bergmann and contributors.
 Running with seed:
