@@ -39,7 +39,7 @@ An on-premises installation requires the stand-alone `magento/magento-cloud-dock
 
 **To install an Adobe Commerce on-premises project**:
 
-1. Create a project using [Composer](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/composer.html#prerequisites).
+1. Create a project using [Composer](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/composer).
 
    ```bash
     composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
@@ -134,8 +134,8 @@ Before you use Cloud Docker for Commerce, you must update the `etc/hosts` file a
 
 After you complete the installation, you can begin using the Docker environment.
 
-<!--Link definitions-->
+\<!--Link definitions--\>
 
 [cloud-repo]: https://github.com/magento/magento-cloud
 [docker-repo]: https://github.com/magento/magento-cloud-docker
-[magento-creds]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html
+[magento-creds]: https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys

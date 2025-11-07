@@ -1,5 +1,7 @@
 # Adobe Commerce Cloud Tools
 
+This repository is used to store the code for the [Commerce Cloud Tools documentation](https://developer.adobe.com/commerce/cloud-tools/) website. It is built using the [Adobe Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) and deployed to [Adobe Developer](https://developer.adobe.com/commerce/cloud-tools/).
+
 This site contains the latest Adobe Commerce and Magento Open Source developer documentation for ongoing releases of Commerce Cloud Tools, including:
 
 - **Cloud Docker for Commerce**—For the Cloud Docker for Commerce source code, see the [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) repository.
@@ -10,79 +12,70 @@ Our goal is to provide the Adobe Commerce and Magento Open Source communities wi
 
 See the [Contribution Guide](https://developer.adobe.com/commerce/contributor/) for details about contributing to Adobe Commerce and Magento Open Source developer documentation.
 
-## Local development
+## Quick start
 
-This repository is a [Gatsby project](https://www.gatsbyjs.com/) that uses the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
+For local development, you need to start three servers:
 
-Install the following for local documentation site builds:
-
-- [`node`](https://nodejs.org)— `brew node`
-- [`corepack`](https://nodejs.org/api/corepack.html)— `brew corepack`
-
-**To build and serve the site**:
-
-1. Clone the repository and change to site directory.
-
-1. Enable the `corepack` package.
+1. **Content server** (your content repo):
 
    ```bash
-   corepack enable
+   npm run dev
    ```
 
-1. Set `yarn` to stable version and install.
+   This starts the content server on port 3003.
+
+2. **Code server** ([adp-devsite](https://github.com/AdobeDocs/adp-devsite)):
 
    ```bash
-   yarn set version stable
+   git clone https://github.com/AdobeDocs/adp-devsite
+   cd adp-devsite
+   npm install
+   npm run dev
    ```
+
+3. **Runtime connector** ([devsite-runtime-connector](https://github.com/aemsites/devsite-runtime-connector)):
 
    ```bash
-   yarn install
+   git clone https://github.com/aemsites/devsite-runtime-connector
+   cd devsite-runtime-connector
+   npm install
+   npm run dev
    ```
 
-1. Build site dependencies.
+Once all three servers are running, navigate to `http://localhost:3000/<pathPrefix>`
 
-   The `build` command is useful for refreshing the build artifacts without serving the site, but `yarn dev` performs this step.
+For common utilities and documentation, please see the [centralized README](https://github.com/AdobeDocs/adp-devsite-utils/blob/main/README.md).
 
-   ```bash
-   yarn build
-   ```
+## Testing and linting
 
-1. Build site and serve preview on `localhost`.
+### Markdown linting
 
-   ```bash
-   yarn dev
-   ```
+To lint your markdown files before pushing, execute:
 
-   Use **CTRL** + **C** to stop serving the site.
+```bash
+npm run lint:md
+```
 
-1. Clean local build artifacts.
+To automatically fix linting errors, execute:
 
-   ```bash
-   yarn clean
-   ```
+```bash
+npm run lint:md:fix
+```
 
-### Available Commands
+### Content validation
 
-| Command      | Description |
-| ------------ | ----------- |
-| `yarn build` | Compile site files. |
-| `yarn clean` | Clean build artifacts. |
-| `yarn dev`   | Launch dev server preview. |
-| `yarn serve` | Serve the existing site files for testing preview. |
-| `yarn start` | Compile site files and serve for testing preview. |
-| `yarn test`  | Test for broken links. |
+To check internal and external links, validate front matter and more, execute:
 
-## Resources
+```bash
+npm run lint
+```
 
-See the following resources to learn more about using the theme:
+### TOC validation
 
-- [Arranging content structure](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme#assets)
-- [Configuring global navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Configuring side navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Writing enhanced Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
-- [Deploying the site](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites) _(Adobe employees only)_
+To validate the table of contents (TOC) file (`src/data/navigation/sections/docker.js`), execute:
+
+```bash
+npm run test:config
+```
 
 If you have questions, open an issue and ask us. We look forward to hearing from you!

@@ -13,7 +13,7 @@ Cloud Docker for Commerce is the recommended tool for effective local developmen
 
 Prerequisites include the following software:
 
-- [Docker](https://www.docker.com/get-started)—Tools for managing images and building containers
+- [Docker](https://www.docker.com/get-started/)—Tools for managing images and building containers
 - [Mutagen](https://mutagen.io/documentation/introduction/installation)—Developer mode on macOS systems might require this option for file synchronization
 - [Git](https://git-scm.com)—For interaction between your local system and Adobe Commerce on cloud infrastructure source repositories
 - Optional—[See PHP and Composer](#php-and-composer):
@@ -38,7 +38,7 @@ Before setting up a local workspace, gather the following credentials and accoun
 
 -  **(Optional) Cloud Project account**
 
-   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/start/onboarding.html) for details.
+   The License Owner or Technical Admin (Super User) should invite you to the Adobe Commerce on cloud infrastructure project. When you receive the e-mail invitation, click the link and follow the prompts to create your account. See [Onboarding to Commerce](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/start/onboarding) for details.
 
 -  **(Optional) Encryption Key**
 
@@ -58,12 +58,12 @@ The script option settings determine the PHP version and Cloud Docker for Commer
 
 The following table lists the available options to use with the `init-docker.sh` script:
 
-| Option          | Description |
-| :-------------- | :---------- |
+| Option          | Description                                                                                                                                                   |
+| :-------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `-p`, `--php`   | PHP version (for installing dependencies). Specify a PHP version that is compatible with the Adobe Commerce version deployed to the Cloud Docker environment. |
-| `-i`, `--image` |  Cloud Docker for Commerce image version (for installing dependencies).<br/>**Default**: `1.1` |
-| `--host`        | Domain name to add to the `/etc/hosts` file.<br/>**Default**: `magento2.docker` |
-| `--add-host`    | Add domain name to `/etc/hosts` file.<br/>**Default**: true (`yes`) |
+| `-i`, `--image` | Cloud Docker for Commerce image version (for installing dependencies).\<br/\>**Default**: `1.1`                                                               |
+| `--host`        | Domain name to add to the `/etc/hosts` file.\<br/\>**Default**: `magento2.docker`                                                                             |
+| `--add-host`    | Add domain name to `/etc/hosts` file.\<br/\>**Default**: true (`yes`)                                                                                         |
 
 ### Examples
 
@@ -93,7 +93,7 @@ sudo apachectl stop
 
 If you start your Docker environment with Apache running, the following error displays: `Cannot start service tls: Ports are not available: port is already allocated`
 
-<!--Link definitions-->
+\<!--Link definitions--\>
 
-[authentication keys]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html
-[Resolve issues with encryption key]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html
+[authentication keys]: https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys
+[Resolve issues with encryption key]: https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key
