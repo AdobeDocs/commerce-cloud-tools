@@ -15,6 +15,6 @@
     "test:config": "npx --yes jest tests/config.test.js"
   },
   "devDependencies": {
-    "express": "5.2.0"
+    "express": "5.2.1"
   }
 }
