@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/AdobeDocs/commerce-cloud-tools"
   },
+  "config": {
+    "sitePath": "commerce/cloud-tools"
+  },
   "scripts": {
     "dev": "node ./dev.mjs",
     "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v",
