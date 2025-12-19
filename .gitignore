@@ -9,6 +9,7 @@
 .code-workspace
 .trash
 Thumbs.db
+.cursor/
 
 # npm yarn
 node_modules
@@ -16,20 +17,6 @@ package.lock
 yarn-error.log
 .pnp.*
 .yarn/*
-
-# keep in repo
-!.gitignore
-!.yarn.lock
-!.yarnrc.yml
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-# cypress
-cypress/videos
-cypress/screenshots
 
 # lerna
 lerna-debug.log
@@ -43,4 +30,5 @@ local-test.yml
 .yalc
 yalc.lock
 
-coverage/
+# local
+tmp/
