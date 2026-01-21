@@ -33,17 +33,17 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
    ./vendor/bin/ece-docker build:compose --mode="developer"
    ```
 
-   <!-- <InlineAlert variant="info" slots="text"/> -->
+   \<!-- \<InlineAlert variant="info" slots="text"/\> --\>
 
    The `--mode` option in this step determines the mode in a later `deploy` step.
 
-   If necessary, set the option for [synchronizing data in Docker][sync]. For example:
+   If necessary, set the option for synchronizing data in Docker. For example:
 
    ```bash
    ./vendor/bin/ece-docker build:compose --mode="developer" --sync-engine="mutagen"
    ```
 
-   <!-- <InlineAlert variant="help" slots="text"/> -->
+   \<!-- \<InlineAlert variant="help" slots="text"/\> --\>
 
    You can further customize the Docker Compose configuration file by adding additional options to the `build:compose` command. For example, you can set the software version for a service, or add Xdebug configuration. See [service configuration options](../containers/index.md#service-configuration-options).
 
@@ -115,7 +115,7 @@ Large files (>1 GB) can cause a period of inactivity. DB dumps and archive files
        docker compose run --rm deploy cloud-post-deploy
        ```
 
-   <!-- <InlineAlert variant="info" slots="text"/> -->
+   \<!-- \<InlineAlert variant="info" slots="text"/\> --\>
 
    Developer mode does not require the `build` operation.
 

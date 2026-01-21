@@ -430,7 +430,7 @@ docker compose exec varnish varnishadm ban req.url '~' '.'
 - **Docker base image**: [magento/magento-cloud-docker-nginx][nginx], based on the `[centos]` Docker image
 - **Ports exposed**: None
 
-The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](../containers/index.md#request-flow).
+The Web container uses NGINX to handle web requests after TLS and Varnish. This container passes all requests to the FPM container to serve the PHP code. See [Request flow](index.md#request-flow).
 
 This container provides two NGINX configuration options for building the Docker configuration:
 
@@ -476,7 +476,7 @@ The [NGINX configuration][nginx configs] for this container is the standard for 
 
 Developers can use Zookeeper to manage locks to prevent the launch of duplicate cron jobs and cron groups for Adobe Commerce and Magento Open Source projects running on servers with multiple nodes.
 
-For Adobe Commerce projects on Adobe cloud infrastructure, lock provider settings are configured automatically during provisioning. See [Cloud variables](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html).
+For Adobe Commerce projects on Adobe cloud infrastructure, lock provider settings are configured automatically during provisioning. See [Cloud variables](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud).
 
 For projects hosted on other infrastructure, developers can add the Zookeeper container to the Docker environment and [configure the service][Configure the lock provider].
 
@@ -489,13 +489,10 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 - `--zookeeper-version`—Specify a specific version to install from Docker Hub.
 - `--zookeeper-image`—Specify the Zookeeper image name to install from a custom image.
 
-<!--Link definitions-->
+\<!--Link definitions--\>
 
-[centos]: https://hub.docker.com/_/centos
-[Configure the lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html
-[debian:jessie]: https://hub.docker.com/_/debian
-[Docker override file]: https://docs.docker.com/compose/extends/
-[FPM]: https://php-fpm.org
+[Configure the lock provider]: https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/lock-provider
+[Docker override file]: https://docs.docker.com/compose/how-tos/multiple-compose-files/extends/
 [elasticsearch-docker]: https://hub.docker.com/r/magento/magento-cloud-docker-elasticsearch
 [Important Elasticsearch configuration]: https://www.elastic.co/guide/en/elasticsearch/reference/6.5/important-settings.html
 [Important OpenSearch configuration]: https://opensearch.org/docs/latest/opensearch/install/important-settings/
@@ -506,7 +503,7 @@ The latest Zookeeper version is installed by default from Docker Hub. You can ad
 [nginx]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
 [opensearch-docker]: https://hub.docker.com/r/magento/magento-cloud-docker-opensearch
 [php-cloud]: https://hub.docker.com/r/magento/magento-cloud-docker-php
-[PHP extensions]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions
+[PHP extensions]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings
 [apache/activemq-artemis]: https://hub.docker.com/r/apache/activemq-artemis
 [rabbitmq]: https://hub.docker.com/_/rabbitmq
 [redis]: https://hub.docker.com/_/redis

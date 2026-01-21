@@ -13,7 +13,7 @@ A quick reference of common commands for Docker Compose and Cloud Docker for Com
 
 ## Docker Compose
 
-Cloud Docker for Commerce uses the Docker Compose tool. The commands reflected in this guide are based on the latest usage defined in the [docker compose CLI reference](https://docs.docker.com/compose/reference/).
+Cloud Docker for Commerce uses the Docker Compose tool. The commands reflected in this guide are based on the latest usage defined in the [docker compose CLI reference](https://docs.docker.com/reference/cli/docker/compose/).
 
 The following table lists the `docker compose` commands for building, deploying, and operating Cloud Docker for Commerce.
 
@@ -34,7 +34,7 @@ The following table lists the `docker compose` commands for building, deploying,
 
 <InlineAlert variant="info" slots="text"/>
 
-The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker composer run`](https://docs.docker.com/engine/reference/commandline/compose_run/) in the _Docker command-line reference_.
+The `--rm` option automatically removes containers when they stop. This setting overrides any restart policy specified in the service configuration and prevents orphaned containers from consuming excess disk space. See [`docker composer run`](https://docs.docker.com/reference/cli/docker/compose/run/) in the _Docker command-line reference_.
 
 ## Configuration generator
 
@@ -48,11 +48,11 @@ php ./vendor/bin/ece-docker build:compose -h
 
 <InlineAlert variant="info" slots="text"/>
 
-See [Service versions](../docker/containers/index.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
+See [Service versions](containers/index.md) for additional information about the service configuration options for the `ece-docker build:compose` command.
 
 ### Override configuration
 
-Because the `ece-docker build:compose` command overwrites the base configuration, Adobe recommends saving your customizations in an override configuration file. You can use this method to merge multiple custom configurations. See [Docker Docs: Multiple Compose files](https://docs.docker.com/compose/extends/#multiple-compose-files).
+Because the `ece-docker build:compose` command overwrites the base configuration, Adobe recommends saving your customizations in an override configuration file. You can use this method to merge multiple custom configurations. See [Docker Docs: Multiple Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/extends/).
 
 The `docker compose up` command considers the base `docker compose.yml` configuration by default. If the `docker compose.override.yml` file is present, then the override configuration merges with the base configuration.
 
@@ -76,23 +76,23 @@ Use the following to connect to the bash shell and begin using the Cloud Docker 
 ./bin/magento-docker bash
 ```
 
-| Action                                                                                                         | Command                                |
-| :------------------------------------------------------------------------------------------------------------- | :------------------------------------- |
-| Connect to bash shell                                                                                          | `./bin/magento-docker bash`            |
-| Pull the latest images                                                                                         | `./bin/magento-docker pull`            |
-| Build application                                                                                              | `./bin/magento-docker ece-build`       |
-| Deploy application                                                                                             | `./bin/magento-docker ece-deploy`      |
-| Run post-deploy hooks                                                                                          | `./bin/magento-docker ece-post-deploy` |
-| Re-build and redeploy application                                                                              | `./bin/magento-docker ece-redeploy`    |
-| Stop containers                                                                                                | `./bin/magento-docker stop`            |
-| Start containers                                                                                               | `./bin/magento-docker start`           |
-| Restart containers                                                                                             | `./bin/magento-docker restart`         |
-| Destroy containers                                                                                             | `./bin/magento-docker down`            |
-| Destroy, re-create, and start containers                                                                       | `./bin/magento-docker up`              |
-| Clears Redis cache                                                                                             | `./bin/magento-docker flush-redis`     |
-| Clears Varnish cache                                                                                           | `./bin/magento-docker flush-varnish`   |
-| Access database                                                                                                | `./bin/magento-docker ece-db`          |
-| Run a command in a PHP container<br/>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
+| Action                                                                                                            | Command                                |
+|:------------------------------------------------------------------------------------------------------------------| :------------------------------------- |
+| Connect to bash shell                                                                                             | `./bin/magento-docker bash`            |
+| Pull the latest images                                                                                            | `./bin/magento-docker pull`            |
+| Build application                                                                                                 | `./bin/magento-docker ece-build`       |
+| Deploy application                                                                                                | `./bin/magento-docker ece-deploy`      |
+| Run post-deploy hooks                                                                                             | `./bin/magento-docker ece-post-deploy` |
+| Re-build and redeploy application                                                                                 | `./bin/magento-docker ece-redeploy`    |
+| Stop containers                                                                                                   | `./bin/magento-docker stop`            |
+| Start containers                                                                                                  | `./bin/magento-docker start`           |
+| Restart containers                                                                                                | `./bin/magento-docker restart`         |
+| Destroy containers                                                                                                | `./bin/magento-docker down`            |
+| Destroy, re-create, and start containers                                                                          | `./bin/magento-docker up`              |
+| Clears Redis cache                                                                                                | `./bin/magento-docker flush-redis`     |
+| Clears Varnish cache                                                                                              | `./bin/magento-docker flush-varnish`   |
+| Access database                                                                                                   | `./bin/magento-docker ece-db`          |
+| Run a command in a PHP container\<br/\>Supports the following values for the PHP version: 7.1, 7.2, 7.3, 7.4, 8.0 | `./bin/magento-docker php <version>`   |
 
 <InlineAlert variant="help" slots="text1, text2"/>
 

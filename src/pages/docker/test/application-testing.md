@@ -73,7 +73,7 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    docker compose run deploy bash -c "echo \"$CONFIG\" > /app/dev/tests/acceptance/.env"
    ```
 
-   <!-- <InlineAlert variant="info" slots="text"/> -->
+   \<!-- \<InlineAlert variant="info" slots="text"/\> --\>
 
    In this example, the variable configuration is for testing a Magento application deployed to the Docker environment. To run tests in a remote environment, change the value of `MAGENTO_BASE_URL` to the remote URL and update the credentials as needed.
 
@@ -127,6 +127,6 @@ Support for MFTF requires `magento/magento-cloud-docker` version 1.0 or later.
    docker compose run test mftf-command run:test AddProductBySkuWithEmptyQtyTest --debug=none
    ```
 
-<!-- link definitions -->
+\<!-- link definitions --\>
 
 [MFTF docs]: https://developer.adobe.com/commerce/testing/functional-testing-framework/

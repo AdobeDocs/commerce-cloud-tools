@@ -51,7 +51,7 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
    ./bin/magento-docker ece-redeploy
    ```
 
-   <!-- <InlineAlert variant="info" slots="text"/> -->
+   \<-- \<InlineAlert variant="info" slots="text"/\> --\>
 
    If you are using file synchronization, synchronize files as needed. See [Launch Docker in developer mode](../deploy/developer-mode.md).
 
@@ -75,7 +75,7 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
       docker compose run --rm deploy cloud-post-deploy
       ```
 
-   <!-- <InlineAlert variant="help" slots="text"/> -->
+   \<!-- \<InlineAlert variant="help" slots="text"/\> --\>
 
    Review messages and notifications during the deployment process and address any errors or notifications as needed.
 
@@ -107,8 +107,8 @@ You must have a Blackfire license and account to use Blackfire with Adobe Commer
 
 1. Profile the Adobe Commerce website.
 
-<!--Link definitions-->
+\<!--Link definitions--\>
 
-[magento]: https://blackfire.io/magento
+[magento]: https://www.blackfire.io/magento/
 [commerce]: https://docs.blackfire.io/integrations/paas/adobe-commerce-cloud
 [Blackfire documentation]: https://docs.blackfire.io/php/training-resources/book/04-first-profile

@@ -36,8 +36,8 @@ After updating the `php.ini` file and adding subdomains, start the Docker enviro
 -  Add specific stores and websites. See [Set up websites, stores, and store views][].
 -  Add the configuration for store and website codes to the `magento-vars.php`. See [Modify Adobe Commerce variables][].
 
-<!--Link definitions-->
+\<!--Link definitions--\>
 
-[Modify Adobe Commerce variables]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html
-[Understanding websites, stores, and store views]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/best-practices.html#store-views
-[Set up websites, stores, and store views]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html
+[Modify Adobe Commerce variables]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/multiple-sites
+[Understanding websites, stores, and store views]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/best-practices
+[Set up websites, stores, and store views]: https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin

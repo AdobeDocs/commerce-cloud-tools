@@ -53,11 +53,11 @@ The following table shows the options to customize service container configurati
 | [rabbitmq](service.md#rabbitmq-container)           | RabbitMQ         | `--rmq` | 3.9, 3.11, 3.12, 3.13, 4.1                                  | Use the `--rmq` option to install a specific RabbitMQ version. |
 | [redis](service.md#redis-container)                 | Redis            | `--redis` | 6.0, 7.0, 7.2                                  | Standard redis container |
 | [valkey](service.md#valkey-container)               | Valkey           | `--valkey` | 8.0                                  | Standard valkey container |
-| [selenium](service.md#selenium-container)           | Selenium         | `--with-selenium`<br/>`--selenium-version`<br/>`--selenium-image` | Any                                                  | Enables application testing using the Magento Functional Testing Framework (MFTF) |
+| [selenium](service.md#selenium-container)           | Selenium         | `--with-selenium`\<br/\>`--selenium-version`\<br/\>`--selenium-image` | Any                                                  | Enables application testing using the Magento Functional Testing Framework (MFTF) |
 | [test](service.md#test-container)                   | PHP CLI          | `--with-test` | Any                                                  | Optional container with a writable file system for running tests |
-| [tls](service.md#tls-container)                     | SSL Endpoint     | `--tls-port`<br/>`--no-tls` | nginx 1.19                                           | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).<br/>Use the `--no-tls` option to disable tls. |
+| [tls](service.md#tls-container)                     | SSL Endpoint     | `--tls-port`\<br/\>`--no-tls` | nginx 1.19                                           | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).\<br/\>Use the `--no-tls` option to disable tls. |
 | [varnish](service.md#varnish-container)             | Varnish          | `--no-varnish` | 4, 6.2, 6.6, 7.0, 7.1                                | Varnish is provisioned by default. Use the `--no-varnish` option to skip Varnish service installation. |
-| [zookeeper](service.md#zookeeper-container)         | Zookeeper        | `--with-zookeeper`<br/>`--zookeeper-version`<br/>`--zookeeper-image` | latest (default)<br/>User-specified version          | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.<br/>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
+| [zookeeper](service.md#zookeeper-container)         | Zookeeper        | `--with-zookeeper`\<br/\>`--zookeeper-version`\<br/\>`--zookeeper-image` | latest (default)\<br/\>User-specified version          | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.\<br/\>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
 
 Use the following command to view all available options for the `ece-docker build:compose` command:
 
@@ -146,10 +146,7 @@ docker compose logs -f tls
 
 Now you can see all requests that are passing through the TLS container and check for errors.
 
-<!-- link definitions -->
+\<!-- link definitions --\>
 
-[Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html
-[docker-repo]: https://github.com/magento/magento-cloud-docker
-[nginx]: https://hub.docker.com/r/magento/magento-cloud-docker-nginx
-[mount-configuration]: https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/properties.html#mounts
-[lock provider]: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html
+[Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.4/en/example-auto-increment.html
+[mount-configuration]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties

@@ -1,4 +1,6 @@
-# OS and IDE generated files
+
+# OS and IDE generated files #
+##############################
 .DS_Store
 .vscode
 .history
@@ -7,6 +9,7 @@
 .code-workspace
 .trash
 Thumbs.db
+.cursor/
 
 # npm yarn
 node_modules
@@ -15,17 +18,17 @@ yarn-error.log
 .pnp.*
 .yarn/*
 
-# keep in repo
-!.gitignore
-!.yarn.lock
-!.yarnrc.yml
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# lerna
+lerna-debug.log
 
-# gatsby files
-.env
-.cache
-public
+# local actions
+.actrc
+.secrets
+local-test.yml
+
+# yalc
+.yalc
+yalc.lock
+
+# local
+tmp/
