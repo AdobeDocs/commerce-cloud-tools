@@ -7,13 +7,13 @@ keywords:
   - Tools
 ---
 
-# Container Architecture
+# Container architecture
 
 The `magento-cloud-docker` package contains build information to create a Docker environment with the required specifications for Adobe Commerce.
 
 The build configuration creates a Docker instance with CLI and service containers required to preview and test an Adobe Commerce project in a local Docker environment. Cloud Docker for Commerce generates the `docker-compose.yml` file to the required specifications. Then, use `docker compose` to create the container instances and build and deploy the Adobe Commerce site.
 
-## CLI Containers
+## CLI containers
 
 The following CLI containers, most of which are based on a PHP-CLI version 7 Docker image, provide `magento-cloud` and `ece-tools` commands to perform file system operations and interact with the application:
 
@@ -53,11 +53,11 @@ The following table shows the options to customize service container configurati
 | [rabbitmq](service.md#rabbitmq-container)           | RabbitMQ         | `--rmq` | 3.9, 3.11, 3.12, 3.13, 4.1                                  | Use the `--rmq` option to install a specific RabbitMQ version. |
 | [redis](service.md#redis-container)                 | Redis            | `--redis` | 6.0, 7.0, 7.2                                  | Standard redis container |
 | [valkey](service.md#valkey-container)               | Valkey           | `--valkey` | 8.0                                  | Standard valkey container |
-| [selenium](service.md#selenium-container)           | Selenium         | `--with-selenium`\<br/\>`--selenium-version`\<br/\>`--selenium-image` | Any                                                  | Enables application testing using the Magento Functional Testing Framework (MFTF) |
+| [selenium](service.md#selenium-container)           | Selenium         | `--with-selenium`<br/>`--selenium-version`<br/>`--selenium-image` | Any                                                  | Enables application testing using the Magento Functional Testing Framework (MFTF) |
 | [test](service.md#test-container)                   | PHP CLI          | `--with-test` | Any                                                  | Optional container with a writable file system for running tests |
-| [tls](service.md#tls-container)                     | SSL Endpoint     | `--tls-port`\<br/\>`--no-tls` | nginx 1.19                                           | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).\<br/\>Use the `--no-tls` option to disable tls. |
+| [tls](service.md#tls-container)                     | SSL Endpoint     | `--tls-port`<br/>`--no-tls` | nginx 1.19                                           | Terminates SSL, can be configured to pass to varnish or nginx. Use the `--tls-port` option to change the default port (443).<br/>Use the `--no-tls` option to disable TLS. |
 | [varnish](service.md#varnish-container)             | Varnish          | `--no-varnish` | 4, 6.2, 6.6, 7.0, 7.1                                | Varnish is provisioned by default. Use the `--no-varnish` option to skip Varnish service installation. |
-| [zookeeper](service.md#zookeeper-container)         | Zookeeper        | `--with-zookeeper`\<br/\>`--zookeeper-version`\<br/\>`--zookeeper-image` | latest (default)\<br/\>User-specified version          | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.\<br/\>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
+| [zookeeper](service.md#zookeeper-container)         | Zookeeper        | `--with-zookeeper`<br/>`--zookeeper-version`<br/>`--zookeeper-image` | latest (default)<br/>User-specified version          | Optional container for Zookeeper lock provider for projects not hosted on Adobe Commerce on Cloud infrastructure.<br/>Use the `--zookeeper-version` option to install a specified version of Zookeeper from the Docker Hub or install a specified image by name with the `--zookeeper-image` option. |
 
 Use the following command to view all available options for the `ece-docker build:compose` command:
 
@@ -65,7 +65,7 @@ Use the following command to view all available options for the `ece-docker buil
 ./vendor/bin/ece-docker build:compose --help
 ```
 
-## Request Flow
+## Request flow
 
 Web requests to `https://magento2.docker/` are handled by the Docker containers using the following request flow:
 
@@ -110,7 +110,7 @@ You can customize this configuration by updating the [`mounts`][mount-configurat
 
 Also, you can share data into the containers using file synchronization. See the [File synchronization](../setup/synchronize-data.md) and [Developer mode](../deploy/developer-mode.md) documentation.
 
-## Container Volumes
+## Container volumes
 
 Cloud Docker for Commerce uses Docker volumes to maintain data throughout the lifecycle of the Docker containers. These volumes can be defined in several ways:
 
@@ -118,7 +118,7 @@ Cloud Docker for Commerce uses Docker volumes to maintain data throughout the li
 - Dockerfile from the [magento-cloud-docker repository](https://github.com/magento/magento-cloud-docker)
 - Upstream Docker image
 
-You do not interact with most of these volumes, which are used by the Docker containers and follow the docker-compose lifecycle. The only exception to this is the `magento-sync` directory that is an external volume used by the Mutagen application to transport data into the containers from the host operating system.
+You do not interact with most of these volumes, which are used by the Docker containers and follow the Docker Compose lifecycle. The only exception to this is the `magento-sync` directory that is an external volume used by the Mutagen application to transport data into the containers from the host operating system.
 
 ### Rebuild a clean environment
 
@@ -136,9 +136,9 @@ The `magento-sync` volume is an external volume that you must create or delete m
 ERROR: Volume magento-sync declared as external, but could not be found. Please create the volume manually using `docker volume create --name=magento-sync` and try again.
 ```
 
-## Container Logs
+## Container logs
 
-All containers use the Docker logging method. You can view the logs using the `docker-compose` command. The following example uses the `-f` option to _follow_ the log output of the TLS container:
+All containers use the Docker logging method. You can view the logs using the `docker compose` command. The following example uses the `-f` option to _follow_ the log output of the TLS container:
 
 ```bash
 docker compose logs -f tls
@@ -146,7 +146,7 @@ docker compose logs -f tls
 
 Now you can see all requests that are passing through the TLS container and check for errors.
 
-\<!-- link definitions --\>
+<!-- link definitions -->
 
 [Using AUTO_INCREMENT]: https://dev.mysql.com/doc/refman/8.4/en/example-auto-increment.html
 [mount-configuration]: https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties
