@@ -18,7 +18,7 @@ The build configuration creates a Docker instance with CLI and service container
 The following CLI containers, most of which are based on a PHP-CLI version 7 Docker image, provide `magento-cloud` and `ece-tools` commands to perform file system operations and interact with the application:
 
 | Name | Service | Key & options | Available Versions | Notes |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | [node](cli.md#node-container) | Node | `--node` | 6, 8, 10, 11 | Optional Node container used for gulp or other NPM-based commands |
 | [cron](cli.md#cron-container) | Cron Jobs | `--with-cron` | none | Optional PHP container runs cron tasks |
 | [build](cli.md#build-container) | Build Container | none | none | PHP container, runs build process |
@@ -43,7 +43,7 @@ See [Service containers](service.md).
 The following table shows the options to customize service container configuration when you generate the Docker Compose configuration file.
 
 | Name | Service | Key & options | Available Versions | Notes |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | [db](service.md#database-container) | MariaDB or MySQL | `--db`, `--db-image` (MySQL), `--expose-db-port`, `--db-increment`, `--db-offset`, `--with-entrypoint`, `--with-mariadb-config` | 10.6, 10.11, 11.4, 8.0 | Use the increment and offset options to customize the [auto-increment settings][Using AUTO_INCREMENT] for replication. Use the `--with-entrypoint` and `--with-mariadb-config` options to automatically configure database directories in the Docker environment. **Example build commands**: `ece-docker build:compose --db <mariadb-version>`, `ece-docker build:compose --db <mysql-version> --db-image` |
 | [opensearch](service.md#opensearch-container) | OpenSearch | `--os`, `--os-env-var`, `--no-os` | 2.3, 2.4, 2.5, 2.12, 3.0 | Use the options to specify the OpenSearch version, customize OpenSearch configuration options, or to build a Docker environment without OpenSearch. |
 | [fpm](service.md#fpm-container) | PHP FPM | `--php`, `--with-xdebug` | 8.0, 8.1, 8.2, 8.3, 8.4 | Used for all incoming requests. Optionally, install a specific PHP version or add Xdebug to debug PHP code in the Docker environment. |
