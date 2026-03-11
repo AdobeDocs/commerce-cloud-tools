@@ -1,14 +1,13 @@
 {
-  "name": "dev-docs-template",
+  "name": "commerce-cloud-tools",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/dev-docs-template"
+    "url": "https://github.com/AdobeDocs/commerce-cloud-tools"
   },
-  "author": {
-    "name": "Tim Kim",
-    "url": "https://github.com/timkim"
+  "config": {
+    "sitePath": "commerce/cloud-tools"
   },
   "scripts": {
     "dev": "npx --yes github:AdobeDocs/adp-devsite-utils dev",
@@ -24,6 +23,10 @@
     "link:skipdeadlinks": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --skip-dead-links -v",
     "link:deadlinkonly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --dead-links-only -v",
     "redirectCheck:stage": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
-    "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
+    "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose",
+    "lint:md": "npx --yes markdownlint-cli2 'src/pages/**/*.md' '*.md'",
+    "lint:md:fix": "npx --yes markdownlint-cli2 --fix 'src/pages/**/*.md' '*.md'",
+    "test": "npx --yes jest",
+    "test:config": "npx --yes jest tests/config.test.js"
   }
 }
