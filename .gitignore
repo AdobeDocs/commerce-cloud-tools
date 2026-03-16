@@ -6,9 +6,14 @@
 .history
 .idea
 .editorconfig
+.code-workspace
+.trash
+Thumbs.db
+.cursor/
 
 # npm yarn
 node_modules
+package.lock
 package-lock.json
 yarn-error.log
 .pnp.*
@@ -44,6 +49,9 @@ local-test.yml
 # yalc
 .yalc
 yalc.lock
+
+# local
+tmp/
 
 #txt
 linter-output.txt
