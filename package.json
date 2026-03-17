@@ -1,13 +1,14 @@
 {
-  "name": "commerce-cloud-tools",
+  "name": "dev-docs-template",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/commerce-cloud-tools"
+    "url": "https://github.com/AdobeDocs/dev-docs-template"
   },
-  "config": {
-    "sitePath": "commerce/cloud-tools"
+  "author": {
+    "name": "Tim Kim",
+    "url": "https://github.com/timkim"
   },
   "scripts": {
     "dev": "npx --yes github:AdobeDocs/adp-devsite-utils dev",
@@ -24,8 +25,5 @@
     "link:checkAllLinks": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v",
     "redirectCheck:stage": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
     "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
-  },
-  "devDependencies": {
-    "express": "5.2.1"
   }
 }
