@@ -18,8 +18,7 @@ MD007: false
 MD013: false
 
 # MD024/no-duplicate-heading - Multiple headings with the same content
-MD024:
-  siblings_only: true
+MD024: false
 
 # MD025/single-title/single-h1 - Multiple top-level headings in the same document
 MD025:
@@ -35,6 +34,12 @@ MD033:
     - Resources
     - DiscoverBlock
     - InlineAlert
+    - Edition
+    - SuperHero
+    - CodeBlock
+    - Fragment
+    - Cards
+    - HorizontalLine
 
 # MD034/no-bare-urls - Bare URL used
 MD034: false
@@ -64,3 +69,9 @@ MD049: false
 MD050:
   style: asterisk
 
+# MD055/table-pipe-style - Require leading and trailing pipes (matches AM023)
+MD055:
+  style: leading_and_trailing
+
+# MD060/table-column-style - Table column style (disabled for flexible formatting)
+MD060: false
