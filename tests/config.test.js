@@ -25,6 +25,7 @@ const LINK_REGEX = /\]\((.+)\)$/;
  * Helper functions to reduce duplication
  */
 const isExternalUrl = (url) => url.startsWith('http://') || url.startsWith('https://');
+const isAnchorLink = (url) => url.startsWith('#');
 
 const extractTitle = (entry) => {
   const match = entry.match(TITLE_REGEX);
@@ -246,7 +247,7 @@ describe('Config.md Navigation Tests', () => {
     test('internal page links should point to existing files', () => {
       configData.pages.forEach((page) => {
         const link = extractLink(page);
-        if (link && !isExternalUrl(link)) {
+        if (link && !isExternalUrl(link) && !isAnchorLink(link)) {
           const filePath = path.join(PAGES_DIR, link);
           expect(fs.existsSync(filePath)).toBe(true);
         }
@@ -281,14 +282,14 @@ describe('Config.md Navigation Tests', () => {
     test('internal subPage links should point to existing files', () => {
       configData.subPages.forEach((item) => {
         const parentLink = extractLink(item.parent);
-        if (parentLink && !isExternalUrl(parentLink)) {
+        if (parentLink && !isExternalUrl(parentLink) && !isAnchorLink(parentLink)) {
           const filePath = path.join(PAGES_DIR, parentLink);
           expect(fs.existsSync(filePath)).toBe(true);
         }
         
         item.children.forEach((child) => {
           const childLink = extractLink(child);
-          if (childLink && !isExternalUrl(childLink)) {
+          if (childLink && !isExternalUrl(childLink) && !isAnchorLink(childLink)) {
             const filePath = path.join(PAGES_DIR, childLink);
             expect(fs.existsSync(filePath)).toBe(true);
           }
@@ -308,7 +309,10 @@ describe('Config.md Navigation Tests', () => {
     test('internal links should use .md extension', () => {
       const links = getAllLinks(configData, true);
       links.forEach((link) => {
-        expect(link).toMatch(/\.md$/);
+        // Skip anchor links as they don't need .md extension
+        if (!isAnchorLink(link)) {
+          expect(link).toMatch(/\.md$/);
+        }
       });
     });
 
