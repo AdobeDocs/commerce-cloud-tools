@@ -127,7 +127,7 @@ You can add PHP extensions to the PHP container by adding the extension configur
 
       For example, the following block adds the `bcmath` extension:
 
-      ```php?start_inline=1
+      ```php
       public static function getConfig(): array
       ...
 
@@ -147,7 +147,7 @@ You can add PHP extensions to the PHP container by adding the extension configur
 
    -  To enable an extension by default, add it to the `DEFAULT_PHP_EXTENSIONS` array in the `ExtensionResolver.php` file.
 
-      ```php?start_inline=1
+      ```php
 
       /**
        * Extensions which should be installed by default
@@ -238,7 +238,7 @@ For information about extension types and extension installation, see the **How 
 
 The following example shows the configuration for adding the PHP core extension `gd` in the `ExtensionResolver.php` file.
 
-```php?start_inline=1
+```php
 public static function getConfig(): array
 ...
             'gd' => [
@@ -267,7 +267,7 @@ public static function getConfig(): array
 
 The following example shows the configuration for adding the `gnupg` extension from the [PECL][] repository.
 
-```php?start_inline=1
+```php
 public static function getConfig(): array
 ...
             'gnupg' => [
@@ -283,7 +283,7 @@ public static function getConfig(): array
 
 The following example shows the configuration for installing the `ioncube` extension using an installation script.
 
-```php?start_inline=1
+```php
 public static function getConfig(): array
 ...
 
