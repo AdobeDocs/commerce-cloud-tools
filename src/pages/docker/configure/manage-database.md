@@ -20,7 +20,7 @@ You can connect to the database through the Docker container or through the data
 
 The procedures in this topic use the following default credentials:
 
-```php?start_inline=1
+```php
 return [
     'MAGENTO_CLOUD_RELATIONSHIPS' => base64_encode(json_encode([
         'database' => [
