@@ -1,7 +1,7 @@
 {
-  "total": 27,
+  "total": 28,
   "offset": 0,
-  "limit": 27,
+  "limit": 28,
   "data": [
     {
       "page": "/",
@@ -11,7 +11,14 @@
         "https://avatars.githubusercontent.com/u/5817319?v=4",
         "https://avatars.githubusercontent.com/u/57922?v=4"
       ],
-      "lastUpdated": "3/24/2026"
+      "lastUpdated": "11/4/2026"
+    },
+    {
+      "page": "/_includes/templated/whats-new",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/12731225?v=4"
+      ],
+      "lastUpdated": "11/4/2026"
     },
     {
       "page": "/config",
